@@ -1,71 +1,71 @@
-variable,questionnaire,retain,reverse_code,reverse_intercept,reverse_slope,label
-NA,NA,TRUE,FALSE,NA,NA,ResponseID
-NA,NA,TRUE,FALSE,NA,NA,ResponseSet
-NA,NA,TRUE,FALSE,NA,NA,Name
-NA,NA,TRUE,FALSE,NA,NA,ExternalDataReference
-NA,NA,TRUE,FALSE,NA,NA,Status
-NA,NA,TRUE,FALSE,NA,NA,StartDate
-NA,NA,TRUE,FALSE,NA,NA,EndDate
-NA,NA,TRUE,FALSE,NA,NA,Finished
-NA,NA,TRUE,FALSE,NA,NA,Score-sum
-NA,NA,TRUE,FALSE,NA,NA,Score-weightedAvg
-NA,NA,TRUE,FALSE,NA,NA,Score-weightedStdDev
-NA,NA,TRUE,FALSE,NA,NA,"My name is Bryan Ray, and I am a graduate student in Educational Psychology at the University of..."
-NA,NA,TRUE,FALSE,NA,NA,Are you a father with at least one child in elementary school?
-NA,NA,TRUE,FALSE,NA,NA,Do you live with your child that is in elementary school?
-NA,NA,TRUE,FALSE,NA,NA,What is your sexual orientation?
-NA,NA,TRUE,FALSE,NA,NA,Do you live with the mother of your children?
-NA,NA,TRUE,FALSE,NA,NA,Are you married?
-NA,NA,TRUE,FALSE,NA,NA,How long have you been married to your spouse?
-NA,NA,TRUE,FALSE,NA,NA,What is the highest level of education you have completed?
-NA,NA,TRUE,FALSE,NA,NA,Age:
-NA,NA,TRUE,FALSE,NA,NA,What is your current household annual income? (gross income)
-NA,NA,TRUE,FALSE,NA,NA,How many children are living in your home
-NA,NA,TRUE,FALSE,NA,NA,Which Race/Ethnicity best describes you?
-NA,NA,TRUE,FALSE,NA,NA,Which Race/Ethnicity best describes you?-TEXT
-NA,NA,TRUE,FALSE,NA,NA,Religious preference
-NA,NA,TRUE,FALSE,NA,NA,Describe your relationship to the elementary-aged children living in your home (Check all that ap...-Biological father
-NA,NA,TRUE,FALSE,NA,NA,Describe your relationship to the elementary-aged children living in your home (Check all that ap...-Step-father
-NA,NA,TRUE,FALSE,NA,NA,Describe your relationship to the elementary-aged children living in your home (Check all that ap...-Adoptive father
-NA,NA,TRUE,FALSE,NA,NA,Describe your relationship to the elementary-aged children living in your home (Check all that ap...-Other
-NA,NA,TRUE,FALSE,NA,NA,Describe your relationship to the elementary-aged children living in your home (Check all that ap...-Other-TEXT
-NA,NA,TRUE,FALSE,NA,NA,How many hours per week to you spend working outside of the home?
-NA,NA,TRUE,FALSE,NA,NA,How many hours per week does your partner spend working outside of the home?
-NA,NA,TRUE,FALSE,NA,NA,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Tell you to do a child care task. (?Go wash Tyler?s face.?)
-NA,NA,TRUE,FALSE,NA,NA,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Ask you politely to help (?Can you wash Tyler?s face please??)
-NA,NA,TRUE,FALSE,NA,NA,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Compliment you (""You're able to calm Tyler down better than I can."")"
-NA,NA,TRUE,FALSE,NA,NA,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Invite you to help (""Wouldn't you like to read to Tyler?"")"
-NA,NA,TRUE,FALSE,NA,NA,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Refuse to do it him/herself (""I'm not giving Tyler a bath. Its' your turn)"
-NA,NA,TRUE,FALSE,NA,NA,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Give you a serious look that means, ""You need to deal with Tyler now!"""
-NA,NA,TRUE,FALSE,NA,NA,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Let you know he/she appreciates your contributions (""It really helps when you take Tyler with you."")"
-NA,NA,TRUE,FALSE,NA,NA,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Give you an irritated or exasperated look
-NA,NA,TRUE,FALSE,NA,NA,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Hint that work needs to be done (""Boy, Tyler sure is dirty!"")"
-NA,NA,TRUE,FALSE,NA,NA,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Wait until you do child care tasks on your own
-NA,NA,TRUE,FALSE,NA,NA,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Leave the house so you don't have a choice
-NA,NA,TRUE,FALSE,NA,NA,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Tell your child to go ask for help (""Go tell Mommy/Daddy you want lunch."")"
-NA,NA,TRUE,FALSE,NA,NA,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Tell you what a good parent you are.
-NA,NA,TRUE,FALSE,NA,NA,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Ask your opinion (""Do you think Tyler should wear a sweater today?"")"
-NA,NA,TRUE,FALSE,NA,NA,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Tell other people about what a good parent you area at a time when you can hear him/her
-NA,NA,TRUE,FALSE,NA,NA,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Tell you how happy you make your child (""Tyler really loves to play with you."")"
-NA,NA,TRUE,FALSE,NA,NA,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Encouraged you to spend time alone with your child
-NA,NA,TRUE,FALSE,NA,NA,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Arrange activities for you and your child to do together
-NA,NA,TRUE,FALSE,NA,NA,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-1. Tell you the right way to handle the situation (?You need to leave him alone till he calms down.?)
-NA,NA,TRUE,FALSE,NA,NA,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-2. Show you that he/she is angry or irritated.
-NA,NA,TRUE,FALSE,NA,NA,"When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-3. Keep quiet, let you handle it anyway."
-NA,NA,TRUE,FALSE,NA,NA,"When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-4. Tell you what he/she thinks you did wrong         (?The bath water is too hot, you?ll burn him.?)"
-NA,NA,TRUE,FALSE,NA,NA,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-5. Explain his/her concerns to you               (?I?m worried because Tyler might hurt himself if you do that.?)
-NA,NA,TRUE,FALSE,NA,NA,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-6. Criticize you
-NA,NA,TRUE,FALSE,NA,NA,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-7. Ask if you would like his/her help.
-NA,NA,TRUE,FALSE,NA,NA,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-8. Look exasperated and roll his/her eyes.
-NA,NA,TRUE,FALSE,NA,NA,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-9. Try to discuss his/her feelings about it with you.
-NA,NA,TRUE,FALSE,NA,NA,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-10. Tell you how he/she has learned to handle similar situations.
-NA,NA,TRUE,FALSE,NA,NA,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-11. Tell other people about the things he/she doesn?t like (?He/she puts winter clothes on them and it?s 70 degrees out!?)
-NA,NA,TRUE,FALSE,NA,NA,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-12. Take over and do it his/her way.
-NA,NA,TRUE,FALSE,NA,NA,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-13. Let you make your own mistakes.
-NA,NA,TRUE,FALSE,NA,NA,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-14. Instruct you                        (?Tyler likes to have his sandwich cut like this.?)
-NA,NA,TRUE,FALSE,NA,NA,"When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-15. Not mention anything, but redo things after you               are gone."
-NA,NA,TRUE,FALSE,NA,NA,"When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-16. Tell your child what he/she thinks you did wrong             (?Mommy/Daddy makes your food too hot, huh??)"
-NA,NA,TRUE,FALSE,NA,NA,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-17. Let you do it your own way.
+variable,section,retain,reverse_code,reverse_intercept,reverse_slope,label
+response_id,plumbing,TRUE,FALSE,NA,NA,ResponseID
+response_set,plumbing,TRUE,FALSE,NA,NA,ResponseSet
+NA,plumbing,FALSE,FALSE,NA,NA,Name
+NA,plumbing,FALSE,FALSE,NA,NA,ExternalDataReference
+NA,plumbing,FALSE,FALSE,NA,NA,Status
+NA,plumbing,FALSE,FALSE,NA,NA,StartDate
+NA,plumbing,FALSE,FALSE,NA,NA,EndDate
+NA,plumbing,FALSE,FALSE,NA,NA,Finished
+NA,plumbing,FALSE,FALSE,NA,NA,Score-sum
+NA,plumbing,FALSE,FALSE,NA,NA,Score-weightedAvg
+NA,plumbing,FALSE,FALSE,NA,NA,Score-weightedStdDev
+NA,plumbing,FALSE,FALSE,NA,NA,"My name is Bryan Ray, and I am a graduate student in Educational Psychology at the University of..."
+one_child_at_least,demographics,TRUE,FALSE,NA,NA,Are you a father with at least one child in elementary school?
+live_with_child,demographics,TRUE,FALSE,NA,NA,Do you live with your child that is in elementary school?
+sexual_orientation,demographics,TRUE,FALSE,NA,NA,What is your sexual orientation?
+live_with_mother,demographics,TRUE,FALSE,NA,NA,Do you live with the mother of your children?
+is_married,demographics,TRUE,FALSE,NA,NA,Are you married?
+married_duration,demographics,TRUE,FALSE,NA,NA,How long have you been married to your spouse?
+education,demographics,TRUE,FALSE,NA,NA,What is the highest level of education you have completed?
+age,demographics,TRUE,FALSE,NA,NA,Age:
+income_category,demographics,TRUE,FALSE,NA,NA,What is your current household annual income? (gross income)
+child_in_home_count,demographics,TRUE,FALSE,NA,NA,How many children are living in your home
+race,demographics,TRUE,FALSE,NA,NA,Which Race/Ethnicity best describes you?
+race_other,demographics,TRUE,FALSE,NA,NA,Which Race/Ethnicity best describes you?-TEXT
+religion,demographics,TRUE,FALSE,NA,NA,Religious preference
+relation_biodad,demographics,TRUE,FALSE,NA,NA,Describe your relationship to the elementary-aged children living in your home (Check all that ap...-Biological father
+relation_step,demographics,TRUE,FALSE,NA,NA,Describe your relationship to the elementary-aged children living in your home (Check all that ap...-Step-father
+relation_adoptive,demographics,TRUE,FALSE,NA,NA,Describe your relationship to the elementary-aged children living in your home (Check all that ap...-Adoptive father
+relation_other,demographics,TRUE,FALSE,NA,NA,Describe your relationship to the elementary-aged children living in your home (Check all that ap...-Other
+relation_other_text,demographics,TRUE,FALSE,NA,NA,Describe your relationship to the elementary-aged children living in your home (Check all that ap...-Other-TEXT
+NA,demographics,TRUE,FALSE,NA,NA,How many hours per week to you spend working outside of the home?
+NA,demographics,TRUE,FALSE,NA,NA,How many hours per week does your partner spend working outside of the home?
+NA,autonomy,TRUE,FALSE,NA,NA,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Tell you to do a child care task. (?Go wash Tyler?s face.?)
+NA,autonomy,TRUE,FALSE,NA,NA,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Ask you politely to help (?Can you wash Tyler?s face please??)
+NA,autonomy,TRUE,FALSE,NA,NA,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Compliment you (""You're able to calm Tyler down better than I can."")"
+NA,autonomy,TRUE,FALSE,NA,NA,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Invite you to help (""Wouldn't you like to read to Tyler?"")"
+NA,autonomy,TRUE,TRUE,7,-1,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Refuse to do it him/herself (""I'm not giving Tyler a bath. Its' your turn)"
+NA,autonomy,TRUE,FALSE,NA,NA,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Give you a serious look that means, ""You need to deal with Tyler now!"""
+NA,autonomy,TRUE,FALSE,NA,NA,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Let you know he/she appreciates your contributions (""It really helps when you take Tyler with you."")"
+NA,autonomy,TRUE,FALSE,NA,NA,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Give you an irritated or exasperated look
+NA,autonomy,TRUE,FALSE,NA,NA,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Hint that work needs to be done (""Boy, Tyler sure is dirty!"")"
+NA,autonomy,TRUE,FALSE,NA,NA,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Wait until you do child care tasks on your own
+NA,autonomy,TRUE,FALSE,NA,NA,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Leave the house so you don't have a choice
+NA,autonomy,TRUE,FALSE,NA,NA,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Tell your child to go ask for help (""Go tell Mommy/Daddy you want lunch."")"
+NA,autonomy,TRUE,FALSE,NA,NA,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Tell you what a good parent you are.
+NA,autonomy,TRUE,FALSE,NA,NA,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Ask your opinion (""Do you think Tyler should wear a sweater today?"")"
+NA,autonomy,TRUE,FALSE,NA,NA,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Tell other people about what a good parent you area at a time when you can hear him/her
+NA,autonomy,TRUE,FALSE,NA,NA,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Tell you how happy you make your child (""Tyler really loves to play with you."")"
+NA,autonomy,TRUE,FALSE,NA,NA,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Encouraged you to spend time alone with your child
+NA,autonomy,TRUE,FALSE,NA,NA,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Arrange activities for you and your child to do together
+NA,autonomy,TRUE,FALSE,NA,NA,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-1. Tell you the right way to handle the situation (?You need to leave him alone till he calms down.?)
+NA,autonomy,TRUE,FALSE,NA,NA,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-2. Show you that he/she is angry or irritated.
+NA,autonomy,TRUE,FALSE,NA,NA,"When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-3. Keep quiet, let you handle it anyway."
+NA,autonomy,TRUE,FALSE,NA,NA,"When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-4. Tell you what he/she thinks you did wrong         (?The bath water is too hot, you?ll burn him.?)"
+NA,autonomy,TRUE,FALSE,NA,NA,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-5. Explain his/her concerns to you               (?I?m worried because Tyler might hurt himself if you do that.?)
+NA,autonomy,TRUE,FALSE,NA,NA,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-6. Criticize you
+NA,autonomy,TRUE,FALSE,NA,NA,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-7. Ask if you would like his/her help.
+NA,autonomy,TRUE,FALSE,NA,NA,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-8. Look exasperated and roll his/her eyes.
+NA,autonomy,TRUE,FALSE,NA,NA,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-9. Try to discuss his/her feelings about it with you.
+NA,autonomy,TRUE,FALSE,NA,NA,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-10. Tell you how he/she has learned to handle similar situations.
+NA,autonomy,TRUE,FALSE,NA,NA,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-11. Tell other people about the things he/she doesn?t like (?He/she puts winter clothes on them and it?s 70 degrees out!?)
+NA,autonomy,TRUE,FALSE,NA,NA,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-12. Take over and do it his/her way.
+NA,autonomy,TRUE,FALSE,NA,NA,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-13. Let you make your own mistakes.
+NA,autonomy,TRUE,FALSE,NA,NA,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-14. Instruct you                        (?Tyler likes to have his sandwich cut like this.?)
+NA,autonomy,TRUE,FALSE,NA,NA,"When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-15. Not mention anything, but redo things after you               are gone."
+NA,autonomy,TRUE,FALSE,NA,NA,"When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-16. Tell your child what he/she thinks you did wrong             (?Mommy/Daddy makes your food too hot, huh??)"
+NA,autonomy,TRUE,FALSE,NA,NA,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-17. Let you do it your own way.
 NA,NA,TRUE,FALSE,NA,NA,Check the responses that are most appropriate for your situation.-What do you feel is the level of your financial stress today?
 NA,NA,TRUE,FALSE,NA,NA,Check the responses that are most appropriate for your situation.-How Satisfied are you with your present financial situation?
 NA,NA,TRUE,FALSE,NA,NA,Check the responses that are most appropriate for your situation.-How you feel about your current financial situation?
