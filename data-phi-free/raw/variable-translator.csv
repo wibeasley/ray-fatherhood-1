@@ -1,0 +1,181 @@
+variable,questionnaire,retain,reverse_code,reverse_intercept,reverse_slope,label
+NA,NA,TRUE,FALSE,NA,NA,ResponseID
+NA,NA,TRUE,FALSE,NA,NA,ResponseSet
+NA,NA,TRUE,FALSE,NA,NA,Name
+NA,NA,TRUE,FALSE,NA,NA,ExternalDataReference
+NA,NA,TRUE,FALSE,NA,NA,Status
+NA,NA,TRUE,FALSE,NA,NA,StartDate
+NA,NA,TRUE,FALSE,NA,NA,EndDate
+NA,NA,TRUE,FALSE,NA,NA,Finished
+NA,NA,TRUE,FALSE,NA,NA,Score-sum
+NA,NA,TRUE,FALSE,NA,NA,Score-weightedAvg
+NA,NA,TRUE,FALSE,NA,NA,Score-weightedStdDev
+NA,NA,TRUE,FALSE,NA,NA,"My name is Bryan Ray, and I am a graduate student in Educational Psychology at the University of..."
+NA,NA,TRUE,FALSE,NA,NA,Are you a father with at least one child in elementary school?
+NA,NA,TRUE,FALSE,NA,NA,Do you live with your child that is in elementary school?
+NA,NA,TRUE,FALSE,NA,NA,What is your sexual orientation?
+NA,NA,TRUE,FALSE,NA,NA,Do you live with the mother of your children?
+NA,NA,TRUE,FALSE,NA,NA,Are you married?
+NA,NA,TRUE,FALSE,NA,NA,How long have you been married to your spouse?
+NA,NA,TRUE,FALSE,NA,NA,What is the highest level of education you have completed?
+NA,NA,TRUE,FALSE,NA,NA,Age:
+NA,NA,TRUE,FALSE,NA,NA,What is your current household annual income? (gross income)
+NA,NA,TRUE,FALSE,NA,NA,How many children are living in your home
+NA,NA,TRUE,FALSE,NA,NA,Which Race/Ethnicity best describes you?
+NA,NA,TRUE,FALSE,NA,NA,Which Race/Ethnicity best describes you?-TEXT
+NA,NA,TRUE,FALSE,NA,NA,Religious preference
+NA,NA,TRUE,FALSE,NA,NA,Describe your relationship to the elementary-aged children living in your home (Check all that ap...-Biological father
+NA,NA,TRUE,FALSE,NA,NA,Describe your relationship to the elementary-aged children living in your home (Check all that ap...-Step-father
+NA,NA,TRUE,FALSE,NA,NA,Describe your relationship to the elementary-aged children living in your home (Check all that ap...-Adoptive father
+NA,NA,TRUE,FALSE,NA,NA,Describe your relationship to the elementary-aged children living in your home (Check all that ap...-Other
+NA,NA,TRUE,FALSE,NA,NA,Describe your relationship to the elementary-aged children living in your home (Check all that ap...-Other-TEXT
+NA,NA,TRUE,FALSE,NA,NA,How many hours per week to you spend working outside of the home?
+NA,NA,TRUE,FALSE,NA,NA,How many hours per week does your partner spend working outside of the home?
+NA,NA,TRUE,FALSE,NA,NA,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Tell you to do a child care task. (?Go wash Tyler?s face.?)
+NA,NA,TRUE,FALSE,NA,NA,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Ask you politely to help (?Can you wash Tyler?s face please??)
+NA,NA,TRUE,FALSE,NA,NA,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Compliment you (""You're able to calm Tyler down better than I can."")"
+NA,NA,TRUE,FALSE,NA,NA,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Invite you to help (""Wouldn't you like to read to Tyler?"")"
+NA,NA,TRUE,FALSE,NA,NA,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Refuse to do it him/herself (""I'm not giving Tyler a bath. Its' your turn)"
+NA,NA,TRUE,FALSE,NA,NA,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Give you a serious look that means, ""You need to deal with Tyler now!"""
+NA,NA,TRUE,FALSE,NA,NA,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Let you know he/she appreciates your contributions (""It really helps when you take Tyler with you."")"
+NA,NA,TRUE,FALSE,NA,NA,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Give you an irritated or exasperated look
+NA,NA,TRUE,FALSE,NA,NA,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Hint that work needs to be done (""Boy, Tyler sure is dirty!"")"
+NA,NA,TRUE,FALSE,NA,NA,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Wait until you do child care tasks on your own
+NA,NA,TRUE,FALSE,NA,NA,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Leave the house so you don't have a choice
+NA,NA,TRUE,FALSE,NA,NA,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Tell your child to go ask for help (""Go tell Mommy/Daddy you want lunch."")"
+NA,NA,TRUE,FALSE,NA,NA,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Tell you what a good parent you are.
+NA,NA,TRUE,FALSE,NA,NA,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Ask your opinion (""Do you think Tyler should wear a sweater today?"")"
+NA,NA,TRUE,FALSE,NA,NA,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Tell other people about what a good parent you area at a time when you can hear him/her
+NA,NA,TRUE,FALSE,NA,NA,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Tell you how happy you make your child (""Tyler really loves to play with you."")"
+NA,NA,TRUE,FALSE,NA,NA,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Encouraged you to spend time alone with your child
+NA,NA,TRUE,FALSE,NA,NA,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Arrange activities for you and your child to do together
+NA,NA,TRUE,FALSE,NA,NA,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-1. Tell you the right way to handle the situation (?You need to leave him alone till he calms down.?)
+NA,NA,TRUE,FALSE,NA,NA,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-2. Show you that he/she is angry or irritated.
+NA,NA,TRUE,FALSE,NA,NA,"When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-3. Keep quiet, let you handle it anyway."
+NA,NA,TRUE,FALSE,NA,NA,"When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-4. Tell you what he/she thinks you did wrong         (?The bath water is too hot, you?ll burn him.?)"
+NA,NA,TRUE,FALSE,NA,NA,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-5. Explain his/her concerns to you               (?I?m worried because Tyler might hurt himself if you do that.?)
+NA,NA,TRUE,FALSE,NA,NA,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-6. Criticize you
+NA,NA,TRUE,FALSE,NA,NA,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-7. Ask if you would like his/her help.
+NA,NA,TRUE,FALSE,NA,NA,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-8. Look exasperated and roll his/her eyes.
+NA,NA,TRUE,FALSE,NA,NA,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-9. Try to discuss his/her feelings about it with you.
+NA,NA,TRUE,FALSE,NA,NA,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-10. Tell you how he/she has learned to handle similar situations.
+NA,NA,TRUE,FALSE,NA,NA,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-11. Tell other people about the things he/she doesn?t like (?He/she puts winter clothes on them and it?s 70 degrees out!?)
+NA,NA,TRUE,FALSE,NA,NA,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-12. Take over and do it his/her way.
+NA,NA,TRUE,FALSE,NA,NA,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-13. Let you make your own mistakes.
+NA,NA,TRUE,FALSE,NA,NA,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-14. Instruct you                        (?Tyler likes to have his sandwich cut like this.?)
+NA,NA,TRUE,FALSE,NA,NA,"When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-15. Not mention anything, but redo things after you               are gone."
+NA,NA,TRUE,FALSE,NA,NA,"When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-16. Tell your child what he/she thinks you did wrong             (?Mommy/Daddy makes your food too hot, huh??)"
+NA,NA,TRUE,FALSE,NA,NA,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-17. Let you do it your own way.
+NA,NA,TRUE,FALSE,NA,NA,Check the responses that are most appropriate for your situation.-What do you feel is the level of your financial stress today?
+NA,NA,TRUE,FALSE,NA,NA,Check the responses that are most appropriate for your situation.-How Satisfied are you with your present financial situation?
+NA,NA,TRUE,FALSE,NA,NA,Check the responses that are most appropriate for your situation.-How you feel about your current financial situation?
+NA,NA,TRUE,FALSE,NA,NA,Check the responses that are most appropriate for your situation.-How often do you worry about being able to meet normal monthly living expenses?
+NA,NA,TRUE,FALSE,NA,NA,Check the responses that are most appropriate for your situation.-How confident are you that you could find the money to pay for a financial emergency that costs about $1000?
+NA,NA,TRUE,FALSE,NA,NA,"Check the responses that are most appropriate for your situation.-How often does this happen to you? You want to go out to eat, go to a movie or do something else and don't go because you can't afford it?"
+NA,NA,TRUE,FALSE,NA,NA,Check the responses that are most appropriate for your situation.-How frequently do you find yourself getting by financially and living paycheck to paycheck?
+NA,NA,TRUE,FALSE,NA,NA,Check the responses that are most appropriate for your situation.-How stressed do you feel about your personal finances in general?
+NA,NA,TRUE,FALSE,NA,NA,For the following scale please rate how much you agree with the following statements by clicking...-My work prevents me spending sufficient quality time with my family
+NA,NA,TRUE,FALSE,NA,NA,"For the following scale please rate how much you agree with the following statements by clicking...-There is no time left at the end of the day to do the things I?d like at home (e.g., chores and leisure activities)"
+NA,NA,TRUE,FALSE,NA,NA,For the following scale please rate how much you agree with the following statements by clicking...-My family misses out because of my work commitments
+NA,NA,TRUE,FALSE,NA,NA,For the following scale please rate how much you agree with the following statements by clicking...-My work has a negative impact on my family life
+NA,NA,TRUE,FALSE,NA,NA,For the following scale please rate how much you agree with the following statements by clicking...-Working often makes me irritable or short tempered at home
+NA,NA,TRUE,FALSE,NA,NA,Please select the most accurate response for each question below:-I feel sure of myself as a father
+NA,NA,TRUE,FALSE,NA,NA,Please select the most accurate response for each question below:-I know I am doing a good job as a father
+NA,NA,TRUE,FALSE,NA,NA,Please select the most accurate response for each question below:-I think I know things about being a father that would be helpful to other parents
+NA,NA,TRUE,FALSE,NA,NA,Please select the most accurate response for each question below:-I feel I can solve most problems between my child(ren) and me.
+NA,NA,TRUE,FALSE,NA,NA,"Please select the most accurate response for each question below:-When things are going badly between my child(ren) and me, I keep trying until things begin to change."
+NA,NA,TRUE,FALSE,NA,NA,The following questions have to do with your relationship with your romantic partner. Though thes...-How satisfied are you with your marriage?
+NA,NA,TRUE,FALSE,NA,NA,The following questions have to do with your relationship with your romantic partner. Though thes...-How satisfied are you with your relationship with your husband/wife?
+NA,NA,TRUE,FALSE,NA,NA,The following questions have to do with your relationship with your romantic partner. Though thes...-How satisfied are you with your husband/wife as a spouse?
+NA,NA,TRUE,FALSE,NA,NA,Answer the following questions in regards to your relationship with your children:-I have a rewarding relationship with my children.
+NA,NA,TRUE,FALSE,NA,NA,"Answer the following questions in regards to your relationship with your children:-Overall, I have a positive relationship with my children."
+NA,NA,TRUE,FALSE,NA,NA,For the following items place the letter that indicates your feelings in the blank.-It is essential for the child's well being that fathers spend time interacting and playing with their children
+NA,NA,TRUE,FALSE,NA,NA,For the following items place the letter that indicates your feelings in the blank.-It is difficult for men to express tender and affectionate feelings toward babies
+NA,NA,TRUE,FALSE,NA,NA,For the following items place the letter that indicates your feelings in the blank.-Fathers play a central role 'in the child's personality development.
+NA,NA,TRUE,FALSE,NA,NA,For the following items place the letter that indicates your feelings in the blank.-The responsibilities of fatherhood never overshadow the joys.
+NA,NA,TRUE,FALSE,NA,NA,For the following items place the letter that indicates your feelings in the blank.-Fathers are able to enjoy children more when the children are older and don't require so much care.
+NA,NA,TRUE,FALSE,NA,NA,"For the following items place the letter that indicates your feelings in the blank.-Very young babies are generally able to sense an adult's moods and feelings. For example, a baby can tell when you are angry."
+NA,NA,TRUE,FALSE,NA,NA,"For the following items place the letter that indicates your feelings in the blank.-Very young babies are affected by adults' moods and feelings. For example, if you are angry with a baby he/she may feel hurt."
+NA,NA,TRUE,FALSE,NA,NA,For the following items place the letter that indicates your feelings in the blank.-The most important thing a man can invest time and energy into his family.
+NA,NA,TRUE,FALSE,NA,NA,For the following items place the letter that indicates your feelings in the blank.-A father should be as heavily involved in the care of a baby as the mother is.
+NA,NA,TRUE,FALSE,NA,NA,For the following items place the letter that indicates your feelings in the blank.-Mothers are naturally more sensitive caregivers than fathers are.
+NA,NA,TRUE,FALSE,NA,NA,For the following items place the letter that indicates your feelings in the blank.-Even when a baby is very young it is important for a father to set a good example for his baby.
+NA,NA,TRUE,FALSE,NA,NA,For the following items place the letter that indicates your feelings in the blank.-It is as important for a father to meet a baby's psychological needs as it is for the mother to do so
+NA,NA,TRUE,FALSE,NA,NA,For the following items place the letter that indicates your feelings in the blank.-It is important to respond quickly to a young a baby each time it cries.
+NA,NA,TRUE,FALSE,NA,NA,For the following items place the letter that indicates your feelings in the blank.-The way a father treats his baby in the first six months has important life-long effects on the child.
+NA,NA,TRUE,FALSE,NA,NA,"For the following items place the letter that indicates your feelings in the blank.-All things considered, fatherhood is a highly rewarding experience."
+NA,NA,TRUE,FALSE,NA,NA,Do you participate in teaching your child responsibility?
+NA,NA,TRUE,FALSE,NA,NA,�Why do you participate in teaching your child responsibility?-Because I enjoy it
+NA,NA,TRUE,FALSE,NA,NA,�Why do you participate in teaching your child responsibility?-Because it's important to me
+NA,NA,TRUE,FALSE,NA,NA,�Why do you participate in teaching your child responsibility?-Because I want others to think I'm a good father
+NA,NA,TRUE,FALSE,NA,NA,�Why do you participate in teaching your child responsibility?-Because that's what I'm supposed to do as a father
+NA,NA,TRUE,FALSE,NA,NA,Do you participate in encouraging your child with school?
+NA,NA,TRUE,FALSE,NA,NA,Why do you participate in encouraging your child with school?-Because I enjoy it
+NA,NA,TRUE,FALSE,NA,NA,Why do you participate in encouraging your child with school?-Because it's important to me
+NA,NA,TRUE,FALSE,NA,NA,Why do you participate in encouraging your child with school?-Because I want others to think I'm a good father
+NA,NA,TRUE,FALSE,NA,NA,Why do you participate in encouraging your child with school?-Because that's what I'm supposed to do as a father
+NA,NA,TRUE,FALSE,NA,NA,Do you support your child's mother?
+NA,NA,TRUE,FALSE,NA,NA,Why do you support your child's mother?-Because I enjoy it
+NA,NA,TRUE,FALSE,NA,NA,Why do you support your child's mother?-Because it's important to me
+NA,NA,TRUE,FALSE,NA,NA,Why do you support your child's mother?-Because I want others to think I'm a good father
+NA,NA,TRUE,FALSE,NA,NA,Why do you support your child's mother?-Because that's what I'm supposed to do as a father
+NA,NA,TRUE,FALSE,NA,NA,Do you provide for your children?
+NA,NA,TRUE,FALSE,NA,NA,Why do you provide for your children?-Because I enjoy it
+NA,NA,TRUE,FALSE,NA,NA,Why do you provide for your children?-Because it's important to me
+NA,NA,TRUE,FALSE,NA,NA,Why do you provide for your children?-Because I want others to think I'm a good father
+NA,NA,TRUE,FALSE,NA,NA,Why do you provide for your children?-Because that's what I'm supposed to do as a father
+NA,NA,TRUE,FALSE,NA,NA,Do you spend time with your children talking and getting to know them?
+NA,NA,TRUE,FALSE,NA,NA,Why do you spend time with your children talking and getting to know them?-Because I enjoy it
+NA,NA,TRUE,FALSE,NA,NA,Why do you spend time with your children talking and getting to know them?-Because it's important to me
+NA,NA,TRUE,FALSE,NA,NA,Why do you spend time with your children talking and getting to know them?-Because I want others to think I'm a good father
+NA,NA,TRUE,FALSE,NA,NA,Why do you spend time with your children talking and getting to know them?-Because that's what I'm supposed to do as a father
+NA,NA,TRUE,FALSE,NA,NA,Do you give your kids praise and attention?
+NA,NA,TRUE,FALSE,NA,NA,Why do you give your kids praise and affection?-Because I enjoy it
+NA,NA,TRUE,FALSE,NA,NA,Why do you give your kids praise and affection?-Because it's important to me
+NA,NA,TRUE,FALSE,NA,NA,Why do you give your kids praise and affection?-Because I want others to think I'm a good father
+NA,NA,TRUE,FALSE,NA,NA,Why do you give your kids praise and affection?-Because that's what I'm supposed to do as a father
+NA,NA,TRUE,FALSE,NA,NA,Do you spend time helping your child(ren) develop their talents and prepare for future concerns?
+NA,NA,TRUE,FALSE,NA,NA,Why do you spend time helping your child(ren) develop their talents and prepare for future concerns?-Because I enjoy it
+NA,NA,TRUE,FALSE,NA,NA,Why do you spend time helping your child(ren) develop their talents and prepare for future concerns?-Because it's important to me
+NA,NA,TRUE,FALSE,NA,NA,Why do you spend time helping your child(ren) develop their talents and prepare for future concerns?-Because I want others to think I'm a good father
+NA,NA,TRUE,FALSE,NA,NA,Why do you spend time helping your child(ren) develop their talents and prepare for future concerns?-Because that's what I'm supposed to do as a father
+NA,NA,TRUE,FALSE,NA,NA,Do you engage in homework and reading support with your child?
+NA,NA,TRUE,FALSE,NA,NA,Why do you engage in homework and reading support with your child?-Because I enjoy it
+NA,NA,TRUE,FALSE,NA,NA,Why do you engage in homework and reading support with your child?-Because it's important to me
+NA,NA,TRUE,FALSE,NA,NA,Why do you engage in homework and reading support with your child?-Because I want others to think I'm a good father
+NA,NA,TRUE,FALSE,NA,NA,Why do you engage in homework and reading support with your child?-Because that's what I'm supposed to do as a father
+NA,NA,TRUE,FALSE,NA,NA,Do you give your child attention?
+NA,NA,TRUE,FALSE,NA,NA,Why do you give your child attention?-Because I enjoy it
+NA,NA,TRUE,FALSE,NA,NA,Why do you give your child attention?-Because it's important to me
+NA,NA,TRUE,FALSE,NA,NA,Why do you give your child attention?-Because I want others to think I'm a good father
+NA,NA,TRUE,FALSE,NA,NA,Why do you give your child attention?-Because that's what I'm supposed to do as a father
+NA,NA,TRUE,FALSE,NA,NA,"Now think of your experience as a father currently. Please rate how involved you think you are on...-I attend events my children participate in (sports, school church events)"
+NA,NA,TRUE,FALSE,NA,NA,Now think of your experience as a father currently. Please rate how involved you think you are on...-I encourage my children to read
+NA,NA,TRUE,FALSE,NA,NA,"Now think of your experience as a father currently. Please rate how involved you think you are on...-I provide for my children's basic needs (shelter, health care, etc.)"
+NA,NA,TRUE,FALSE,NA,NA,Now think of your experience as a father currently. Please rate how involved you think you are on...-I praise my children for being good or doing the right thing
+NA,NA,TRUE,FALSE,NA,NA,Now think of your experience as a father currently. Please rate how involved you think you are on...-I give my children's mother encouragement and emotional support
+NA,NA,TRUE,FALSE,NA,NA,"Now think of your experience as a father currently. Please rate how involved you think you are on...-I am involved in the daily or regular routine of taking care of my children's basic needs or activities (feeding, driving them places, etc.)"
+NA,NA,TRUE,FALSE,NA,NA,Now think of your experience as a father currently. Please rate how involved you think you are on...-I let my children know that their mother is an important and special person
+NA,NA,TRUE,FALSE,NA,NA,Now think of your experience as a father currently. Please rate how involved you think you are on...-I praise my children for something they have done well
+NA,NA,TRUE,FALSE,NA,NA,Now think of your experience as a father currently. Please rate how involved you think you are on...-I encourage my children to succeed in school
+NA,NA,TRUE,FALSE,NA,NA,Now think of your experience as a father currently. Please rate how involved you think you are on...-I am a pal or friend to my children
+NA,NA,TRUE,FALSE,NA,NA,Now think of your experience as a father currently. Please rate how involved you think you are on...-I accept responsibility for the financial support of the children I have fathered
+NA,NA,TRUE,FALSE,NA,NA,Now think of your experience as a father currently. Please rate how involved you think you are on...-I encourage my children to do their homework
+NA,NA,TRUE,FALSE,NA,NA,Now think of your experience as a father currently. Please rate how involved you think you are on...-I tell my children that I love them
+NA,NA,TRUE,FALSE,NA,NA,Now think of your experience as a father currently. Please rate how involved you think you are on...-I know where my children go and what they do with their friends
+NA,NA,TRUE,FALSE,NA,NA,Now think of your experience as a father currently. Please rate how involved you think you are on...-I spend time just talking with my children when they want to talk about something
+NA,NA,TRUE,FALSE,NA,NA,Now think of your experience as a father currently. Please rate how involved you think you are on...-I cooperate with my children's mother in the rearing of my children
+NA,NA,TRUE,FALSE,NA,NA,Now think of your experience as a father currently. Please rate how involved you think you are on...-I read to my younger children
+NA,NA,TRUE,FALSE,NA,NA,Now think of your experience as a father currently. Please rate how involved you think you are on...-I teach my children to follow rules at school
+NA,NA,TRUE,FALSE,NA,NA,Now think of your experience as a father currently. Please rate how involved you think you are on...-I encourage my children to continue schooling beyond high school
+NA,NA,TRUE,FALSE,NA,NA,Now think of your experience as a father currently. Please rate how involved you think you are on...-I discipline my children
+NA,NA,TRUE,FALSE,NA,NA,Now think of your experience as a father currently. Please rate how involved you think you are on...-I help my older children with their homework
+NA,NA,TRUE,FALSE,NA,NA,Now think of your experience as a father currently. Please rate how involved you think you are on...-I plan for my children's future
+NA,NA,TRUE,FALSE,NA,NA,"Now think of your experience as a father currently. Please rate how involved you think you are on...-I encourage my children to develop their talents (music, athletics, art, etc.)"
+NA,NA,TRUE,FALSE,NA,NA,Now think of your experience as a father currently. Please rate how involved you think you are on...-I spend time with my children doing things they like to do
+NA,NA,TRUE,FALSE,NA,NA,Now think of your experience as a father currently. Please rate how involved you think you are on...-I encourage my children to do their chores
+NA,NA,TRUE,FALSE,NA,NA,Now think of your experience as a father currently. Please rate how involved you think you are on...-I set rules and limits for my children's behavior
+NA,NA,TRUE,FALSE,NA,NA,Use the scale provided to answer the questions below:-How satisfied are you with your children's behavior?
+NA,NA,TRUE,FALSE,NA,NA,Use the scale provided to answer the questions below:-How satisfied are you with yourself as a parent?
+NA,NA,TRUE,FALSE,NA,NA,Use the scale provided to answer the questions below:-How satisfied are you with your relationship(s) with your children?
+NA,NA,TRUE,FALSE,NA,NA,"If you want to be eligible for one of two $50 gift cards to a local retailer, you must provide yo..."
