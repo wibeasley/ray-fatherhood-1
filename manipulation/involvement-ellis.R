@@ -16,26 +16,91 @@ requireNamespace("readr")
 requireNamespace("tidyr")
 requireNamespace("dplyr") #Avoid attaching dplyr, b/c its function names conflict with a lot of packages (esp base, stats, and plyr).
 requireNamespace("testit") #For asserting conditions meet expected patterns.
+requireNamespace("tibble")
 requireNamespace("car") #For it's `recode()` function.
 
 # ---- declare-globals ---------------------------------------------------------
 # Constant values that won't change.
-path_in                        <- "data-unshared/raw/Father Involvement - Raw Data.csv"
+path_in                        <- "data-unshared/raw/Father_Involvement.csv"
+path_in_translator             <- "data-phi-free/raw/variable-translator.csv"
 path_out                       <- "data-unshared/derived/involvement.csv"
 figure_path                    <- 'manipulation/stitched-output/father-involvement/'
 
 # URIs of CSV and County lookup table
-path_variable_translator       <- "./data-phi-free/raw/variable-translator.csv"
+# path_variable_translator       <- "./data-phi-free/raw/variable-translator.csv"
 
+sections_to_summarize <- c("autonomy", "competency", "relatedness", "motivation", "involvement", "satisfaction")
+# ds_item_group <- tibble::frame_data(
+  # ~
+# )
+# bad_characters <-
 # ---- load-data ---------------------------------------------------------------
 # Read the CSVs
-ds                      <- readr::read_csv(path_in, skip=1)
-# ds_county               <- readr::read_csv(path_county)
+ds_wide_1                      <- readr::read_csv(path_in, skip=1)
+ds_translator                  <- readr::read_csv(path_in_translator)
 
-rm(path_in)
+rm(path_in, path_in_translator)
 
+# iconv(colnames(ds_wide_1), "latin1", "ASCII")
 
 # ---- tweak-data --------------------------------------------------------------
+# ds_translator <- ds_translator %>%
+#   dplyr::mutate(
+#     slope        = ifelse(is.na(slope)    , 1, slope),
+#     intercept    = ifelse(is.na(intercept), 0, intercept)
+#   )
+
+
+
+# ---- rename-items --------------------------------------------------------------
+testit::assert("The count of variables should match the translator.", nrow(ds_translator)==length(colnames(ds_wide_1)))
+colnames(ds_wide_1) <- ds_translator$variable
+
+ds_wide_1 <- ds_wide_1[ , !duplicated(colnames(ds_wide_1))]
+
+
+columns_to_keep <- ds_translator$variable[ds_translator$retain]
+
+ds_wide_1 <- ds_wide_1 %>%
+  dplyr::select_(.dots=columns_to_keep) %>%
+  dplyr::select(-response_id) %>%
+  # dplyr::rename_(
+  #   "response_tag"    = "response_id"
+  # ) %>%
+  dplyr::mutate(
+    response_id          = seq_len(n()),
+    one_child_at_least   = as.logical(car::recode(one_child_at_least    , "1='TRUE'; else='FALSE'"       )),
+    live_with_mother     = as.logical(car::recode(live_with_mother      , "1='TRUE'; else='FALSE'"       )),
+    is_married           = as.logical(car::recode(is_married            , "1='TRUE'; else='FALSE'"       ))
+  ) %>%
+  dplyr::filter(
+    !is.na(one_child_at_least) & one_child_at_least &  #Drop if not 'yes'
+      !is.na(live_with_child) & live_with_child &      #Drop if not 'yes'
+      !is.na(is_married) & is_married                  #Drop if not 'yes'
+  )
+table(ds_wide_1$sexual_orientation)
+
+# ---- weight-items --------------------------------------------------------------
+
+ds_long_item <- tidyr::gather(ds_wide_1, key="item", value="response_unweighted", -response_id) %>%
+  dplyr::left_join(ds_translator, by=c("item"="variable")) %>%
+  dplyr::filter(section %in% sections_to_summarize) %>%
+  dplyr::select(-label) %>%
+  dplyr::mutate(
+    response_unweighted    = as.integer(response_unweighted),
+    response_weighted      = ifelse(!is.na(slope), intercept + slope*response_unweighted, response_unweighted)
+  )
+
+ds_long_scale <- ds_long_item %>%
+  dplyr::group_by(response_id, section) %>%
+  dplyr::summarize(
+    section_mean            = mean(response_weighted, na.rm=T),
+    section_response_count  = sum(!is.na(response_weighted)),
+    section_item_count      = n()
+  ) %>%
+  dplyr::ungroup()
+
+# ---- aggreate-scales --------------------------------------------------------------
 
 
 # ---- verify-values -----------------------------------------------------------
@@ -45,7 +110,7 @@ rm(path_in)
 
 
 # ---- save-to-disk ------------------------------------------------------------
-readr::write_csv(ds, path_out)
+# readr::write_csv(ds_wide_2, path_out)
 
 
 # ---- save-metadata-skeleton --------------------------------------------------
