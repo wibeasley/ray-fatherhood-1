@@ -1,4 +1,4 @@
-variable,section,retain,reverse_code,reverse_intercept,reverse_slope,label
+variable,section,retain,reverse_code,intercept,slope,label
 response_id,plumbing,TRUE,FALSE,NA,NA,ResponseID
 response_set,plumbing,TRUE,FALSE,NA,NA,ResponseSet
 na,plumbing,FALSE,FALSE,NA,NA,Name
@@ -104,51 +104,51 @@ father_psychological_needs,relatedness,TRUE,FALSE,NA,NA,For the following items 
 father_response_time,relatedness,TRUE,FALSE,NA,NA,For the following items place the letter that indicates your feelings in the blank.-It is important to respond quickly to a young a baby each time it cries.
 father_nurture_six_months,relatedness,TRUE,FALSE,NA,NA,For the following items place the letter that indicates your feelings in the blank.-The way a father treats his baby in the first six months has important life-long effects on the child.
 father_reward,relatedness,TRUE,FALSE,NA,NA,"For the following items place the letter that indicates your feelings in the blank.-All things considered, fatherhood is a highly rewarding experience."
-teach_responsibility_zero,motivation,TRUE,FALSE,NA,NA,Do you participate in teaching your child responsibility?
-teach_responsibility_enjoyment,motivation,TRUE,FALSE,NA,NA,�Why do you participate in teaching your child responsibility?-Because I enjoy it
-teach_responsibility_important,motivation,TRUE,FALSE,NA,NA,�Why do you participate in teaching your child responsibility?-Because it's important to me
-teach_responsibility_others,motivation,TRUE,FALSE,NA,NA,�Why do you participate in teaching your child responsibility?-Because I want others to think I'm a good father
-teach_responsibility_obligation,motivation,TRUE,FALSE,NA,NA,�Why do you participate in teaching your child responsibility?-Because that's what I'm supposed to do as a father
-school_encourage_zero,motivation,TRUE,FALSE,NA,NA,Do you participate in encouraging your child with school?
-school_encouragement_enjoyment,motivation,TRUE,FALSE,NA,NA,Why do you participate in encouraging your child with school?-Because I enjoy it
-school_encouragement_important,motivation,TRUE,FALSE,NA,NA,Why do you participate in encouraging your child with school?-Because it's important to me
-school_encouragement_others,motivation,TRUE,FALSE,NA,NA,Why do you participate in encouraging your child with school?-Because I want others to think I'm a good father
-school_encouragement_obligation,motivation,TRUE,FALSE,NA,NA,Why do you participate in encouraging your child with school?-Because that's what I'm supposed to do as a father
-support_mother_zero,motivation,TRUE,FALSE,NA,NA,Do you support your child's mother?
-support_mother_enjoyment,motivation,TRUE,FALSE,NA,NA,Why do you support your child's mother?-Because I enjoy it
-support_mother_important,motivation,TRUE,FALSE,NA,NA,Why do you support your child's mother?-Because it's important to me
-support_mother_others,motivation,TRUE,FALSE,NA,NA,Why do you support your child's mother?-Because I want others to think I'm a good father
-support_mother_obligation,motivation,TRUE,FALSE,NA,NA,Why do you support your child's mother?-Because that's what I'm supposed to do as a father
-provide_zero,motivation,TRUE,FALSE,NA,NA,Do you provide for your children?
-provide_enjoyment,motivation,TRUE,FALSE,NA,NA,Why do you provide for your children?-Because I enjoy it
-provide_important,motivation,TRUE,FALSE,NA,NA,Why do you provide for your children?-Because it's important to me
-provide_others,motivation,TRUE,FALSE,NA,NA,Why do you provide for your children?-Because I want others to think I'm a good father
-provide_obligation,motivation,TRUE,FALSE,NA,NA,Why do you provide for your children?-Because that's what I'm supposed to do as a father
-talking_child_zero,motivation,TRUE,FALSE,NA,NA,Do you spend time with your children talking and getting to know them?
-talking_child_enjoyment,motivation,TRUE,FALSE,NA,NA,Why do you spend time with your children talking and getting to know them?-Because I enjoy it
-talking_child_important,motivation,TRUE,FALSE,NA,NA,Why do you spend time with your children talking and getting to know them?-Because it's important to me
-talking_child_others,motivation,TRUE,FALSE,NA,NA,Why do you spend time with your children talking and getting to know them?-Because I want others to think I'm a good father
-talking_child_obligation,motivation,TRUE,FALSE,NA,NA,Why do you spend time with your children talking and getting to know them?-Because that's what I'm supposed to do as a father
-praise_child_zero,motivation,TRUE,FALSE,NA,NA,Do you give your kids praise and attention?
-praise_child_enjoyment,motivation,TRUE,FALSE,NA,NA,Why do you give your kids praise and affection?-Because I enjoy it
-praise_child_important,motivation,TRUE,FALSE,NA,NA,Why do you give your kids praise and affection?-Because it's important to me
-praise_child_others,motivation,TRUE,FALSE,NA,NA,Why do you give your kids praise and affection?-Because I want others to think I'm a good father
-praise_child_obligation,motivation,TRUE,FALSE,NA,NA,Why do you give your kids praise and affection?-Because that's what I'm supposed to do as a father
-talent_future_zero,motivation,TRUE,FALSE,NA,NA,Do you spend time helping your child(ren) develop their talents and prepare for future concerns?
-talent_future_enjoyment,motivation,TRUE,FALSE,NA,NA,Why do you spend time helping your child(ren) develop their talents and prepare for future concerns?-Because I enjoy it
-talent_future_important,motivation,TRUE,FALSE,NA,NA,Why do you spend time helping your child(ren) develop their talents and prepare for future concerns?-Because it's important to me
-talent_future_others,motivation,TRUE,FALSE,NA,NA,Why do you spend time helping your child(ren) develop their talents and prepare for future concerns?-Because I want others to think I'm a good father
-talent_future_obligation,motivation,TRUE,FALSE,NA,NA,Why do you spend time helping your child(ren) develop their talents and prepare for future concerns?-Because that's what I'm supposed to do as a father
-reading_support_zero,motivation,TRUE,FALSE,NA,NA,Do you engage in homework and reading support with your child?
-reading_support_enjoyment,motivation,TRUE,FALSE,NA,NA,Why do you engage in homework and reading support with your child?-Because I enjoy it
-reading_support_important,motivation,TRUE,FALSE,NA,NA,Why do you engage in homework and reading support with your child?-Because it's important to me
-reading_support_others,motivation,TRUE,FALSE,NA,NA,Why do you engage in homework and reading support with your child?-Because I want others to think I'm a good father
-reading_support_obligation,motivation,TRUE,FALSE,NA,NA,Why do you engage in homework and reading support with your child?-Because that's what I'm supposed to do as a father
-attention_zero,motivation,TRUE,FALSE,NA,NA,Do you give your child attention?
-attention_enjoyment,motivation,TRUE,FALSE,NA,NA,Why do you give your child attention?-Because I enjoy it
-attention_important,motivation,TRUE,FALSE,NA,NA,Why do you give your child attention?-Because it's important to me
-attention_others,motivation,TRUE,FALSE,NA,NA,Why do you give your child attention?-Because I want others to think I'm a good father
-attention_obligation,motivation,TRUE,FALSE,NA,NA,Why do you give your child attention?-Because that's what I'm supposed to do as a father
+teach_responsibility_zero,motivation,TRUE,FALSE,0,-3,Do you participate in teaching your child responsibility?
+teach_responsibility_enjoyment,motivation,TRUE,FALSE,0,2,�Why do you participate in teaching your child responsibility?-Because I enjoy it
+teach_responsibility_important,motivation,TRUE,FALSE,0,1,�Why do you participate in teaching your child responsibility?-Because it's important to me
+teach_responsibility_others,motivation,TRUE,FALSE,0,-1,�Why do you participate in teaching your child responsibility?-Because I want others to think I'm a good father
+teach_responsibility_obligation,motivation,TRUE,FALSE,0,-2,�Why do you participate in teaching your child responsibility?-Because that's what I'm supposed to do as a father
+school_encourage_zero,motivation,TRUE,FALSE,0,-3,Do you participate in encouraging your child with school?
+school_encouragement_enjoyment,motivation,TRUE,FALSE,0,2,Why do you participate in encouraging your child with school?-Because I enjoy it
+school_encouragement_important,motivation,TRUE,FALSE,0,1,Why do you participate in encouraging your child with school?-Because it's important to me
+school_encouragement_others,motivation,TRUE,FALSE,0,-1,Why do you participate in encouraging your child with school?-Because I want others to think I'm a good father
+school_encouragement_obligation,motivation,TRUE,FALSE,0,-2,Why do you participate in encouraging your child with school?-Because that's what I'm supposed to do as a father
+support_mother_zero,motivation,TRUE,FALSE,0,-3,Do you support your child's mother?
+support_mother_enjoyment,motivation,TRUE,FALSE,0,2,Why do you support your child's mother?-Because I enjoy it
+support_mother_important,motivation,TRUE,FALSE,0,1,Why do you support your child's mother?-Because it's important to me
+support_mother_others,motivation,TRUE,FALSE,0,-1,Why do you support your child's mother?-Because I want others to think I'm a good father
+support_mother_obligation,motivation,TRUE,FALSE,0,-2,Why do you support your child's mother?-Because that's what I'm supposed to do as a father
+provide_zero,motivation,TRUE,FALSE,0,-3,Do you provide for your children?
+provide_enjoyment,motivation,TRUE,FALSE,0,2,Why do you provide for your children?-Because I enjoy it
+provide_important,motivation,TRUE,FALSE,0,1,Why do you provide for your children?-Because it's important to me
+provide_others,motivation,TRUE,FALSE,0,-1,Why do you provide for your children?-Because I want others to think I'm a good father
+provide_obligation,motivation,TRUE,FALSE,0,-2,Why do you provide for your children?-Because that's what I'm supposed to do as a father
+talking_child_zero,motivation,TRUE,FALSE,0,-3,Do you spend time with your children talking and getting to know them?
+talking_child_enjoyment,motivation,TRUE,FALSE,0,2,Why do you spend time with your children talking and getting to know them?-Because I enjoy it
+talking_child_important,motivation,TRUE,FALSE,0,1,Why do you spend time with your children talking and getting to know them?-Because it's important to me
+talking_child_others,motivation,TRUE,FALSE,0,-1,Why do you spend time with your children talking and getting to know them?-Because I want others to think I'm a good father
+talking_child_obligation,motivation,TRUE,FALSE,0,-2,Why do you spend time with your children talking and getting to know them?-Because that's what I'm supposed to do as a father
+praise_child_zero,motivation,TRUE,FALSE,0,-3,Do you give your kids praise and attention?
+praise_child_enjoyment,motivation,TRUE,FALSE,0,2,Why do you give your kids praise and affection?-Because I enjoy it
+praise_child_important,motivation,TRUE,FALSE,0,1,Why do you give your kids praise and affection?-Because it's important to me
+praise_child_others,motivation,TRUE,FALSE,0,-1,Why do you give your kids praise and affection?-Because I want others to think I'm a good father
+praise_child_obligation,motivation,TRUE,FALSE,0,-2,Why do you give your kids praise and affection?-Because that's what I'm supposed to do as a father
+talent_future_zero,motivation,TRUE,FALSE,0,-3,Do you spend time helping your child(ren) develop their talents and prepare for future concerns?
+talent_future_enjoyment,motivation,TRUE,FALSE,0,2,Why do you spend time helping your child(ren) develop their talents and prepare for future concerns?-Because I enjoy it
+talent_future_important,motivation,TRUE,FALSE,0,1,Why do you spend time helping your child(ren) develop their talents and prepare for future concerns?-Because it's important to me
+talent_future_others,motivation,TRUE,FALSE,0,-1,Why do you spend time helping your child(ren) develop their talents and prepare for future concerns?-Because I want others to think I'm a good father
+talent_future_obligation,motivation,TRUE,FALSE,0,-2,Why do you spend time helping your child(ren) develop their talents and prepare for future concerns?-Because that's what I'm supposed to do as a father
+reading_support_zero,motivation,TRUE,FALSE,0,-3,Do you engage in homework and reading support with your child?
+reading_support_enjoyment,motivation,TRUE,FALSE,0,2,Why do you engage in homework and reading support with your child?-Because I enjoy it
+reading_support_important,motivation,TRUE,FALSE,0,1,Why do you engage in homework and reading support with your child?-Because it's important to me
+reading_support_others,motivation,TRUE,FALSE,0,-1,Why do you engage in homework and reading support with your child?-Because I want others to think I'm a good father
+reading_support_obligation,motivation,TRUE,FALSE,0,-2,Why do you engage in homework and reading support with your child?-Because that's what I'm supposed to do as a father
+attention_zero,motivation,TRUE,FALSE,0,-3,Do you give your child attention?
+attention_enjoyment,motivation,TRUE,FALSE,0,2,Why do you give your child attention?-Because I enjoy it
+attention_important,motivation,TRUE,FALSE,0,1,Why do you give your child attention?-Because it's important to me
+attention_others,motivation,TRUE,FALSE,0,-1,Why do you give your child attention?-Because I want others to think I'm a good father
+attention_obligation,motivation,TRUE,FALSE,0,-2,Why do you give your child attention?-Because that's what I'm supposed to do as a father
 attending_events,involvement,TRUE,FALSE,NA,NA,"Now think of your experience as a father currently. Please rate how involved you think you are on...-I attend events my children participate in (sports, school church events)"
 reading_encouragement,involvement,TRUE,FALSE,NA,NA,Now think of your experience as a father currently. Please rate how involved you think you are on...-I encourage my children to read
 provide_needs,involvement,TRUE,FALSE,NA,NA,"Now think of your experience as a father currently. Please rate how involved you think you are on...-I provide for my children's basic needs (shelter, health care, etc.)"
