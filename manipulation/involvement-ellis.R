@@ -23,13 +23,14 @@ requireNamespace("car") #For it's `recode()` function.
 # Constant values that won't change.
 path_in                        <- "data-unshared/raw/Father_Involvement.csv"
 path_in_translator             <- "data-phi-free/raw/variable-translator.csv"
-path_out                       <- "data-unshared/derived/involvement.csv"
+path_out                       <- "data-unshared/derived/involvement-subject.csv"
 figure_path                    <- 'manipulation/stitched-output/father-involvement/'
 
 # URIs of CSV and County lookup table
 # path_variable_translator       <- "./data-phi-free/raw/variable-translator.csv"
 
 sections_to_summarize <- c("autonomy", "competency", "relatedness", "motivation", "involvement", "satisfaction")
+section_minimum_to_retain <- 0.85 #If a subject's section has less than this much completed, it's set to missing/NA.
 # ds_item_group <- tibble::frame_data(
   # ~
 # )
@@ -82,7 +83,7 @@ table(ds_wide_1$sexual_orientation)
 
 # ---- weight-items --------------------------------------------------------------
 
-ds_long_item <- tidyr::gather(ds_wide_1, key="item", value="response_unweighted", -response_id) %>%
+ds_item <- tidyr::gather(ds_wide_1, key="item", value="response_unweighted", -response_id) %>%
   dplyr::left_join(ds_translator, by=c("item"="variable")) %>%
   dplyr::filter(section %in% sections_to_summarize) %>%
   dplyr::select(-label) %>%
@@ -91,26 +92,56 @@ ds_long_item <- tidyr::gather(ds_wide_1, key="item", value="response_unweighted"
     response_weighted      = ifelse(!is.na(slope), intercept + slope*response_unweighted, response_unweighted)
   )
 
-ds_long_scale <- ds_long_item %>%
+# ---- aggreate-scales --------------------------------------------------------------
+ds_scale <- ds_item %>%
   dplyr::group_by(response_id, section) %>%
   dplyr::summarize(
-    section_mean            = mean(response_weighted, na.rm=T),
     section_response_count  = sum(!is.na(response_weighted)),
-    section_item_count      = n()
+    section_item_count      = n(),
+    complete_proportion     = section_response_count / section_item_count,
+    section_mean            = mean(response_weighted, na.rm=TRUE),
+    section_mean            = ifelse(section_minimum_to_retain<complete_proportion, section_mean, NA_real_)
+  ) %>%
+  dplyr::ungroup() #%>%
+# dplyr::filter(0.85<complete_proportion) %>%
+
+
+# ---- widen -------------------------------------------------------------------
+
+ds_wide_2a <- ds_scale %>%
+  dplyr::group_by(response_id) %>%
+  dplyr::summarize(
+    section_complete_count  = sum(!is.na(section_mean))
   ) %>%
   dplyr::ungroup()
 
-# ---- aggreate-scales --------------------------------------------------------------
+ds_wide_2b <- ds_scale %>%
+  dplyr::select(response_id, section, section_mean) %>%
+  tidyr::spread(section, section_mean)
 
+ds_wide_2 <- ds_wide_1 %>%
+  dplyr::select_(
+    "response_id", "one_child_at_least", "live_with_child", "sexual_orientation",
+    "live_with_mother", "is_married", "married_duration", "education",
+    "age", "income_category", "child_in_home_count", "race", #"race_other",
+    "religion",
+    # "relation_biodad", "relation_step", "relation_adoptive", "relation_other", "relation_other_text",
+    "work_hours_outside", "work_hours_spouse_outside"
+  ) %>%
+  dplyr::left_join(ds_wide_2a, by="response_id") %>%
+  dplyr::left_join(ds_wide_2b, by="response_id")
+
+table(ds_wide_2$section_complete_count)
 
 # ---- verify-values -----------------------------------------------------------
+testit::assert("All `response_id` values should be nonmissing.", sum(is.na(ds_wide_2$response_id))==0L)
 
 
 # ---- specify-columns-to-upload -----------------------------------------------
 
 
 # ---- save-to-disk ------------------------------------------------------------
-# readr::write_csv(ds_wide_2, path_out)
+readr::write_csv(ds_wide_2, path_out)
 
 
 # ---- save-metadata-skeleton --------------------------------------------------
