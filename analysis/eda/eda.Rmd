@@ -65,9 +65,11 @@ read_chunk("./analysis/eda/eda.R") #This allows knitr to call chunks tagged in t
 ### Unanswered questions
 
 
-
-
 # Marginals
 ```{r marginals, echo=echoChunks, results='show', message = FALSE}
+```
+
+# Scatterplots
+```{r scatterplots, echo=echoChunks, results='show', message = FALSE, fig.width=9, fig.height=9}
 ```
 

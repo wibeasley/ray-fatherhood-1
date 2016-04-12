@@ -64,3 +64,23 @@ TabularManifest::histogram_continuous(ds, "involvement"    , bin_width=.2    , r
 TabularManifest::histogram_continuous(ds, "motivation"     , bin_width=.2    , rounded_digits = 1)
 TabularManifest::histogram_continuous(ds, "relatedness"    , bin_width=.2    , rounded_digits = 1)
 TabularManifest::histogram_continuous(ds, "satisfaction"   , bin_width=.5    , rounded_digits = 1)
+
+
+# ---- scatterplots --------------------------------------------------------------
+# ggplot(ds, aes(x = autonomy))
+
+panel.hist <- function(x, ...) {
+  usr <- par("usr")
+  on.exit(par(usr))
+  par(usr=c(usr[1:2], 0, 1.5))
+
+  h <- hist(x, plot=F)
+  breaks <- h$breaks
+  nB <- length(breaks)
+  y <- h$counts
+  y <- y/max(y)
+  rect(breaks[-nB], 0, breaks[-1], y, col="white", ...)
+}
+pairs(x=ds[, c("autonomy", "competency", "involvement", "motivation", "relatedness", "satisfaction" )], lower.panel=panel.smooth, upper.panel=panel.smooth, diag.panel=panel.hist)
+
+
