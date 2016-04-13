@@ -7,7 +7,7 @@ rm(list=ls(all=TRUE)) #Clear the memory of variables from previous run. This is 
 
 
 # ---- load-packages -----------------------------------------------------------
-# library(ggplot2) #For graphing
+library(ggplot2) #For graphing
 library(magrittr)
 requireNamespace("readr")
 requireNamespace("knitr")
@@ -94,10 +94,8 @@ panel.cor <- function(x, y, digits = 2, prefix = "", cex.cor, ...) {
 }
 pairs(x=ds[, c("autonomy", "competency", "relatedness", "motivation_internal", "motivation_external", "involvement", "satisfaction" )], lower.panel=panel.smooth, upper.panel=panel.cor, diag.panel=panel.hist)
 
-
 pairs(x=ds[, c("autonomy", "competency", "relatedness", "motivation_internal", "motivation_external")], lower.panel=panel.smooth, upper.panel=panel.cor, diag.panel=panel.hist)
-
 pairs(x=ds[, c("motivation_internal", "motivation_external", "involvement", "satisfaction" )], lower.panel=panel.smooth, upper.panel=panel.cor, diag.panel=panel.hist)
 
 
-
+# grep(" colnames(ds)

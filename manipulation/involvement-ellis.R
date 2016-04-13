@@ -1,4 +1,4 @@
-# knitr::stitch_rmd(script="./manipulation/te-ellis.R", output="./manipulation/stitched-output/te-ellis.md")
+# knitr::stitch_rmd(script="./manipulation/involvement-ellis.R", output="./manipulation/stitched-output/involvement-ellis.md")
 # For a brief description of this file see the presentation at
 #   - slides: https://rawgit.com/wibeasley/RAnalysisSkeleton/master/documentation/time-and-effort-synthesis.html#/
 #   - code: https://github.com/wibeasley/RAnalysisSkeleton/blob/master/documentation/time-and-effort-synthesis.Rpres
@@ -156,3 +156,38 @@ readr::write_csv(ds_wide_2, path_out)
 #   label             = colnames(ds)
 # )
 # readr::write_csv(ds_column, path_variable_translator)
+
+
+# ---- scatterplots --------------------------------------------------------------
+# ggplot(ds, aes(x = autonomy))
+
+panel.hist <- function(x, ...) {
+  usr <- par("usr")
+  on.exit(par(usr))
+  par(usr=c(usr[1:2], 0, 1.5))
+
+  h <- hist(x, plot=F)
+  breaks <- h$breaks
+  nB <- length(breaks)
+  y <- h$counts
+  y <- y/max(y)
+  rect(breaks[-nB], 0, breaks[-1], y, col="white", ...)
+}
+panel.cor <- function(x, y, digits = 2, prefix = "", cex.cor, ...) {
+  usr <- par("usr"); on.exit(par(usr))
+  par(usr = c(0, 1, 0, 1))
+  r <- abs(cor(x, y))
+  txt <- format(c(r, 0.123456789), digits = digits)[1]
+  txt <- paste0(prefix, txt)
+  if(missing(cex.cor)) cex.cor <- 0.8/strwidth(txt)
+  text(0.5, 0.5, txt, cex = cex.cor * (r)^.2)
+}
+
+
+cor(ds_wide_1[, ds_translator$variable[ds_translator$section==sections_to_summarize[1]]], use="pairwise.complete.obs")
+cor(ds_wide_1[, ds_translator$variable[ds_translator$section==sections_to_summarize[2]]], use="pairwise.complete.obs")
+cor(ds_wide_1[, ds_translator$variable[ds_translator$section==sections_to_summarize[3]]], use="pairwise.complete.obs")
+cor(ds_wide_1[, ds_translator$variable[ds_translator$section==sections_to_summarize[4]]], use="pairwise.complete.obs")
+cor(ds_wide_1[, ds_translator$variable[ds_translator$section==sections_to_summarize[5]]], use="pairwise.complete.obs")
+cor(ds_wide_1[, ds_translator$variable[ds_translator$section==sections_to_summarize[6]]], use="pairwise.complete.obs")
+cor(ds_wide_1[, ds_translator$variable[ds_translator$section==sections_to_summarize[7]]], use="pairwise.complete.obs")
