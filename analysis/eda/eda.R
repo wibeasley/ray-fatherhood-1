@@ -31,7 +31,7 @@ rm(path_input)
 
 # ---- tweak-data --------------------------------------------------------------
 ds <- ds %>%
-  dplyr::filter(section_complete_count == 6L) %>%
+  dplyr::filter(section_complete_count == 7L) %>%
   as.data.frame()
 
 # ---- singular-columns --------------------------------------------------------
@@ -48,7 +48,7 @@ TabularManifest::histogram_discrete(ds, "live_with_child")
 TabularManifest::histogram_discrete(ds, "sexual_orientation")
 TabularManifest::histogram_discrete(ds, "live_with_mother")
 TabularManifest::histogram_discrete(ds, "is_married")
-TabularManifest::histogram_discrete(ds, "married_duration")
+TabularManifest::histogram_discrete(ds, "married_duration", main_title="Years Married")
 TabularManifest::histogram_discrete(ds, "education")
 TabularManifest::histogram_discrete(ds, "age")
 TabularManifest::histogram_discrete(ds, "income_category")
@@ -61,7 +61,9 @@ TabularManifest::histogram_discrete(ds, "section_complete_count")
 TabularManifest::histogram_continuous(ds, "autonomy"       , bin_width=.1    , rounded_digits = 1)
 TabularManifest::histogram_continuous(ds, "competency"     , bin_width=.25   , rounded_digits = 1)
 TabularManifest::histogram_continuous(ds, "involvement"    , bin_width=.2    , rounded_digits = 1)
-TabularManifest::histogram_continuous(ds, "motivation"     , bin_width=.2    , rounded_digits = 1)
+TabularManifest::histogram_continuous(ds, "motivation_internal"     , bin_width=.2    , rounded_digits = 1)
+TabularManifest::histogram_continuous(ds, "motivation_external"     , bin_width=.2    , rounded_digits = 1)
+# TabularManifest::histogram_continuous(ds, "motivation"     , bin_width=.2    , rounded_digits = 1)
 TabularManifest::histogram_continuous(ds, "relatedness"    , bin_width=.2    , rounded_digits = 1)
 TabularManifest::histogram_continuous(ds, "satisfaction"   , bin_width=.5    , rounded_digits = 1)
 
@@ -81,6 +83,21 @@ panel.hist <- function(x, ...) {
   y <- y/max(y)
   rect(breaks[-nB], 0, breaks[-1], y, col="white", ...)
 }
-pairs(x=ds[, c("autonomy", "competency", "involvement", "motivation", "relatedness", "satisfaction" )], lower.panel=panel.smooth, upper.panel=panel.smooth, diag.panel=panel.hist)
+panel.cor <- function(x, y, digits = 2, prefix = "", cex.cor, ...) {
+  usr <- par("usr"); on.exit(par(usr))
+  par(usr = c(0, 1, 0, 1))
+  r <- abs(cor(x, y))
+  txt <- format(c(r, 0.123456789), digits = digits)[1]
+  txt <- paste0(prefix, txt)
+  if(missing(cex.cor)) cex.cor <- 0.8/strwidth(txt)
+  text(0.5, 0.5, txt, cex = cex.cor * (r)^.2)
+}
+pairs(x=ds[, c("autonomy", "competency", "relatedness", "motivation_internal", "motivation_external", "involvement", "satisfaction" )], lower.panel=panel.smooth, upper.panel=panel.cor, diag.panel=panel.hist)
+
+
+pairs(x=ds[, c("autonomy", "competency", "relatedness", "motivation_internal", "motivation_external")], lower.panel=panel.smooth, upper.panel=panel.cor, diag.panel=panel.hist)
+
+pairs(x=ds[, c("motivation_internal", "motivation_external", "involvement", "satisfaction" )], lower.panel=panel.smooth, upper.panel=panel.cor, diag.panel=panel.hist)
+
 
 
