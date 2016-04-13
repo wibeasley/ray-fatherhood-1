@@ -29,7 +29,7 @@ figure_path                    <- 'manipulation/stitched-output/father-involveme
 # URIs of CSV and County lookup table
 # path_variable_translator       <- "./data-phi-free/raw/variable-translator.csv"
 
-sections_to_summarize <- c("autonomy", "competency", "relatedness", "motivation", "involvement", "satisfaction")
+sections_to_summarize <- c("autonomy", "competency", "relatedness", "motivation_internal", "motivation_external", "involvement", "satisfaction")
 section_minimum_to_retain <- 0.85 #If a subject's section has less than this much completed, it's set to missing/NA.
 # ds_item_group <- tibble::frame_data(
   # ~
@@ -83,7 +83,8 @@ table(ds_wide_1$sexual_orientation)
 
 # ---- weight-items --------------------------------------------------------------
 
-ds_item <- tidyr::gather(ds_wide_1, key="item", value="response_unweighted", -response_id) %>%
+ds_item <- ds_wide_1 %>%
+  tidyr::gather(key="item", value="response_unweighted", -response_id) %>%
   dplyr::left_join(ds_translator, by=c("item"="variable")) %>%
   dplyr::filter(section %in% sections_to_summarize) %>%
   dplyr::select(-label) %>%
