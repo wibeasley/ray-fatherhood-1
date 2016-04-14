@@ -18,6 +18,7 @@ requireNamespace("dplyr") #Avoid attaching dplyr, b/c its function names conflic
 requireNamespace("testit") #For asserting conditions meet expected patterns.
 requireNamespace("tibble")
 requireNamespace("car") #For it's `recode()` function.
+requireNamespace("psych") #For item reliably
 
 # ---- declare-globals ---------------------------------------------------------
 # Constant values that won't change.
@@ -173,6 +174,8 @@ readr::write_csv(ds_wide_2, path_out)
 
 
 # ---- scatterplots --------------------------------------------------------------
+
+cat("############### Stuff below this line ideally doesn't stay in an Ellis ############")
 # ggplot(ds, aes(x = autonomy))
 
 panel.hist <- function(x, ...) {
@@ -197,11 +200,9 @@ panel.cor <- function(x, y, digits = 2, prefix = "", cex.cor, ...) {
   text(0.5, 0.5, txt, cex = cex.cor * (r)^.2)
 }
 
-
-cor(ds_wide_1[, ds_translator$variable[ds_translator$section==sections_to_summarize[1]]], use="pairwise.complete.obs")
-cor(ds_wide_1[, ds_translator$variable[ds_translator$section==sections_to_summarize[2]]], use="pairwise.complete.obs")
-cor(ds_wide_1[, ds_translator$variable[ds_translator$section==sections_to_summarize[3]]], use="pairwise.complete.obs")
-cor(ds_wide_1[, ds_translator$variable[ds_translator$section==sections_to_summarize[4]]], use="pairwise.complete.obs")
-cor(ds_wide_1[, ds_translator$variable[ds_translator$section==sections_to_summarize[5]]], use="pairwise.complete.obs")
-cor(ds_wide_1[, ds_translator$variable[ds_translator$section==sections_to_summarize[6]]], use="pairwise.complete.obs")
-cor(ds_wide_1[, ds_translator$variable[ds_translator$section==sections_to_summarize[7]]], use="pairwise.complete.obs")
+# ---- revelle --------------------------------------------------------------
+sections_to_summarize
+lapply(1:7, function(scale) {
+  # cat("\n\n+++++++++++++++++++++++++ ", sections_to_summarize[scale], " ++++++++++++++++++++++++\n\n")
+  psych::alpha(cor(ds_wide_1[, ds_translator$variable[ds_translator$section==sections_to_summarize[scale]]], use="pairwise.complete.obs"))
+})
