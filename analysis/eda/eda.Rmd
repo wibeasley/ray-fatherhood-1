@@ -73,3 +73,10 @@ read_chunk("./analysis/eda/eda.R") #This allows knitr to call chunks tagged in t
 ```{r scatterplots, echo=echoChunks, results='show', message = FALSE, fig.width=9, fig.height=9}
 ```
 
+# Session Information
+For the sake of documentation and reproducibility, the current report was rendered on a system using the following software.
+
+```{r session-info-calendar, echo=FALSE}
+cat("Report rendered by", Sys.info()["user"], "at", strftime(Sys.time(), "%Y-%m-%d, %H:%M %z"))
+sessionInfo()
+```

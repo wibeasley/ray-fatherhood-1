@@ -59,8 +59,12 @@ colnames(ds_wide_1) <- ds_translator$variable
 
 ds_wide_1 <- ds_wide_1[ , !duplicated(colnames(ds_wide_1))]
 
+ds_translator <- ds_translator %>%
+  dplyr::filter(retain)
 
-columns_to_keep <- ds_translator$variable[ds_translator$retain]
+columns_to_keep <- ds_translator$variable
+
+# car::recode(ds_wide_1$work_hours_outside, "1='0'; 2='1-20'; 3='21-40'; 4='40+'")
 
 ds_wide_1 <- ds_wide_1 %>%
   dplyr::select_(.dots=columns_to_keep) %>%
@@ -72,7 +76,17 @@ ds_wide_1 <- ds_wide_1 %>%
     response_id          = seq_len(n()),
     one_child_at_least   = as.logical(car::recode(one_child_at_least    , "1='TRUE'; else='FALSE'"       )),
     live_with_mother     = as.logical(car::recode(live_with_mother      , "1='TRUE'; else='FALSE'"       )),
-    is_married           = as.logical(car::recode(is_married            , "1='TRUE'; else='FALSE'"       ))
+    is_married           = as.logical(car::recode(is_married            , "1='TRUE'; else='FALSE'"       )),
+    sexual_orientation   = car::recode(sexual_orientation    , "1='Heterosexual'; 2='Homosexual'; 3='Bisexual'"       ),
+    married_duration     = car::recode(married_duration,  "1='0-1 year'; 2='1-5 years'; 3='6-10 years'; 4='11-15 years'; 5='16-20 years'; 6='20+years'"),
+    education            = car::recode(education, "1='High school diploma or GED'; 2='Vocational-Technical Training'; 3='Associates Degree'; 4='College Graduate'; 5='Graduate School'" ),
+    age                  = car::recode(age, "1='18-25'; 2='26-40'; 3='41-55'; 4='56 or older'"),
+    income_category      = car::recode(income_category, "1='Less than $24,999'; 2='$25,000 to $49,999'; 3='$50,000 to $99,999'; 4='$100,000'"),
+    child_in_home_count  = car::recode(child_in_home_count,  "1='1'; 2='2'; 3='3'; 4='4 or more'"),
+    race                 = car::recode(race, "1='Black'; 2='Caucasian'; 3='Asian-American'; 4='American Indian'; 5='Hispanic'; 6='Other'"),
+    religion             = car::recode(religion, "1='Christian'; 2='Buddhist'; 3='Muslim'; 4='Hindu'; 5='American Indian spirituality/religion'; 6='Agnostic'; 7='Atheist'; 8='None'"),
+    work_hours_outside   = car::recode(work_hours_outside, "1='0'; 2='1-20'; 3='21-40'; 4='40+'"),
+    work_hours_spouse_outside   = car::recode(work_hours_spouse_outside ,  "1='0'; 2='1-20'; 3='21-40'; 4='40+'")
   ) %>%
   dplyr::filter(
     !is.na(one_child_at_least) & one_child_at_least &  #Drop if not 'yes'
