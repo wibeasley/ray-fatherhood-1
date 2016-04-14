@@ -56,7 +56,11 @@ model_dual_motivation <- '
    motivation_internal ~~ motivation_external
    involvement ~~ satisfaction
 '
-summary(sem(model_dual_motivation, data=ds))
+fit_dual_motivation <- sem(model_dual_motivation, data=ds)
+fitmeasures(fit_dual_motivation)
+summary(fit_dual_motivation)
+standardizedSolution(fit_dual_motivation)
+# sapply(ds, sd, na.rm=T)
 
 cat("Correlation between motivation_internal ~~ motivatn_xtrnl: ", 0.060/sqrt(0.185*0.594)) #0.1809973
 cat("Correlation between involvement ~~ satisfaction: ", 0.041/sqrt(.113*.288)) #0.2272733 =
@@ -74,6 +78,9 @@ model_single_motivation <- '
    # residual covariances
    involvement ~~ satisfaction
 '
-summary(sem(model_single_motivation, data=ds))
+fit_single_motivation <- sem(model_single_motivation, data=ds)
+fitmeasures(fit_single_motivation)
+summary(fit_single_motivation)
+standardizedSolution(fit_single_motivation)
 
 cat("Correlation between involvement ~~ satisfaction: ", 0.081/sqrt(0.160*0.322)) #0.3568594 =

@@ -35,6 +35,23 @@
 # Model (Motivation separated into two variables)
 
 ```
+               npar                fmin               chisq                  df              pvalue      baseline.chisq 
+             16.000               0.173              89.728               6.000               0.000             536.279 
+        baseline.df     baseline.pvalue                 cfi                 tli                nnfi                 rfi 
+             18.000               0.000               0.838               0.515               0.515               0.498 
+                nfi                pnfi                 ifi                 rni                logl   unrestricted.logl 
+              0.833               0.278               0.842               0.838           -1170.491           -1125.627 
+                aic                 bic              ntotal                bic2               rmsea      rmsea.ci.lower 
+           2372.983            2429.953             260.000            2379.227               0.232               0.191 
+     rmsea.ci.upper        rmsea.pvalue                 rmr          rmr_nomean                srmr        srmr_bentler 
+              0.275               0.000               0.030               0.030               0.095               0.095 
+srmr_bentler_nomean         srmr_bollen  srmr_bollen_nomean          srmr_mplus   srmr_mplus_nomean               cn_05 
+              0.095               0.095               0.095               0.095               0.095              37.486 
+              cn_01                 gfi                agfi                pgfi                 mfi                ecvi 
+             49.715               0.922               0.634               0.197               0.851               0.468 
+```
+
+```
 lavaan (0.5-20) converged normally after  28 iterations
 
   Number of observations                           260
@@ -82,6 +99,32 @@ Variances:
 ```
 
 ```
+                   lhs op                 rhs est.std    se      z pvalue
+1  motivation_internal  ~            autonomy  -0.058 0.052 -1.128  0.259
+2  motivation_internal  ~          competency   0.279 0.053  5.233  0.000
+3  motivation_internal  ~         relatedness   0.497 0.050  9.935  0.000
+4  motivation_external  ~            autonomy  -0.031 0.068 -0.454  0.650
+5  motivation_external  ~          competency   0.164 0.071  2.298  0.022
+6  motivation_external  ~         relatedness   0.062 0.074  0.844  0.399
+7          involvement  ~ motivation_internal   0.699 0.032 21.997  0.000
+8          involvement  ~ motivation_external   0.111 0.043  2.541  0.011
+9         satisfaction  ~ motivation_internal   0.456 0.050  9.033  0.000
+10        satisfaction  ~ motivation_external   0.033 0.057  0.576  0.564
+11 motivation_internal ~~ motivation_external   0.182 0.060  3.037  0.002
+12         involvement ~~        satisfaction   0.228 0.059  3.884  0.000
+13 motivation_internal ~~ motivation_internal   0.563 0.041 13.791  0.000
+14 motivation_external ~~ motivation_external   0.963 0.023 42.190  0.000
+15         involvement ~~         involvement   0.461 0.041 11.269  0.000
+16        satisfaction ~~        satisfaction   0.784 0.045 17.526  0.000
+17            autonomy ~~            autonomy   1.000 0.000     NA     NA
+18            autonomy ~~          competency   0.354 0.000     NA     NA
+19            autonomy ~~         relatedness   0.398 0.000     NA     NA
+20          competency ~~          competency   1.000 0.000     NA     NA
+21          competency ~~         relatedness   0.518 0.000     NA     NA
+22         relatedness ~~         relatedness   1.000 0.000     NA     NA
+```
+
+```
 Correlation between motivation_internal ~~ motivatn_xtrnl:  0.1809973
 ```
 
@@ -90,6 +133,23 @@ Correlation between involvement ~~ satisfaction:  0.2272733
 ```
 
 # Model (Motivation combined into one variable)
+
+```
+               npar                fmin               chisq                  df              pvalue      baseline.chisq 
+              9.000               0.277             143.934               6.000               0.000             394.096 
+        baseline.df     baseline.pvalue                 cfi                 tli                nnfi                 rfi 
+             12.000               0.000               0.639               0.278               0.278               0.270 
+                nfi                pnfi                 ifi                 rni                logl   unrestricted.logl 
+              0.635               0.317               0.645               0.639           -1127.842           -1055.875 
+                aic                 bic              ntotal                bic2               rmsea      rmsea.ci.lower 
+           2273.684            2305.730             260.000            2277.197               0.297               0.256 
+     rmsea.ci.upper        rmsea.pvalue                 rmr          rmr_nomean                srmr        srmr_bentler 
+              0.340               0.000               0.050               0.050               0.167               0.167 
+srmr_bentler_nomean         srmr_bollen  srmr_bollen_nomean          srmr_mplus   srmr_mplus_nomean               cn_05 
+              0.167               0.167               0.167               0.167               0.167              23.745 
+              cn_01                 gfi                agfi                pgfi                 mfi                ecvi 
+             31.369               0.872               0.551               0.249               0.767               0.623 
+```
 
 ```
 lavaan (0.5-20) converged normally after  22 iterations
@@ -130,6 +190,25 @@ Variances:
 ```
 
 ```
+            lhs op          rhs est.std    se      z pvalue
+1    motivation  ~     autonomy  -0.053 0.060 -0.881  0.378
+2    motivation  ~   competency   0.267 0.062  4.279  0.000
+3    motivation  ~  relatedness   0.308 0.063  4.898  0.000
+4   involvement  ~   motivation   0.592 0.040 14.741  0.000
+5  satisfaction  ~   motivation   0.352 0.054  6.489  0.000
+6   involvement ~~ satisfaction   0.357 0.054  6.591  0.000
+7    motivation ~~   motivation   0.769 0.043 17.824  0.000
+8   involvement ~~  involvement   0.650 0.047 13.694  0.000
+9  satisfaction ~~ satisfaction   0.876 0.038 22.944  0.000
+10     autonomy ~~     autonomy   1.000 0.000     NA     NA
+11     autonomy ~~   competency   0.354 0.000     NA     NA
+12     autonomy ~~  relatedness   0.398 0.000     NA     NA
+13   competency ~~   competency   1.000 0.000     NA     NA
+14   competency ~~  relatedness   0.518 0.000     NA     NA
+15  relatedness ~~  relatedness   1.000 0.000     NA     NA
+```
+
+```
 Correlation between involvement ~~ satisfaction:  0.3568594
 ```
 
@@ -138,7 +217,7 @@ For the sake of documentation and reproducibility, the current report was render
 
 
 ```
-Report rendered by Will at 2016-04-13, 21:55 -0500
+Report rendered by Will at 2016-04-13, 23:00 -0500
 ```
 
 ```
