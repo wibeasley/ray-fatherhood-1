@@ -24,12 +24,51 @@ library(magrittr, quietly=TRUE)
 
 # Verify these packages are available on the machine, but their functions need to be qualified: http://r-pkgs.had.co.nz/namespace.html#search-path
 requireNamespace("readr")
+```
+
+```
+## Loading required namespace: readr
+```
+
+```r
 requireNamespace("tidyr")
+```
+
+```
+## Loading required namespace: tidyr
+```
+
+```r
 requireNamespace("dplyr") #Avoid attaching dplyr, b/c its function names conflict with a lot of packages (esp base, stats, and plyr).
 requireNamespace("testit") #For asserting conditions meet expected patterns.
+```
+
+```
+## Loading required namespace: testit
+```
+
+```r
 requireNamespace("tibble")
+```
+
+```
+## Loading required namespace: tibble
+```
+
+```r
 requireNamespace("car") #For it's `recode()` function.
+```
+
+```
+## Loading required namespace: car
+```
+
+```r
 requireNamespace("psych") #For item reliably
+```
+
+```
+## Loading required namespace: psych
 ```
 
 ```r
@@ -1274,10 +1313,9 @@ sessionInfo()
 ## [19] mgcv_1.8-12        quantreg_5.21      psych_1.5.8       
 ## [22] DBI_0.3.1.9008     MatrixModels_0.4-1 lazyeval_0.1.10   
 ## [25] lme4_1.1-11        assertthat_0.1     tibble_1.0        
-## [28] Matrix_1.2-4       formatR_1.3        readr_0.2.2       
-## [31] nloptr_1.0.4       tidyr_0.4.1        rsconnect_0.4.2.1 
-## [34] evaluate_0.8.3     stringi_1.0-1      SparseM_1.7       
-## [37] markdown_0.7.7
+## [28] Matrix_1.2-4       nloptr_1.0.4       readr_0.2.2       
+## [31] formatR_1.3        tidyr_0.4.1        rsconnect_0.4.2.1 
+## [34] evaluate_0.8.3     stringi_1.0-1      SparseM_1.7
 ```
 
 ```r
@@ -1285,6 +1323,6 @@ Sys.time()
 ```
 
 ```
-## [1] "2016-04-14 21:46:28 CDT"
+## [1] "2016-04-15 10:03:58 CDT"
 ```
 
