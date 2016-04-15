@@ -32,8 +32,7 @@ figure_path                    <- 'manipulation/stitched-output/father-involveme
 
 sections_to_summarize <- c(
   "autonomy", "competency", "relatedness",
-  "motivation",
-  # "motivation_internal", "motivation_external",
+  "motivation_internal", "motivation_external",
   "involvement", "satisfaction"
 )
 names(sections_to_summarize) <- sections_to_summarize
