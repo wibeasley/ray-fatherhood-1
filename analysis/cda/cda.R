@@ -25,10 +25,10 @@ rm(path_input)
 
 # ---- tweak-data --------------------------------------------------------------
 ds <- ds %>%
-  dplyr::filter(section_complete_count == 7L) %>%
-  dplyr::mutate(
-    motivation   = motivation_internal + motivation_external
-  ) %>%
+  dplyr::filter(section_complete_count == 6L) %>%
+  # dplyr::mutate(
+  #   motivation   = motivation_internal + motivation_external
+  # ) %>%
   as.data.frame()
 
 
@@ -42,28 +42,28 @@ ds <- ds %>%
 # [16] "section_complete_count"    "autonomy"                  "competency"
 # [19] "involvement"               "motivation_external"       "motivation_internal"
 # [22] "relatedness"               "satisfaction"
-
-model_dual_motivation <- '
-   # regressions between tiers 1 & 2
-   motivation_internal ~ autonomy + competency + relatedness
-   motivation_external ~ autonomy + competency + relatedness
-
-   # regressions between tiers 2 & 3
-   involvement  ~ motivation_internal + motivation_external
-   satisfaction ~ motivation_internal + motivation_external
-
-   # residual covariances
-   motivation_internal ~~ motivation_external
-   involvement ~~ satisfaction
-'
-fit_dual_motivation <- sem(model_dual_motivation, data=ds)
-fitmeasures(fit_dual_motivation)
-summary(fit_dual_motivation)
-standardizedSolution(fit_dual_motivation)
-# sapply(ds, sd, na.rm=T)
-
-cat("Correlation between motivation_internal ~~ motivatn_xtrnl: ", 0.060/sqrt(0.185*0.594)) #0.1809973
-cat("Correlation between involvement ~~ satisfaction: ", 0.041/sqrt(.113*.288)) #0.2272733 =
+#
+# model_dual_motivation <- '
+#    # regressions between tiers 1 & 2
+#    motivation_internal ~ autonomy + competency + relatedness
+#    motivation_external ~ autonomy + competency + relatedness
+#
+#    # regressions between tiers 2 & 3
+#    involvement  ~ motivation_internal + motivation_external
+#    satisfaction ~ motivation_internal + motivation_external
+#
+#    # residual covariances
+#    motivation_internal ~~ motivation_external
+#    involvement ~~ satisfaction
+# '
+# fit_dual_motivation <- sem(model_dual_motivation, data=ds)
+# fitmeasures(fit_dual_motivation)
+# summary(fit_dual_motivation)
+# standardizedSolution(fit_dual_motivation)
+# # sapply(ds, sd, na.rm=T)
+#
+# cat("Correlation between motivation_internal ~~ motivatn_xtrnl: ", 0.060/sqrt(0.185*0.594)) #0.1809973
+# cat("Correlation between involvement ~~ satisfaction: ", 0.041/sqrt(.113*.288)) #0.2272733 =
 
 
 # ---- model-single-motivation --------------------------------------------------------------
