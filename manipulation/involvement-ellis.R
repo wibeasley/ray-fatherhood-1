@@ -30,7 +30,19 @@ figure_path                    <- 'manipulation/stitched-output/father-involveme
 # URIs of CSV and County lookup table
 # path_variable_translator       <- "./data-phi-free/raw/variable-translator.csv"
 
-sections_to_summarize <- c("autonomy", "competency", "relatedness", "motivation_internal", "motivation_external", "involvement", "satisfaction")
+sections_to_summarize <- c(
+  "autonomy", "competency", "relatedness",
+  "motivation_internal", "motivation_external",
+  "involvement", "satisfaction"
+)
+names(sections_to_summarize) <- sections_to_summarize
+
+instruments_to_analyze_reliability <- c(
+  "pri", "fss", "wafcs", "psi", "kmss", "rc", "rofq",
+  "motivation_external", "motivation_internal",
+  "ifi", "kpss"
+)
+names(instruments_to_analyze_reliability) <- instruments_to_analyze_reliability
 section_minimum_to_retain <- 0.85 #If a subject's section has less than this much completed, it's set to missing/NA.
 # ds_item_group <- tibble::frame_data(
   # ~
@@ -44,6 +56,7 @@ ds_translator                  <- readr::read_csv(path_in_translator)
 rm(path_in, path_in_translator)
 
 # iconv(colnames(ds_wide_1), "latin1", "ASCII")
+dput(unique(ds_translator$instrument))
 
 # ---- tweak-data --------------------------------------------------------------
 # ds_translator <- ds_translator %>%
@@ -57,6 +70,7 @@ rm(path_in, path_in_translator)
 # ---- rename-items --------------------------------------------------------------
 testit::assert("The count of variables should match the translator.", nrow(ds_translator)==length(colnames(ds_wide_1)))
 colnames(ds_wide_1) <- ds_translator$variable
+
 
 ds_wide_1 <- ds_wide_1[ , !duplicated(colnames(ds_wide_1))]
 
@@ -200,9 +214,16 @@ panel.cor <- function(x, y, digits = 2, prefix = "", cex.cor, ...) {
   text(0.5, 0.5, txt, cex = cex.cor * (r)^.2)
 }
 
-# ---- revelle --------------------------------------------------------------
+# ---- revelle-constructs --------------------------------------------------------------
 sections_to_summarize
-lapply(1:7, function(scale) {
+lapply(sections_to_summarize, function( construct ) {
   # cat("\n\n+++++++++++++++++++++++++ ", sections_to_summarize[scale], " ++++++++++++++++++++++++\n\n")
-  psych::alpha(cor(ds_wide_1[, ds_translator$variable[ds_translator$section==sections_to_summarize[scale]]], use="pairwise.complete.obs"))
+  psych::alpha(cor(ds_wide_1[, ds_translator$variable[ds_translator$section==construct]], use="pairwise.complete.obs"))
+})
+
+# ---- revelle-instruments --------------------------------------------------------------
+instruments_to_analyze_reliability
+lapply(instruments_to_analyze_reliability, function( instrument ) {
+  # cat("\n\n+++++++++++++++++++++++++ ", instruments_to_analyze_reliability[scale], " ++++++++++++++++++++++++\n\n")
+  psych::alpha(cor(ds_wide_1[, ds_translator$variable[ds_translator$instrument==instrument]], use="pairwise.complete.obs"))
 })

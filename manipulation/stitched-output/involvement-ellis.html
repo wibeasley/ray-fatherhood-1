@@ -236,7 +236,19 @@ figure_path                    &lt;- &#39;manipulation/stitched-output/father-in
 # URIs of CSV and County lookup table
 # path_variable_translator       &lt;- &quot;./data-phi-free/raw/variable-translator.csv&quot;
 
-sections_to_summarize &lt;- c(&quot;autonomy&quot;, &quot;competency&quot;, &quot;relatedness&quot;, &quot;motivation_internal&quot;, &quot;motivation_external&quot;, &quot;involvement&quot;, &quot;satisfaction&quot;)
+sections_to_summarize &lt;- c(
+  &quot;autonomy&quot;, &quot;competency&quot;, &quot;relatedness&quot;,
+  &quot;motivation_internal&quot;, &quot;motivation_external&quot;,
+  &quot;involvement&quot;, &quot;satisfaction&quot;
+)
+names(sections_to_summarize) &lt;- sections_to_summarize
+
+instruments_to_analyze_reliability &lt;- c(
+  &quot;pri&quot;, &quot;fss&quot;, &quot;wafcs&quot;, &quot;psi&quot;, &quot;kmss&quot;, &quot;rc&quot;, &quot;rofq&quot;,
+  &quot;motivation_external&quot;, &quot;motivation_internal&quot;,
+  &quot;ifi&quot;, &quot;kpss&quot;
+)
+names(instruments_to_analyze_reliability) &lt;- instruments_to_analyze_reliability
 section_minimum_to_retain &lt;- 0.85 #If a subject&#39;s section has less than this much completed, it&#39;s set to missing/NA.
 # ds_item_group &lt;- tibble::frame_data(
   # ~
@@ -251,6 +263,12 @@ ds_translator                  &lt;- readr::read_csv(path_in_translator)
 rm(path_in, path_in_translator)
 
 # iconv(colnames(ds_wide_1), &quot;latin1&quot;, &quot;ASCII&quot;)
+dput(unique(ds_translator$instrument))
+</code></pre>
+
+<pre><code>## c(&quot;plumbing&quot;, &quot;demographics&quot;, &quot;pri&quot;, &quot;fss&quot;, &quot;wafcs&quot;, &quot;psi&quot;, &quot;kmss&quot;, 
+## &quot;rc&quot;, &quot;rofq&quot;, &quot;motivation_external&quot;, &quot;motivation_internal&quot;, &quot;ifi&quot;, 
+## &quot;kpss&quot;, &quot;gift_card&quot;)
 </code></pre>
 
 <pre><code class="r"># ds_translator &lt;- ds_translator %&gt;%
@@ -262,6 +280,7 @@ rm(path_in, path_in_translator)
 
 <pre><code class="r">testit::assert(&quot;The count of variables should match the translator.&quot;, nrow(ds_translator)==length(colnames(ds_wide_1)))
 colnames(ds_wide_1) &lt;- ds_translator$variable
+
 
 ds_wide_1 &lt;- ds_wide_1[ , !duplicated(colnames(ds_wide_1))]
 
@@ -414,14 +433,17 @@ panel.cor &lt;- function(x, y, digits = 2, prefix = &quot;&quot;, cex.cor, ...) 
 <pre><code class="r">sections_to_summarize
 </code></pre>
 
-<pre><code>## [1] &quot;autonomy&quot;            &quot;competency&quot;          &quot;relatedness&quot;        
-## [4] &quot;motivation_internal&quot; &quot;motivation_external&quot; &quot;involvement&quot;        
-## [7] &quot;satisfaction&quot;
+<pre><code>##              autonomy            competency           relatedness 
+##            &quot;autonomy&quot;          &quot;competency&quot;         &quot;relatedness&quot; 
+##   motivation_internal   motivation_external           involvement 
+## &quot;motivation_internal&quot; &quot;motivation_external&quot;         &quot;involvement&quot; 
+##          satisfaction 
+##        &quot;satisfaction&quot;
 </code></pre>
 
-<pre><code class="r">lapply(1:7, function(scale) {
+<pre><code class="r">lapply(sections_to_summarize, function( construct ) {
   # cat(&quot;\n\n+++++++++++++++++++++++++ &quot;, sections_to_summarize[scale], &quot; ++++++++++++++++++++++++\n\n&quot;)
-  psych::alpha(cor(ds_wide_1[, ds_translator$variable[ds_translator$section==sections_to_summarize[scale]]], use=&quot;pairwise.complete.obs&quot;))
+  psych::alpha(cor(ds_wide_1[, ds_translator$variable[ds_translator$section==construct]], use=&quot;pairwise.complete.obs&quot;))
 })
 </code></pre>
 
@@ -443,11 +465,11 @@ panel.cor &lt;- function(x, y, digits = 2, prefix = &quot;&quot;, cex.cor, ...) 
 <pre><code>## Some items ( affection_difficulty father_enjoyment_older_children father_sensitivity ) were negatively correlated with the total scale and probably should be reversed.  To do this, run the function again with the &#39;check.keys=TRUE&#39; option
 </code></pre>
 
-<pre><code>## [[1]]
+<pre><code>## $autonomy
 ## 
 ## Reliability analysis   
 ## Call: psych::alpha(x = cor(ds_wide_1[, ds_translator$variable[ds_translator$section == 
-##     sections_to_summarize[scale]]], use = &quot;pairwise.complete.obs&quot;))
+##     construct]], use = &quot;pairwise.complete.obs&quot;))
 ## 
 ##   raw_alpha std.alpha G6(smc) average_r S/N
 ##       0.88      0.88    0.94      0.13 7.3
@@ -603,11 +625,11 @@ panel.cor &lt;- function(x, y, digits = 2, prefix = &quot;&quot;, cex.cor, ...) 
 ## work_conflict_negative_family     0.25 0.243  0.199
 ## work_conflict_irritability        0.13 0.099  0.074
 ## 
-## [[2]]
+## $competency
 ## 
 ## Reliability analysis   
 ## Call: psych::alpha(x = cor(ds_wide_1[, ds_translator$variable[ds_translator$section == 
-##     sections_to_summarize[scale]]], use = &quot;pairwise.complete.obs&quot;))
+##     construct]], use = &quot;pairwise.complete.obs&quot;))
 ## 
 ##   raw_alpha std.alpha G6(smc) average_r S/N
 ##       0.84      0.84    0.82      0.51 5.2
@@ -628,11 +650,11 @@ panel.cor &lt;- function(x, y, digits = 2, prefix = &quot;&quot;, cex.cor, ...) 
 ## father_problem_solve         0.77  0.68   0.63
 ## father_child_conflict_change 0.71  0.59   0.54
 ## 
-## [[3]]
+## $relatedness
 ## 
 ## Reliability analysis   
 ## Call: psych::alpha(x = cor(ds_wide_1[, ds_translator$variable[ds_translator$section == 
-##     sections_to_summarize[scale]]], use = &quot;pairwise.complete.obs&quot;))
+##     construct]], use = &quot;pairwise.complete.obs&quot;))
 ## 
 ##   raw_alpha std.alpha G6(smc) average_r S/N
 ##       0.82      0.82    0.89      0.18 4.4
@@ -683,11 +705,11 @@ panel.cor &lt;- function(x, y, digits = 2, prefix = &quot;&quot;, cex.cor, ...) 
 ## father_nurture_six_months        0.529  0.491  0.446
 ## father_reward                    0.663  0.653  0.597
 ## 
-## [[4]]
+## $motivation_internal
 ## 
 ## Reliability analysis   
 ## Call: psych::alpha(x = cor(ds_wide_1[, ds_translator$variable[ds_translator$section == 
-##     sections_to_summarize[scale]]], use = &quot;pairwise.complete.obs&quot;))
+##     construct]], use = &quot;pairwise.complete.obs&quot;))
 ## 
 ##   raw_alpha std.alpha G6(smc) average_r S/N
 ##       0.94      0.94    0.96      0.46  16
@@ -734,11 +756,11 @@ panel.cor &lt;- function(x, y, digits = 2, prefix = &quot;&quot;, cex.cor, ...) 
 ## attention_enjoyment            0.74  0.73   0.70
 ## attention_important            0.82  0.82   0.79
 ## 
-## [[5]]
+## $motivation_external
 ## 
 ## Reliability analysis   
 ## Call: psych::alpha(x = cor(ds_wide_1[, ds_translator$variable[ds_translator$section == 
-##     sections_to_summarize[scale]]], use = &quot;pairwise.complete.obs&quot;))
+##     construct]], use = &quot;pairwise.complete.obs&quot;))
 ## 
 ##   raw_alpha std.alpha G6(smc) average_r S/N
 ##       0.93      0.93    0.98      0.44  14
@@ -785,11 +807,11 @@ panel.cor &lt;- function(x, y, digits = 2, prefix = &quot;&quot;, cex.cor, ...) 
 ## attention_others                0.73  0.73   0.69
 ## attention_obligation            0.68  0.68   0.63
 ## 
-## [[6]]
+## $involvement
 ## 
 ## Reliability analysis   
 ## Call: psych::alpha(x = cor(ds_wide_1[, ds_translator$variable[ds_translator$section == 
-##     sections_to_summarize[scale]]], use = &quot;pairwise.complete.obs&quot;))
+##     construct]], use = &quot;pairwise.complete.obs&quot;))
 ## 
 ##   raw_alpha std.alpha G6(smc) average_r S/N
 ##       0.95      0.95    0.97      0.45  21
@@ -852,11 +874,517 @@ panel.cor &lt;- function(x, y, digits = 2, prefix = &quot;&quot;, cex.cor, ...) 
 ## chores_encouragement             0.64  0.62   0.60
 ## rules_behavior_child             0.72  0.71   0.69
 ## 
-## [[7]]
+## $satisfaction
 ## 
 ## Reliability analysis   
 ## Call: psych::alpha(x = cor(ds_wide_1[, ds_translator$variable[ds_translator$section == 
-##     sections_to_summarize[scale]]], use = &quot;pairwise.complete.obs&quot;))
+##     construct]], use = &quot;pairwise.complete.obs&quot;))
+## 
+##   raw_alpha std.alpha G6(smc) average_r S/N
+##        0.8       0.8    0.73      0.57   4
+## 
+##  Reliability if an item is dropped:
+##                                 raw_alpha std.alpha G6(smc) average_r S/N
+## satisfaction_child                   0.78      0.78    0.64      0.64 3.5
+## satisfaction_parenting               0.71      0.71    0.55      0.55 2.5
+## satisfaction_relationship_child      0.69      0.69    0.53      0.53 2.3
+## 
+##  Item statistics 
+##                                    r r.cor r.drop
+## satisfaction_child              0.82  0.66   0.60
+## satisfaction_parenting          0.85  0.75   0.66
+## satisfaction_relationship_child 0.86  0.76   0.68
+</code></pre>
+
+<pre><code class="r">instruments_to_analyze_reliability
+</code></pre>
+
+<pre><code>##                   pri                   fss                 wafcs 
+##                 &quot;pri&quot;                 &quot;fss&quot;               &quot;wafcs&quot; 
+##                   psi                  kmss                    rc 
+##                 &quot;psi&quot;                &quot;kmss&quot;                  &quot;rc&quot; 
+##                  rofq   motivation_external   motivation_internal 
+##                &quot;rofq&quot; &quot;motivation_external&quot; &quot;motivation_internal&quot; 
+##                   ifi                  kpss 
+##                 &quot;ifi&quot;                &quot;kpss&quot;
+</code></pre>
+
+<pre><code class="r">lapply(instruments_to_analyze_reliability, function( instrument ) {
+  # cat(&quot;\n\n+++++++++++++++++++++++++ &quot;, instruments_to_analyze_reliability[scale], &quot; ++++++++++++++++++++++++\n\n&quot;)
+  psych::alpha(cor(ds_wide_1[, ds_translator$variable[ds_translator$instrument==instrument]], use=&quot;pairwise.complete.obs&quot;))
+})
+</code></pre>
+
+<pre><code>## Warning in psych::alpha(cor(ds_wide_1[, ds_translator
+## $variable[ds_translator$instrument == : Some items were negatively
+## correlated with the total scale and probably should be reversed. To do
+## this, run the function again with the &#39;check.keys=TRUE&#39; option
+</code></pre>
+
+<pre><code>## Some items ( affection_difficulty father_enjoyment_older_children father_sensitivity ) were negatively correlated with the total scale and probably should be reversed.  To do this, run the function again with the &#39;check.keys=TRUE&#39; option
+</code></pre>
+
+<pre><code>## $pri
+## 
+## Reliability analysis   
+## Call: psych::alpha(x = cor(ds_wide_1[, ds_translator$variable[ds_translator$instrument == 
+##     instrument]], use = &quot;pairwise.complete.obs&quot;))
+## 
+##   raw_alpha std.alpha G6(smc) average_r S/N
+##       0.91      0.91    0.94      0.21 9.6
+## 
+##  Reliability if an item is dropped:
+##                                   raw_alpha std.alpha G6(smc) average_r
+## encourage_childcare_tasks              0.90      0.90    0.94      0.21
+## encourage_ask_help                     0.90      0.90    0.94      0.21
+## encourage_compliment                   0.90      0.90    0.94      0.22
+## encourage_invite_help                  0.90      0.90    0.94      0.21
+## encourage_refuse                       0.90      0.90    0.94      0.22
+## encourage_give_look                    0.90      0.90    0.94      0.21
+## encourage_appreciation                 0.90      0.90    0.94      0.22
+## encourage_irritated_look               0.90      0.90    0.94      0.21
+## encourage_hint_work                    0.90      0.90    0.94      0.21
+## encourage_tasks_independent            0.90      0.90    0.94      0.22
+## encourage_leave_house                  0.91      0.91    0.95      0.22
+## encourage_child_ask_help               0.90      0.90    0.94      0.21
+## encourage_tells_good_parent            0.90      0.90    0.94      0.22
+## encourage_ask_opinion                  0.90      0.90    0.94      0.22
+## encourage_tell_others_good_parent      0.90      0.90    0.94      0.22
+## encourage_tell_happy                   0.90      0.90    0.94      0.21
+## encourage_alone_time                   0.90      0.90    0.94      0.21
+## encourage_arrange_activities           0.90      0.90    0.94      0.21
+## tells_right_way                        0.90      0.90    0.94      0.21
+## shows_anger                            0.90      0.90    0.94      0.21
+## keeps_quiet                            0.91      0.91    0.94      0.22
+## tells_mistake                          0.90      0.90    0.94      0.21
+## explains_concerns                      0.90      0.90    0.94      0.21
+## criticize                              0.90      0.90    0.94      0.21
+## solicits_their_help                    0.90      0.90    0.94      0.21
+## exasperated_look                       0.90      0.90    0.94      0.21
+## feelings_discuss                       0.90      0.90    0.94      0.21
+## situations_learned                     0.90      0.90    0.94      0.21
+## complains_others                       0.90      0.90    0.94      0.22
+## take_over                              0.90      0.90    0.94      0.21
+## mistakes_on_your_own                   0.90      0.90    0.94      0.22
+## instruction                            0.90      0.90    0.94      0.21
+## redo_after                             0.90      0.90    0.94      0.22
+## tells_child_mistake                    0.90      0.90    0.94      0.22
+## tasks_without_help                     0.91      0.91    0.94      0.22
+##                                   S/N
+## encourage_childcare_tasks         9.3
+## encourage_ask_help                9.2
+## encourage_compliment              9.3
+## encourage_invite_help             9.1
+## encourage_refuse                  9.3
+## encourage_give_look               9.2
+## encourage_appreciation            9.3
+## encourage_irritated_look          9.2
+## encourage_hint_work               9.2
+## encourage_tasks_independent       9.4
+## encourage_leave_house             9.6
+## encourage_child_ask_help          9.2
+## encourage_tells_good_parent       9.4
+## encourage_ask_opinion             9.4
+## encourage_tell_others_good_parent 9.4
+## encourage_tell_happy              9.3
+## encourage_alone_time              9.1
+## encourage_arrange_activities      9.3
+## tells_right_way                   9.1
+## shows_anger                       9.0
+## keeps_quiet                       9.6
+## tells_mistake                     9.2
+## explains_concerns                 9.1
+## criticize                         9.3
+## solicits_their_help               9.2
+## exasperated_look                  9.2
+## feelings_discuss                  9.2
+## situations_learned                9.1
+## complains_others                  9.4
+## take_over                         9.3
+## mistakes_on_your_own              9.4
+## instruction                       9.1
+## redo_after                        9.5
+## tells_child_mistake               9.4
+## tasks_without_help                9.7
+## 
+##  Item statistics 
+##                                      r r.cor r.drop
+## encourage_childcare_tasks         0.50  0.48   0.45
+## encourage_ask_help                0.54  0.52   0.49
+## encourage_compliment              0.45  0.44   0.40
+## encourage_invite_help             0.58  0.57   0.54
+## encourage_refuse                  0.47  0.45   0.42
+## encourage_give_look               0.54  0.53   0.50
+## encourage_appreciation            0.46  0.46   0.42
+## encourage_irritated_look          0.54  0.54   0.50
+## encourage_hint_work               0.54  0.53   0.50
+## encourage_tasks_independent       0.39  0.36   0.34
+## encourage_leave_house             0.32  0.29   0.27
+## encourage_child_ask_help          0.52  0.50   0.47
+## encourage_tells_good_parent       0.44  0.44   0.39
+## encourage_ask_opinion             0.40  0.38   0.35
+## encourage_tell_others_good_parent 0.43  0.42   0.38
+## encourage_tell_happy              0.48  0.48   0.43
+## encourage_alone_time              0.61  0.60   0.57
+## encourage_arrange_activities      0.49  0.48   0.45
+## tells_right_way                   0.58  0.57   0.54
+## shows_anger                       0.63  0.63   0.59
+## keeps_quiet                       0.30  0.28   0.25
+## tells_mistake                     0.55  0.54   0.50
+## explains_concerns                 0.61  0.60   0.58
+## criticize                         0.48  0.47   0.43
+## solicits_their_help               0.52  0.51   0.48
+## exasperated_look                  0.54  0.54   0.50
+## feelings_discuss                  0.56  0.56   0.52
+## situations_learned                0.58  0.57   0.53
+## complains_others                  0.44  0.42   0.39
+## take_over                         0.47  0.46   0.42
+## mistakes_on_your_own              0.44  0.42   0.39
+## instruction                       0.58  0.56   0.54
+## redo_after                        0.38  0.35   0.33
+## tells_child_mistake               0.43  0.41   0.38
+## tasks_without_help                0.23  0.21   0.17
+## 
+## $fss
+## 
+## Reliability analysis   
+## Call: psych::alpha(x = cor(ds_wide_1[, ds_translator$variable[ds_translator$instrument == 
+##     instrument]], use = &quot;pairwise.complete.obs&quot;))
+## 
+##   raw_alpha std.alpha G6(smc) average_r S/N
+##       0.94      0.94    0.94      0.65  15
+## 
+##  Reliability if an item is dropped:
+##                                raw_alpha std.alpha G6(smc) average_r S/N
+## financial_stress_today              0.93      0.93    0.93      0.65  13
+## financial_satisfaction              0.93      0.93    0.93      0.64  13
+## financial_situation_feelings        0.92      0.92    0.92      0.63  12
+## financial_worry_expenses            0.93      0.93    0.93      0.64  13
+## confidence_financial_emergency      0.94      0.94    0.94      0.68  15
+## financial_activities_canceled       0.93      0.93    0.93      0.67  14
+## financial_paycheck_paycheck         0.93      0.93    0.93      0.65  13
+## financial_stress_general            0.92      0.92    0.92      0.63  12
+## 
+##  Item statistics 
+##                                   r r.cor r.drop
+## financial_stress_today         0.84  0.82   0.78
+## financial_satisfaction         0.85  0.83   0.80
+## financial_situation_feelings   0.89  0.89   0.85
+## financial_worry_expenses       0.85  0.82   0.80
+## confidence_financial_emergency 0.74  0.69   0.66
+## financial_activities_canceled  0.76  0.72   0.69
+## financial_paycheck_paycheck    0.83  0.80   0.78
+## financial_stress_general       0.89  0.89   0.86
+## 
+## $wafcs
+## 
+## Reliability analysis   
+## Call: psych::alpha(x = cor(ds_wide_1[, ds_translator$variable[ds_translator$instrument == 
+##     instrument]], use = &quot;pairwise.complete.obs&quot;))
+## 
+##   raw_alpha std.alpha G6(smc) average_r S/N
+##       0.86      0.86    0.86      0.56 6.3
+## 
+##  Reliability if an item is dropped:
+##                               raw_alpha std.alpha G6(smc) average_r S/N
+## work_conflict_family               0.82      0.82    0.81      0.54 4.7
+## work_conflict_time                 0.85      0.85    0.84      0.59 5.7
+## work_commitments_family_time       0.81      0.81    0.78      0.51 4.2
+## work_conflict_negative_family      0.80      0.80    0.78      0.51 4.1
+## work_conflict_irritability         0.88      0.88    0.86      0.65 7.5
+## 
+##  Item statistics 
+##                                  r r.cor r.drop
+## work_conflict_family          0.83  0.79   0.72
+## work_conflict_time            0.76  0.66   0.62
+## work_commitments_family_time  0.88  0.87   0.79
+## work_conflict_negative_family 0.88  0.87   0.80
+## work_conflict_irritability    0.67  0.53   0.49
+## 
+## $psi
+## 
+## Reliability analysis   
+## Call: psych::alpha(x = cor(ds_wide_1[, ds_translator$variable[ds_translator$instrument == 
+##     instrument]], use = &quot;pairwise.complete.obs&quot;))
+## 
+##   raw_alpha std.alpha G6(smc) average_r S/N
+##       0.84      0.84    0.82      0.51 5.2
+## 
+##  Reliability if an item is dropped:
+##                              raw_alpha std.alpha G6(smc) average_r S/N
+## father_confidence                 0.78      0.78    0.74      0.47 3.5
+## father_good_job                   0.77      0.77    0.73      0.46 3.4
+## father_helping_parents            0.83      0.83    0.80      0.55 4.8
+## father_problem_solve              0.81      0.81    0.78      0.51 4.2
+## father_child_conflict_change      0.83      0.83    0.80      0.55 5.0
+## 
+##  Item statistics 
+##                                 r r.cor r.drop
+## father_confidence            0.84  0.82   0.74
+## father_good_job              0.85  0.83   0.75
+## father_helping_parents       0.72  0.61   0.55
+## father_problem_solve         0.77  0.68   0.63
+## father_child_conflict_change 0.71  0.59   0.54
+## 
+## $kmss
+## 
+## Reliability analysis   
+## Call: psych::alpha(x = cor(ds_wide_1[, ds_translator$variable[ds_translator$instrument == 
+##     instrument]], use = &quot;pairwise.complete.obs&quot;))
+## 
+##   raw_alpha std.alpha G6(smc) average_r S/N
+##       0.96      0.96    0.94      0.89  25
+## 
+##  Reliability if an item is dropped:
+##                           raw_alpha std.alpha G6(smc) average_r S/N
+## marital_satisfaction           0.95      0.95    0.91      0.91  21
+## relationship_satisfaction      0.93      0.93    0.87      0.87  14
+## spousal_satisfaction           0.94      0.94    0.89      0.89  17
+## 
+##  Item statistics 
+##                              r r.cor r.drop
+## marital_satisfaction      0.96  0.92   0.90
+## relationship_satisfaction 0.97  0.95   0.93
+## spousal_satisfaction      0.96  0.94   0.92
+## 
+## $rc
+## 
+## Reliability analysis   
+## Call: psych::alpha(x = cor(ds_wide_1[, ds_translator$variable[ds_translator$instrument == 
+##     instrument]], use = &quot;pairwise.complete.obs&quot;))
+## 
+##   raw_alpha std.alpha G6(smc) average_r S/N
+##       0.93      0.93    0.87      0.87  13
+## 
+##  Reliability if an item is dropped:
+##                                 raw_alpha std.alpha G6(smc) average_r S/N
+## child_relationship_satisfaction      0.87      0.87    0.75      0.87  NA
+## child_relationship_positivity        0.87      0.87    0.75      0.87  NA
+## 
+##  Item statistics 
+##                                    r r.cor r.drop
+## child_relationship_satisfaction 0.97   0.9   0.87
+## child_relationship_positivity   0.97   0.9   0.87
+## 
+## $rofq
+## 
+## Reliability analysis   
+## Call: psych::alpha(x = cor(ds_wide_1[, ds_translator$variable[ds_translator$instrument == 
+##     instrument]], use = &quot;pairwise.complete.obs&quot;))
+## 
+##   raw_alpha std.alpha G6(smc) average_r S/N
+##       0.75      0.75    0.83      0.17 3.1
+## 
+##  Reliability if an item is dropped:
+##                                 raw_alpha std.alpha G6(smc) average_r S/N
+## playing_child                        0.73      0.73    0.80      0.16 2.7
+## affection_difficulty                 0.78      0.78    0.84      0.21 3.6
+## father_role_development              0.73      0.73    0.80      0.16 2.7
+## father_responsibility                0.74      0.74    0.82      0.17 2.9
+## father_enjoyment_older_children      0.79      0.79    0.84      0.21 3.7
+## moods_adult_sensing                  0.73      0.73    0.80      0.16 2.7
+## moods_adult_affecting                0.73      0.73    0.80      0.16 2.6
+## family_time                          0.73      0.73    0.81      0.16 2.6
+## father_childcare                     0.73      0.73    0.81      0.16 2.7
+## father_sensitivity                   0.77      0.77    0.84      0.20 3.4
+## father_example                       0.71      0.71    0.79      0.15 2.5
+## father_psychological_needs           0.72      0.72    0.80      0.16 2.6
+## father_response_time                 0.77      0.77    0.84      0.19 3.3
+## father_nurture_six_months            0.73      0.73    0.81      0.16 2.7
+## father_reward                        0.72      0.72    0.80      0.16 2.6
+## 
+##  Item statistics 
+##                                       r  r.cor  r.drop
+## playing_child                    0.6147  0.600  0.5153
+## affection_difficulty             0.0266 -0.084 -0.1130
+## father_role_development          0.6122  0.600  0.5124
+## father_responsibility            0.4670  0.390  0.3465
+## father_enjoyment_older_children -0.0064 -0.119 -0.1452
+## moods_adult_sensing              0.6028  0.603  0.5014
+## moods_adult_affecting            0.6202  0.625  0.5219
+## family_time                      0.6197  0.589  0.5213
+## father_childcare                 0.5741  0.544  0.4682
+## father_sensitivity               0.1306  0.017 -0.0098
+## father_example                   0.7375  0.752  0.6624
+## father_psychological_needs       0.6666  0.667  0.5767
+## father_response_time             0.2265  0.108  0.0881
+## father_nurture_six_months        0.5908  0.554  0.4875
+## father_reward                    0.6432  0.637  0.5489
+## 
+## $motivation_external
+## 
+## Reliability analysis   
+## Call: psych::alpha(x = cor(ds_wide_1[, ds_translator$variable[ds_translator$instrument == 
+##     instrument]], use = &quot;pairwise.complete.obs&quot;))
+## 
+##   raw_alpha std.alpha G6(smc) average_r S/N
+##       0.93      0.93    0.98      0.44  14
+## 
+##  Reliability if an item is dropped:
+##                                 raw_alpha std.alpha G6(smc) average_r S/N
+## teach_responsibility_others          0.93      0.93    0.98      0.43  13
+## teach_responsibility_obligation      0.93      0.93    0.98      0.44  14
+## school_encouragement_others          0.93      0.93    0.98      0.43  13
+## school_encouragement_obligation      0.93      0.93    0.98      0.44  13
+## support_mother_others                0.93      0.93    0.98      0.43  13
+## support_mother_obligation            0.93      0.93    0.98      0.44  14
+## provide_others                       0.93      0.93    0.98      0.43  13
+## provide_obligation                   0.93      0.93    0.98      0.44  13
+## talking_child_others                 0.93      0.93    0.98      0.43  13
+## talking_child_obligation             0.93      0.93    0.98      0.44  13
+## praise_child_others                  0.93      0.93    0.98      0.43  13
+## praise_child_obligation              0.93      0.93    0.98      0.44  13
+## talent_future_others                 0.93      0.93    0.98      0.43  13
+## talent_future_obligation             0.93      0.93    0.98      0.44  13
+## reading_support_others               0.93      0.93    0.98      0.43  13
+## reading_support_obligation           0.93      0.93    0.98      0.44  13
+## attention_others                     0.93      0.93    0.98      0.43  13
+## attention_obligation                 0.93      0.93    0.98      0.44  13
+## 
+##  Item statistics 
+##                                    r r.cor r.drop
+## teach_responsibility_others     0.70  0.69   0.65
+## teach_responsibility_obligation 0.60  0.57   0.54
+## school_encouragement_others     0.73  0.73   0.69
+## school_encouragement_obligation 0.64  0.62   0.58
+## support_mother_others           0.73  0.72   0.69
+## support_mother_obligation       0.60  0.57   0.54
+## provide_others                  0.72  0.72   0.68
+## provide_obligation              0.66  0.64   0.61
+## talking_child_others            0.73  0.73   0.69
+## talking_child_obligation        0.66  0.65   0.61
+## praise_child_others             0.72  0.72   0.68
+## praise_child_obligation         0.65  0.64   0.60
+## talent_future_others            0.73  0.73   0.69
+## talent_future_obligation        0.66  0.65   0.61
+## reading_support_others          0.71  0.71   0.66
+## reading_support_obligation      0.66  0.66   0.62
+## attention_others                0.73  0.73   0.69
+## attention_obligation            0.68  0.68   0.63
+## 
+## $motivation_internal
+## 
+## Reliability analysis   
+## Call: psych::alpha(x = cor(ds_wide_1[, ds_translator$variable[ds_translator$instrument == 
+##     instrument]], use = &quot;pairwise.complete.obs&quot;))
+## 
+##   raw_alpha std.alpha G6(smc) average_r S/N
+##       0.94      0.94    0.96      0.46  16
+## 
+##  Reliability if an item is dropped:
+##                                raw_alpha std.alpha G6(smc) average_r S/N
+## teach_responsibility_enjoyment      0.94      0.94    0.96      0.48  15
+## teach_responsibility_important      0.94      0.94    0.96      0.46  15
+## school_encouragement_enjoyment      0.94      0.94    0.96      0.48  15
+## school_encouragement_important      0.94      0.94    0.95      0.46  15
+## support_mother_enjoyment            0.94      0.94    0.96      0.47  15
+## support_mother_important            0.94      0.94    0.96      0.47  15
+## provide_enjoyment                   0.94      0.94    0.96      0.47  15
+## provide_important                   0.94      0.94    0.96      0.46  15
+## talking_child_enjoyment             0.93      0.93    0.95      0.46  14
+## talking_child_important             0.94      0.94    0.96      0.46  15
+## praise_child_enjoyment              0.93      0.93    0.96      0.45  14
+## praise_child_important              0.93      0.93    0.95      0.45  14
+## talent_future_enjoyment             0.94      0.94    0.96      0.46  14
+## talent_future_important             0.93      0.93    0.95      0.46  14
+## reading_support_enjoyment           0.94      0.94    0.96      0.48  16
+## reading_support_important           0.94      0.94    0.96      0.46  14
+## attention_enjoyment                 0.94      0.94    0.96      0.46  14
+## attention_important                 0.93      0.93    0.95      0.45  14
+## 
+##  Item statistics 
+##                                   r r.cor r.drop
+## teach_responsibility_enjoyment 0.57  0.53   0.51
+## teach_responsibility_important 0.70  0.69   0.66
+## school_encouragement_enjoyment 0.57  0.55   0.51
+## school_encouragement_important 0.71  0.70   0.67
+## support_mother_enjoyment       0.65  0.63   0.60
+## support_mother_important       0.66  0.64   0.61
+## provide_enjoyment              0.66  0.63   0.62
+## provide_important              0.73  0.71   0.69
+## talking_child_enjoyment        0.78  0.77   0.74
+## talking_child_important        0.74  0.73   0.70
+## praise_child_enjoyment         0.80  0.79   0.76
+## praise_child_important         0.81  0.80   0.78
+## talent_future_enjoyment        0.74  0.73   0.70
+## talent_future_important        0.76  0.75   0.72
+## reading_support_enjoyment      0.47  0.44   0.41
+## reading_support_important      0.75  0.74   0.71
+## attention_enjoyment            0.74  0.73   0.70
+## attention_important            0.82  0.82   0.79
+## 
+## $ifi
+## 
+## Reliability analysis   
+## Call: psych::alpha(x = cor(ds_wide_1[, ds_translator$variable[ds_translator$instrument == 
+##     instrument]], use = &quot;pairwise.complete.obs&quot;))
+## 
+##   raw_alpha std.alpha G6(smc) average_r S/N
+##       0.95      0.95    0.97      0.45  21
+## 
+##  Reliability if an item is dropped:
+##                                  raw_alpha std.alpha G6(smc) average_r S/N
+## attending_events                      0.95      0.95    0.97      0.45  21
+## reading_encouragement                 0.95      0.95    0.97      0.45  21
+## provide_needs                         0.95      0.95    0.96      0.45  20
+## praising_choices                      0.95      0.95    0.96      0.44  20
+## encouraging_mother                    0.95      0.95    0.96      0.45  21
+## routine_daily_involvement             0.95      0.95    0.97      0.45  21
+## praise_mom_to_children                0.95      0.95    0.96      0.45  21
+## praise_children_good_job              0.95      0.95    0.96      0.44  20
+## encourage_school                      0.95      0.95    0.96      0.44  20
+## befriend_children                     0.96      0.96    0.97      0.47  22
+## financial_support_responsibility      0.95      0.95    0.97      0.45  21
+## encourage_homework                    0.95      0.95    0.96      0.44  20
+## love_communication                    0.95      0.95    0.96      0.45  20
+## children_whereabouts                  0.95      0.95    0.96      0.45  20
+## talking_children                      0.95      0.95    0.96      0.44  20
+## mother_cooperation_parenting          0.95      0.95    0.96      0.45  20
+## reading_child                         0.95      0.95    0.97      0.45  21
+## teach_rules_following                 0.95      0.95    0.96      0.44  20
+## encourage_college                     0.95      0.95    0.97      0.45  20
+## discipline_child                      0.95      0.95    0.96      0.45  20
+## homework_help                         0.95      0.95    0.97      0.45  21
+## plan_child_future                     0.95      0.95    0.97      0.45  21
+## encourage_talent_development          0.95      0.95    0.96      0.45  20
+## time_child                            0.95      0.95    0.96      0.45  20
+## chores_encouragement                  0.95      0.95    0.97      0.45  21
+## rules_behavior_child                  0.95      0.95    0.96      0.45  20
+## 
+##  Item statistics 
+##                                     r r.cor r.drop
+## attending_events                 0.62  0.60   0.59
+## reading_encouragement            0.61  0.60   0.58
+## provide_needs                    0.73  0.72   0.70
+## praising_choices                 0.82  0.82   0.80
+## encouraging_mother               0.65  0.64   0.61
+## routine_daily_involvement        0.60  0.58   0.56
+## praise_mom_to_children           0.65  0.64   0.61
+## praise_children_good_job         0.81  0.81   0.79
+## encourage_school                 0.81  0.81   0.79
+## befriend_children                0.40  0.36   0.35
+## financial_support_responsibility 0.64  0.63   0.60
+## encourage_homework               0.77  0.76   0.74
+## love_communication               0.72  0.71   0.69
+## children_whereabouts             0.73  0.73   0.71
+## talking_children                 0.76  0.75   0.73
+## mother_cooperation_parenting     0.74  0.73   0.71
+## reading_child                    0.59  0.57   0.55
+## teach_rules_following            0.76  0.76   0.74
+## encourage_college                0.66  0.64   0.62
+## discipline_child                 0.69  0.68   0.66
+## homework_help                    0.61  0.59   0.57
+## plan_child_future                0.64  0.62   0.60
+## encourage_talent_development     0.73  0.72   0.70
+## time_child                       0.73  0.73   0.71
+## chores_encouragement             0.64  0.62   0.60
+## rules_behavior_child             0.72  0.71   0.69
+## 
+## $kpss
+## 
+## Reliability analysis   
+## Call: psych::alpha(x = cor(ds_wide_1[, ds_translator$variable[ds_translator$instrument == 
+##     instrument]], use = &quot;pairwise.complete.obs&quot;))
 ## 
 ##   raw_alpha std.alpha G6(smc) average_r S/N
 ##        0.8       0.8    0.73      0.57   4
@@ -895,39 +1423,28 @@ packages used):</p>
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## other attached packages:
-## [1] psych_1.5.8   ggplot2_2.1.0 magrittr_1.5 
+## [1] magrittr_1.5
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] Rcpp_0.12.4                 formatR_1.3                
-##  [3] nloptr_1.0.4                plyr_1.8.3                 
-##  [5] tools_3.2.4                 lme4_1.1-11                
-##  [7] digest_0.6.9                evaluate_0.8.3             
-##  [9] tibble_1.0                  nlme_3.1-125               
-## [11] gtable_0.2.0                lattice_0.20-33            
-## [13] mgcv_1.8-12                 Matrix_1.2-4               
-## [15] DBI_0.3.1.9008              yaml_2.1.13                
-## [17] parallel_3.2.4              SparseM_1.7                
-## [19] stringr_1.0.0               knitr_1.12.3               
-## [21] dplyr_0.4.3                 MatrixModels_0.4-1         
-## [23] TabularManifest_0.1-16.9000 grid_3.2.4                 
-## [25] nnet_7.3-12                 R6_2.1.2                   
-## [27] rmarkdown_0.9.5             minqa_1.2.4                
-## [29] tidyr_0.4.1                 readr_0.2.2                
-## [31] car_2.1-2                   scales_0.4.0               
-## [33] htmltools_0.3.5             MASS_7.3-45                
-## [35] splines_3.2.4               mnormt_1.5-4               
-## [37] rsconnect_0.4.2.1           assertthat_0.1             
-## [39] pbkrtest_0.4-6              testit_0.5.1               
-## [41] colorspace_1.2-6            labeling_0.3               
-## [43] quantreg_5.21               stringi_1.0-1              
-## [45] lazyeval_0.1.10             munsell_0.4.3              
-## [47] markdown_0.7.7
+##  [1] Rcpp_0.12.4        knitr_1.12.3       splines_3.2.4     
+##  [4] MASS_7.3-45        mnormt_1.5-4       testit_0.5.1      
+##  [7] lattice_0.20-33    R6_2.1.2           minqa_1.2.4       
+## [10] stringr_1.0.0      car_2.1-2          dplyr_0.4.3       
+## [13] tools_3.2.4        nnet_7.3-12        parallel_3.2.4    
+## [16] pbkrtest_0.4-6     grid_3.2.4         nlme_3.1-125      
+## [19] mgcv_1.8-12        quantreg_5.21      psych_1.5.8       
+## [22] DBI_0.3.1.9008     MatrixModels_0.4-1 lazyeval_0.1.10   
+## [25] lme4_1.1-11        assertthat_0.1     tibble_1.0        
+## [28] Matrix_1.2-4       formatR_1.3        readr_0.2.2       
+## [31] nloptr_1.0.4       tidyr_0.4.1        rsconnect_0.4.2.1 
+## [34] evaluate_0.8.3     stringi_1.0-1      SparseM_1.7       
+## [37] markdown_0.7.7
 </code></pre>
 
 <pre><code class="r">Sys.time()
 </code></pre>
 
-<pre><code>## [1] &quot;2016-04-13 22:27:14 CDT&quot;
+<pre><code>## [1] &quot;2016-04-14 21:46:28 CDT&quot;
 </code></pre>
 
 </body>

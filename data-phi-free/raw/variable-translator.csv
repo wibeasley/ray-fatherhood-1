@@ -1,181 +1,181 @@
-variable,section,retain,reverse_code,intercept,slope,label
-response_id,plumbing,TRUE,FALSE,NA,NA,ResponseID
-response_set,plumbing,TRUE,FALSE,NA,NA,ResponseSet
-na,plumbing,FALSE,FALSE,NA,NA,Name
-na,plumbing,FALSE,FALSE,NA,NA,ExternalDataReference
-na,plumbing,FALSE,FALSE,NA,NA,Status
-na,plumbing,FALSE,FALSE,NA,NA,StartDate
-na,plumbing,FALSE,FALSE,NA,NA,EndDate
-na,plumbing,FALSE,FALSE,NA,NA,Finished
-na,plumbing,FALSE,FALSE,NA,NA,Score-sum
-na,plumbing,FALSE,FALSE,NA,NA,Score-weightedAvg
-na,plumbing,FALSE,FALSE,NA,NA,Score-weightedStdDev
-na,plumbing,FALSE,FALSE,NA,NA,"My name is Bryan Ray, and I am a graduate student in Educational Psychology at the University of..."
-one_child_at_least,demographics,TRUE,FALSE,NA,NA,Are you a father with at least one child in elementary school?
-live_with_child,demographics,TRUE,FALSE,NA,NA,Do you live with your child that is in elementary school?
-sexual_orientation,demographics,TRUE,FALSE,NA,NA,What is your sexual orientation?
-live_with_mother,demographics,TRUE,FALSE,NA,NA,Do you live with the mother of your children?
-is_married,demographics,TRUE,FALSE,NA,NA,Are you married?
-married_duration,demographics,TRUE,FALSE,NA,NA,How long have you been married to your spouse?
-education,demographics,TRUE,FALSE,NA,NA,What is the highest level of education you have completed?
-age,demographics,TRUE,FALSE,NA,NA,Age:
-income_category,demographics,TRUE,FALSE,NA,NA,What is your current household annual income? (gross income)
-child_in_home_count,demographics,TRUE,FALSE,NA,NA,How many children are living in your home
-race,demographics,TRUE,FALSE,NA,NA,Which Race/Ethnicity best describes you?
-race_other,demographics,TRUE,FALSE,NA,NA,Which Race/Ethnicity best describes you?-TEXT
-religion,demographics,TRUE,FALSE,NA,NA,Religious preference
-relation_biodad,demographics,TRUE,FALSE,NA,NA,Describe your relationship to the elementary-aged children living in your home (Check all that ap...-Biological father
-relation_step,demographics,TRUE,FALSE,NA,NA,Describe your relationship to the elementary-aged children living in your home (Check all that ap...-Step-father
-relation_adoptive,demographics,TRUE,FALSE,NA,NA,Describe your relationship to the elementary-aged children living in your home (Check all that ap...-Adoptive father
-relation_other,demographics,TRUE,FALSE,NA,NA,Describe your relationship to the elementary-aged children living in your home (Check all that ap...-Other
-relation_other_text,demographics,TRUE,FALSE,NA,NA,Describe your relationship to the elementary-aged children living in your home (Check all that ap...-Other-TEXT
-work_hours_outside,demographics,TRUE,FALSE,NA,NA,How many hours per week to you spend working outside of the home?
-work_hours_spouse_outside,demographics,TRUE,FALSE,NA,NA,How many hours per week does your partner spend working outside of the home?
-encourage_childcare_tasks,autonomy,TRUE,FALSE,0,1,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Tell you to do a child care task. (?Go wash Tyler?s face.?)
-encourage_ask_help,autonomy,TRUE,FALSE,0,1,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Ask you politely to help (?Can you wash Tyler?s face please??)
-encourage_compliment,autonomy,TRUE,FALSE,0,1,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Compliment you (""You're able to calm Tyler down better than I can."")"
-encourage_invite_help,autonomy,TRUE,FALSE,0,1,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Invite you to help (""Wouldn't you like to read to Tyler?"")"
-encourage_refuse,autonomy,TRUE,FALSE,0,1,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Refuse to do it him/herself (""I'm not giving Tyler a bath. Its' your turn)"
-encourage_give_look,autonomy,TRUE,FALSE,0,1,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Give you a serious look that means, ""You need to deal with Tyler now!"""
-encourage_appreciation,autonomy,TRUE,FALSE,0,1,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Let you know he/she appreciates your contributions (""It really helps when you take Tyler with you."")"
-encourage_irritated_look,autonomy,TRUE,FALSE,0,1,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Give you an irritated or exasperated look
-encourage_hint_work,autonomy,TRUE,FALSE,0,1,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Hint that work needs to be done (""Boy, Tyler sure is dirty!"")"
-encourage_tasks_independent,autonomy,TRUE,FALSE,0,1,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Wait until you do child care tasks on your own
-encourage_leave_house,autonomy,TRUE,FALSE,0,1,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Leave the house so you don't have a choice
-encourage_child_ask_help,autonomy,TRUE,FALSE,0,1,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Tell your child to go ask for help (""Go tell Mommy/Daddy you want lunch."")"
-encourage_tells_good_parent,autonomy,TRUE,FALSE,0,1,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Tell you what a good parent you are.
-encourage_ask_opinion,autonomy,TRUE,FALSE,0,1,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Ask your opinion (""Do you think Tyler should wear a sweater today?"")"
-encourage_tell_others_good_parent,autonomy,TRUE,FALSE,0,1,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Tell other people about what a good parent you area at a time when you can hear him/her
-encourage_tell_happy,autonomy,TRUE,FALSE,0,1,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Tell you how happy you make your child (""Tyler really loves to play with you."")"
-encourage_alone_time,autonomy,TRUE,FALSE,0,1,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Encouraged you to spend time alone with your child
-encourage_arrange_activities,autonomy,TRUE,FALSE,0,1,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Arrange activities for you and your child to do together
-tells_right_way,autonomy,TRUE,TRUE,7,-1,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-1. Tell you the right way to handle the situation (?You need to leave him alone till he calms down.?)
-shows_anger,autonomy,TRUE,TRUE,7,-1,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-2. Show you that he/she is angry or irritated.
-keeps_quiet,autonomy,TRUE,TRUE,7,-1,"When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-3. Keep quiet, let you handle it anyway."
-tells_mistake,autonomy,TRUE,TRUE,7,-1,"When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-4. Tell you what he/she thinks you did wrong         (?The bath water is too hot, you?ll burn him.?)"
-explains_concerns,autonomy,TRUE,TRUE,7,-1,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-5. Explain his/her concerns to you               (?I?m worried because Tyler might hurt himself if you do that.?)
-criticize,autonomy,TRUE,TRUE,7,-1,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-6. Criticize you
-solicits_their_help,autonomy,TRUE,TRUE,7,-1,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-7. Ask if you would like his/her help.
-exasperated_look,autonomy,TRUE,TRUE,7,-1,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-8. Look exasperated and roll his/her eyes.
-feelings_discuss,autonomy,TRUE,TRUE,7,-1,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-9. Try to discuss his/her feelings about it with you.
-situations_learned,autonomy,TRUE,TRUE,7,-1,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-10. Tell you how he/she has learned to handle similar situations.
-complains_others,autonomy,TRUE,TRUE,7,-1,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-11. Tell other people about the things he/she doesn?t like (?He/she puts winter clothes on them and it?s 70 degrees out!?)
-take_over,autonomy,TRUE,TRUE,7,-1,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-12. Take over and do it his/her way.
-mistakes_on_your_own,autonomy,TRUE,TRUE,7,-1,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-13. Let you make your own mistakes.
-instruction,autonomy,TRUE,TRUE,7,-1,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-14. Instruct you                        (?Tyler likes to have his sandwich cut like this.?)
-redo_after,autonomy,TRUE,TRUE,7,-1,"When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-15. Not mention anything, but redo things after you               are gone."
-tells_child_mistake,autonomy,TRUE,TRUE,7,-1,"When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-16. Tell your child what he/she thinks you did wrong             (?Mommy/Daddy makes your food too hot, huh??)"
-tasks_without_help,autonomy,TRUE,TRUE,7,-1,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-17. Let you do it your own way.
-financial_stress_today,autonomy,TRUE,FALSE,0,1,Check the responses that are most appropriate for your situation.-What do you feel is the level of your financial stress today?
-financial_satisfaction,autonomy,TRUE,FALSE,0,1,Check the responses that are most appropriate for your situation.-How Satisfied are you with your present financial situation?
-financial_situation_feelings,autonomy,TRUE,FALSE,0,1,Check the responses that are most appropriate for your situation.-How you feel about your current financial situation?
-financial_worry_expenses,autonomy,TRUE,FALSE,0,1,Check the responses that are most appropriate for your situation.-How often do you worry about being able to meet normal monthly living expenses?
-confidence_financial_emergency,autonomy,TRUE,FALSE,0,1,Check the responses that are most appropriate for your situation.-How confident are you that you could find the money to pay for a financial emergency that costs about $1000?
-financial_activities_canceled,autonomy,TRUE,FALSE,0,1,"Check the responses that are most appropriate for your situation.-How often does this happen to you? You want to go out to eat, go to a movie or do something else and don't go because you can't afford it?"
-financial_paycheck_paycheck,autonomy,TRUE,FALSE,0,1,Check the responses that are most appropriate for your situation.-How frequently do you find yourself getting by financially and living paycheck to paycheck?
-financial_stress_general,autonomy,TRUE,FALSE,0,1,Check the responses that are most appropriate for your situation.-How stressed do you feel about your personal finances in general?
-work_conflict_family,autonomy,TRUE,TRUE,7,-1,For the following scale please rate how much you agree with the following statements by clicking...-My work prevents me spending sufficient quality time with my family
-work_conflict_time,autonomy,TRUE,TRUE,7,-1,"For the following scale please rate how much you agree with the following statements by clicking...-There is no time left at the end of the day to do the things I?d like at home (e.g., chores and leisure activities)"
-work_commitments_family_time,autonomy,TRUE,TRUE,7,-1,For the following scale please rate how much you agree with the following statements by clicking...-My family misses out because of my work commitments
-work_conflict_negative_family,autonomy,TRUE,TRUE,7,-1,For the following scale please rate how much you agree with the following statements by clicking...-My work has a negative impact on my family life
-work_conflict_irritability,autonomy,TRUE,TRUE,7,-1,For the following scale please rate how much you agree with the following statements by clicking...-Working often makes me irritable or short tempered at home
-father_confidence,competency,TRUE,FALSE,0,1,Please select the most accurate response for each question below:-I feel sure of myself as a father
-father_good_job,competency,TRUE,FALSE,0,1,Please select the most accurate response for each question below:-I know I am doing a good job as a father
-father_helping_parents,competency,TRUE,FALSE,0,1,Please select the most accurate response for each question below:-I think I know things about being a father that would be helpful to other parents
-father_problem_solve,competency,TRUE,FALSE,0,1,Please select the most accurate response for each question below:-I feel I can solve most problems between my child(ren) and me.
-father_child_conflict_change,competency,TRUE,FALSE,0,1,"Please select the most accurate response for each question below:-When things are going badly between my child(ren) and me, I keep trying until things begin to change."
-marital_satisfaction,relatedness,TRUE,FALSE,0,1,The following questions have to do with your relationship with your romantic partner. Though thes...-How satisfied are you with your marriage?
-relationship_satisfaction,relatedness,TRUE,FALSE,0,1,The following questions have to do with your relationship with your romantic partner. Though thes...-How satisfied are you with your relationship with your husband/wife?
-spousal_satisfaction,relatedness,TRUE,FALSE,0,1,The following questions have to do with your relationship with your romantic partner. Though thes...-How satisfied are you with your husband/wife as a spouse?
-child_relationship_satisfaction,relatedness,TRUE,FALSE,0,1,Answer the following questions in regards to your relationship with your children:-I have a rewarding relationship with my children.
-child_relationship_positivity,relatedness,TRUE,FALSE,0,1,"Answer the following questions in regards to your relationship with your children:-Overall, I have a positive relationship with my children."
-playing_child,relatedness,TRUE,FALSE,0,1,For the following items place the letter that indicates your feelings in the blank.-It is essential for the child's well being that fathers spend time interacting and playing with their children
-affection_difficulty,relatedness,TRUE,TRUE,7,-1,For the following items place the letter that indicates your feelings in the blank.-It is difficult for men to express tender and affectionate feelings toward babies
-father_role_development,relatedness,TRUE,FALSE,0,1,For the following items place the letter that indicates your feelings in the blank.-Fathers play a central role 'in the child's personality development.
-father_responsibility,relatedness,TRUE,FALSE,0,1,For the following items place the letter that indicates your feelings in the blank.-The responsibilities of fatherhood never overshadow the joys.
-father_enjoyment_older_children,relatedness,TRUE,TRUE,7,-1,For the following items place the letter that indicates your feelings in the blank.-Fathers are able to enjoy children more when the children are older and don't require so much care.
-moods_adult_sensing,relatedness,TRUE,FALSE,0,1,"For the following items place the letter that indicates your feelings in the blank.-Very young babies are generally able to sense an adult's moods and feelings. For example, a baby can tell when you are angry."
-moods_adult_affecting,relatedness,TRUE,FALSE,0,1,"For the following items place the letter that indicates your feelings in the blank.-Very young babies are affected by adults' moods and feelings. For example, if you are angry with a baby he/she may feel hurt."
-family_time,relatedness,TRUE,FALSE,0,1,For the following items place the letter that indicates your feelings in the blank.-The most important thing a man can invest time and energy into his family.
-father_childcare,relatedness,TRUE,FALSE,0,1,For the following items place the letter that indicates your feelings in the blank.-A father should be as heavily involved in the care of a baby as the mother is.
-father_sensitivity,relatedness,TRUE,TRUE,7,-1,For the following items place the letter that indicates your feelings in the blank.-Mothers are naturally more sensitive caregivers than fathers are.
-father_example,relatedness,TRUE,FALSE,0,1,For the following items place the letter that indicates your feelings in the blank.-Even when a baby is very young it is important for a father to set a good example for his baby.
-father_psychological_needs,relatedness,TRUE,FALSE,0,1,For the following items place the letter that indicates your feelings in the blank.-It is as important for a father to meet a baby's psychological needs as it is for the mother to do so
-father_response_time,relatedness,TRUE,FALSE,0,1,For the following items place the letter that indicates your feelings in the blank.-It is important to respond quickly to a young a baby each time it cries.
-father_nurture_six_months,relatedness,TRUE,FALSE,0,1,For the following items place the letter that indicates your feelings in the blank.-The way a father treats his baby in the first six months has important life-long effects on the child.
-father_reward,relatedness,TRUE,FALSE,0,1,"For the following items place the letter that indicates your feelings in the blank.-All things considered, fatherhood is a highly rewarding experience."
-teach_responsibility_zero,motivation_external,FALSE,FALSE,0,-1,Do you participate in teaching your child responsibility?
-teach_responsibility_enjoyment,motivation_internal,TRUE,FALSE,0,1,�Why do you participate in teaching your child responsibility?-Because I enjoy it
-teach_responsibility_important,motivation_internal,TRUE,FALSE,0,1,�Why do you participate in teaching your child responsibility?-Because it's important to me
-teach_responsibility_others,motivation_external,TRUE,FALSE,0,1,�Why do you participate in teaching your child responsibility?-Because I want others to think I'm a good father
-teach_responsibility_obligation,motivation_external,TRUE,FALSE,0,1,�Why do you participate in teaching your child responsibility?-Because that's what I'm supposed to do as a father
-school_encourage_zero,motivation_external,FALSE,FALSE,0,-1,Do you participate in encouraging your child with school?
-school_encouragement_enjoyment,motivation_internal,TRUE,FALSE,0,1,Why do you participate in encouraging your child with school?-Because I enjoy it
-school_encouragement_important,motivation_internal,TRUE,FALSE,0,1,Why do you participate in encouraging your child with school?-Because it's important to me
-school_encouragement_others,motivation_external,TRUE,FALSE,0,1,Why do you participate in encouraging your child with school?-Because I want others to think I'm a good father
-school_encouragement_obligation,motivation_external,TRUE,FALSE,0,1,Why do you participate in encouraging your child with school?-Because that's what I'm supposed to do as a father
-support_mother_zero,motivation_external,FALSE,FALSE,0,-1,Do you support your child's mother?
-support_mother_enjoyment,motivation_internal,TRUE,FALSE,0,1,Why do you support your child's mother?-Because I enjoy it
-support_mother_important,motivation_internal,TRUE,FALSE,0,1,Why do you support your child's mother?-Because it's important to me
-support_mother_others,motivation_external,TRUE,FALSE,0,1,Why do you support your child's mother?-Because I want others to think I'm a good father
-support_mother_obligation,motivation_external,TRUE,FALSE,0,1,Why do you support your child's mother?-Because that's what I'm supposed to do as a father
-provide_zero,motivation_external,FALSE,FALSE,0,-1,Do you provide for your children?
-provide_enjoyment,motivation_internal,TRUE,FALSE,0,1,Why do you provide for your children?-Because I enjoy it
-provide_important,motivation_internal,TRUE,FALSE,0,1,Why do you provide for your children?-Because it's important to me
-provide_others,motivation_external,TRUE,FALSE,0,1,Why do you provide for your children?-Because I want others to think I'm a good father
-provide_obligation,motivation_external,TRUE,FALSE,0,1,Why do you provide for your children?-Because that's what I'm supposed to do as a father
-talking_child_zero,motivation_external,FALSE,FALSE,0,-1,Do you spend time with your children talking and getting to know them?
-talking_child_enjoyment,motivation_internal,TRUE,FALSE,0,1,Why do you spend time with your children talking and getting to know them?-Because I enjoy it
-talking_child_important,motivation_internal,TRUE,FALSE,0,1,Why do you spend time with your children talking and getting to know them?-Because it's important to me
-talking_child_others,motivation_external,TRUE,FALSE,0,1,Why do you spend time with your children talking and getting to know them?-Because I want others to think I'm a good father
-talking_child_obligation,motivation_external,TRUE,FALSE,0,1,Why do you spend time with your children talking and getting to know them?-Because that's what I'm supposed to do as a father
-praise_child_zero,motivation_external,FALSE,FALSE,0,-1,Do you give your kids praise and attention?
-praise_child_enjoyment,motivation_internal,TRUE,FALSE,0,1,Why do you give your kids praise and affection?-Because I enjoy it
-praise_child_important,motivation_internal,TRUE,FALSE,0,1,Why do you give your kids praise and affection?-Because it's important to me
-praise_child_others,motivation_external,TRUE,FALSE,0,1,Why do you give your kids praise and affection?-Because I want others to think I'm a good father
-praise_child_obligation,motivation_external,TRUE,FALSE,0,1,Why do you give your kids praise and affection?-Because that's what I'm supposed to do as a father
-talent_future_zero,motivation_external,FALSE,FALSE,0,-1,Do you spend time helping your child(ren) develop their talents and prepare for future concerns?
-talent_future_enjoyment,motivation_internal,TRUE,FALSE,0,1,Why do you spend time helping your child(ren) develop their talents and prepare for future concerns?-Because I enjoy it
-talent_future_important,motivation_internal,TRUE,FALSE,0,1,Why do you spend time helping your child(ren) develop their talents and prepare for future concerns?-Because it's important to me
-talent_future_others,motivation_external,TRUE,FALSE,0,1,Why do you spend time helping your child(ren) develop their talents and prepare for future concerns?-Because I want others to think I'm a good father
-talent_future_obligation,motivation_external,TRUE,FALSE,0,1,Why do you spend time helping your child(ren) develop their talents and prepare for future concerns?-Because that's what I'm supposed to do as a father
-reading_support_zero,motivation_external,FALSE,FALSE,0,-1,Do you engage in homework and reading support with your child?
-reading_support_enjoyment,motivation_internal,TRUE,FALSE,0,1,Why do you engage in homework and reading support with your child?-Because I enjoy it
-reading_support_important,motivation_internal,TRUE,FALSE,0,1,Why do you engage in homework and reading support with your child?-Because it's important to me
-reading_support_others,motivation_external,TRUE,FALSE,0,1,Why do you engage in homework and reading support with your child?-Because I want others to think I'm a good father
-reading_support_obligation,motivation_external,TRUE,FALSE,0,1,Why do you engage in homework and reading support with your child?-Because that's what I'm supposed to do as a father
-attention_zero,motivation_external,FALSE,FALSE,0,-1,Do you give your child attention?
-attention_enjoyment,motivation_internal,TRUE,FALSE,0,1,Why do you give your child attention?-Because I enjoy it
-attention_important,motivation_internal,TRUE,FALSE,0,1,Why do you give your child attention?-Because it's important to me
-attention_others,motivation_external,TRUE,FALSE,0,1,Why do you give your child attention?-Because I want others to think I'm a good father
-attention_obligation,motivation_external,TRUE,FALSE,0,1,Why do you give your child attention?-Because that's what I'm supposed to do as a father
-attending_events,involvement,TRUE,FALSE,0,1,"Now think of your experience as a father currently. Please rate how involved you think you are on...-I attend events my children participate in (sports, school church events)"
-reading_encouragement,involvement,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I encourage my children to read
-provide_needs,involvement,TRUE,FALSE,0,1,"Now think of your experience as a father currently. Please rate how involved you think you are on...-I provide for my children's basic needs (shelter, health care, etc.)"
-praising_choices,involvement,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I praise my children for being good or doing the right thing
-encouraging_mother,involvement,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I give my children's mother encouragement and emotional support
-routine_daily_involvement,involvement,TRUE,FALSE,0,1,"Now think of your experience as a father currently. Please rate how involved you think you are on...-I am involved in the daily or regular routine of taking care of my children's basic needs or activities (feeding, driving them places, etc.)"
-praise_mom_to_children,involvement,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I let my children know that their mother is an important and special person
-praise_children_good_job,involvement,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I praise my children for something they have done well
-encourage_school,involvement,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I encourage my children to succeed in school
-befriend_children,involvement,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I am a pal or friend to my children
-financial_support_responsibility,involvement,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I accept responsibility for the financial support of the children I have fathered
-encourage_homework,involvement,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I encourage my children to do their homework
-love_communication,involvement,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I tell my children that I love them
-children_whereabouts,involvement,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I know where my children go and what they do with their friends
-talking_children,involvement,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I spend time just talking with my children when they want to talk about something
-mother_cooperation_parenting,involvement,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I cooperate with my children's mother in the rearing of my children
-reading_child,involvement,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I read to my younger children
-teach_rules_following,involvement,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I teach my children to follow rules at school
-encourage_college,involvement,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I encourage my children to continue schooling beyond high school
-discipline_child,involvement,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I discipline my children
-homework_help,involvement,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I help my older children with their homework
-plan_child_future,involvement,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I plan for my children's future
-encourage_talent_development,involvement,TRUE,FALSE,0,1,"Now think of your experience as a father currently. Please rate how involved you think you are on...-I encourage my children to develop their talents (music, athletics, art, etc.)"
-time_child,involvement,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I spend time with my children doing things they like to do
-chores_encouragement,involvement,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I encourage my children to do their chores
-rules_behavior_child,involvement,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I set rules and limits for my children's behavior
-satisfaction_child,satisfaction,TRUE,FALSE,0,1,Use the scale provided to answer the questions below:-How satisfied are you with your children's behavior?
-satisfaction_parenting,satisfaction,TRUE,FALSE,0,1,Use the scale provided to answer the questions below:-How satisfied are you with yourself as a parent?
-satisfaction_relationship_child,satisfaction,TRUE,FALSE,0,1,Use the scale provided to answer the questions below:-How satisfied are you with your relationship(s) with your children?
-gift_card,gift_card,FALSE,FALSE,NA,NA,"If you want to be eligible for one of two $50 gift cards to a local retailer, you must provide yo..."
+variable,section,instrument,retain,reverse_code,intercept,slope,label
+response_id,plumbing,plumbing,TRUE,FALSE,NA,NA,ResponseID
+response_set,plumbing,plumbing,TRUE,FALSE,NA,NA,ResponseSet
+na,plumbing,plumbing,FALSE,FALSE,NA,NA,Name
+na,plumbing,plumbing,FALSE,FALSE,NA,NA,ExternalDataReference
+na,plumbing,plumbing,FALSE,FALSE,NA,NA,Status
+na,plumbing,plumbing,FALSE,FALSE,NA,NA,StartDate
+na,plumbing,plumbing,FALSE,FALSE,NA,NA,EndDate
+na,plumbing,plumbing,FALSE,FALSE,NA,NA,Finished
+na,plumbing,plumbing,FALSE,FALSE,NA,NA,Score-sum
+na,plumbing,plumbing,FALSE,FALSE,NA,NA,Score-weightedAvg
+na,plumbing,plumbing,FALSE,FALSE,NA,NA,Score-weightedStdDev
+na,plumbing,plumbing,FALSE,FALSE,NA,NA,"My name is Bryan Ray, and I am a graduate student in Educational Psychology at the University of..."
+one_child_at_least,demographics,demographics,TRUE,FALSE,NA,NA,Are you a father with at least one child in elementary school?
+live_with_child,demographics,demographics,TRUE,FALSE,NA,NA,Do you live with your child that is in elementary school?
+sexual_orientation,demographics,demographics,TRUE,FALSE,NA,NA,What is your sexual orientation?
+live_with_mother,demographics,demographics,TRUE,FALSE,NA,NA,Do you live with the mother of your children?
+is_married,demographics,demographics,TRUE,FALSE,NA,NA,Are you married?
+married_duration,demographics,demographics,TRUE,FALSE,NA,NA,How long have you been married to your spouse?
+education,demographics,demographics,TRUE,FALSE,NA,NA,What is the highest level of education you have completed?
+age,demographics,demographics,TRUE,FALSE,NA,NA,Age:
+income_category,demographics,demographics,TRUE,FALSE,NA,NA,What is your current household annual income? (gross income)
+child_in_home_count,demographics,demographics,TRUE,FALSE,NA,NA,How many children are living in your home
+race,demographics,demographics,TRUE,FALSE,NA,NA,Which Race/Ethnicity best describes you?
+race_other,demographics,demographics,TRUE,FALSE,NA,NA,Which Race/Ethnicity best describes you?-TEXT
+religion,demographics,demographics,TRUE,FALSE,NA,NA,Religious preference
+relation_biodad,demographics,demographics,TRUE,FALSE,NA,NA,Describe your relationship to the elementary-aged children living in your home (Check all that ap...-Biological father
+relation_step,demographics,demographics,TRUE,FALSE,NA,NA,Describe your relationship to the elementary-aged children living in your home (Check all that ap...-Step-father
+relation_adoptive,demographics,demographics,TRUE,FALSE,NA,NA,Describe your relationship to the elementary-aged children living in your home (Check all that ap...-Adoptive father
+relation_other,demographics,demographics,TRUE,FALSE,NA,NA,Describe your relationship to the elementary-aged children living in your home (Check all that ap...-Other
+relation_other_text,demographics,demographics,TRUE,FALSE,NA,NA,Describe your relationship to the elementary-aged children living in your home (Check all that ap...-Other-TEXT
+work_hours_outside,demographics,demographics,TRUE,FALSE,NA,NA,How many hours per week to you spend working outside of the home?
+work_hours_spouse_outside,demographics,demographics,TRUE,FALSE,NA,NA,How many hours per week does your partner spend working outside of the home?
+encourage_childcare_tasks,autonomy,pri,TRUE,FALSE,0,1,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Tell you to do a child care task. (?Go wash Tyler?s face.?)
+encourage_ask_help,autonomy,pri,TRUE,FALSE,0,1,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Ask you politely to help (?Can you wash Tyler?s face please??)
+encourage_compliment,autonomy,pri,TRUE,FALSE,0,1,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Compliment you (""You're able to calm Tyler down better than I can."")"
+encourage_invite_help,autonomy,pri,TRUE,FALSE,0,1,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Invite you to help (""Wouldn't you like to read to Tyler?"")"
+encourage_refuse,autonomy,pri,TRUE,FALSE,0,1,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Refuse to do it him/herself (""I'm not giving Tyler a bath. Its' your turn)"
+encourage_give_look,autonomy,pri,TRUE,FALSE,0,1,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Give you a serious look that means, ""You need to deal with Tyler now!"""
+encourage_appreciation,autonomy,pri,TRUE,FALSE,0,1,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Let you know he/she appreciates your contributions (""It really helps when you take Tyler with you."")"
+encourage_irritated_look,autonomy,pri,TRUE,FALSE,0,1,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Give you an irritated or exasperated look
+encourage_hint_work,autonomy,pri,TRUE,FALSE,0,1,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Hint that work needs to be done (""Boy, Tyler sure is dirty!"")"
+encourage_tasks_independent,autonomy,pri,TRUE,FALSE,0,1,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Wait until you do child care tasks on your own
+encourage_leave_house,autonomy,pri,TRUE,FALSE,0,1,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Leave the house so you don't have a choice
+encourage_child_ask_help,autonomy,pri,TRUE,FALSE,0,1,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Tell your child to go ask for help (""Go tell Mommy/Daddy you want lunch."")"
+encourage_tells_good_parent,autonomy,pri,TRUE,FALSE,0,1,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Tell you what a good parent you are.
+encourage_ask_opinion,autonomy,pri,TRUE,FALSE,0,1,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Ask your opinion (""Do you think Tyler should wear a sweater today?"")"
+encourage_tell_others_good_parent,autonomy,pri,TRUE,FALSE,0,1,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Tell other people about what a good parent you area at a time when you can hear him/her
+encourage_tell_happy,autonomy,pri,TRUE,FALSE,0,1,"How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Tell you how happy you make your child (""Tyler really loves to play with you."")"
+encourage_alone_time,autonomy,pri,TRUE,FALSE,0,1,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Encouraged you to spend time alone with your child
+encourage_arrange_activities,autonomy,pri,TRUE,FALSE,0,1,How often does YOUR SPOUSE/PARTNER do the following things to encourage you to be involved in chi...-Arrange activities for you and your child to do together
+tells_right_way,autonomy,pri,TRUE,TRUE,7,-1,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-1. Tell you the right way to handle the situation (?You need to leave him alone till he calms down.?)
+shows_anger,autonomy,pri,TRUE,TRUE,7,-1,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-2. Show you that he/she is angry or irritated.
+keeps_quiet,autonomy,pri,TRUE,TRUE,7,-1,"When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-3. Keep quiet, let you handle it anyway."
+tells_mistake,autonomy,pri,TRUE,TRUE,7,-1,"When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-4. Tell you what he/she thinks you did wrong         (?The bath water is too hot, you?ll burn him.?)"
+explains_concerns,autonomy,pri,TRUE,TRUE,7,-1,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-5. Explain his/her concerns to you               (?I?m worried because Tyler might hurt himself if you do that.?)
+criticize,autonomy,pri,TRUE,TRUE,7,-1,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-6. Criticize you
+solicits_their_help,autonomy,pri,TRUE,TRUE,7,-1,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-7. Ask if you would like his/her help.
+exasperated_look,autonomy,pri,TRUE,TRUE,7,-1,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-8. Look exasperated and roll his/her eyes.
+feelings_discuss,autonomy,pri,TRUE,TRUE,7,-1,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-9. Try to discuss his/her feelings about it with you.
+situations_learned,autonomy,pri,TRUE,TRUE,7,-1,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-10. Tell you how he/she has learned to handle similar situations.
+complains_others,autonomy,pri,TRUE,TRUE,7,-1,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-11. Tell other people about the things he/she doesn?t like (?He/she puts winter clothes on them and it?s 70 degrees out!?)
+take_over,autonomy,pri,TRUE,TRUE,7,-1,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-12. Take over and do it his/her way.
+mistakes_on_your_own,autonomy,pri,TRUE,TRUE,7,-1,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-13. Let you make your own mistakes.
+instruction,autonomy,pri,TRUE,TRUE,7,-1,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-14. Instruct you                        (?Tyler likes to have his sandwich cut like this.?)
+redo_after,autonomy,pri,TRUE,TRUE,7,-1,"When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-15. Not mention anything, but redo things after you               are gone."
+tells_child_mistake,autonomy,pri,TRUE,TRUE,7,-1,"When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-16. Tell your child what he/she thinks you did wrong             (?Mommy/Daddy makes your food too hot, huh??)"
+tasks_without_help,autonomy,pri,TRUE,TRUE,7,-1,When you do something that YOUR SPOUSE/PARTNER doesn?t approve of regarding child care or with yo...-17. Let you do it your own way.
+financial_stress_today,autonomy,fss,TRUE,FALSE,0,1,Check the responses that are most appropriate for your situation.-What do you feel is the level of your financial stress today?
+financial_satisfaction,autonomy,fss,TRUE,FALSE,0,1,Check the responses that are most appropriate for your situation.-How Satisfied are you with your present financial situation?
+financial_situation_feelings,autonomy,fss,TRUE,FALSE,0,1,Check the responses that are most appropriate for your situation.-How you feel about your current financial situation?
+financial_worry_expenses,autonomy,fss,TRUE,FALSE,0,1,Check the responses that are most appropriate for your situation.-How often do you worry about being able to meet normal monthly living expenses?
+confidence_financial_emergency,autonomy,fss,TRUE,FALSE,0,1,Check the responses that are most appropriate for your situation.-How confident are you that you could find the money to pay for a financial emergency that costs about $1000?
+financial_activities_canceled,autonomy,fss,TRUE,FALSE,0,1,"Check the responses that are most appropriate for your situation.-How often does this happen to you? You want to go out to eat, go to a movie or do something else and don't go because you can't afford it?"
+financial_paycheck_paycheck,autonomy,fss,TRUE,FALSE,0,1,Check the responses that are most appropriate for your situation.-How frequently do you find yourself getting by financially and living paycheck to paycheck?
+financial_stress_general,autonomy,fss,TRUE,FALSE,0,1,Check the responses that are most appropriate for your situation.-How stressed do you feel about your personal finances in general?
+work_conflict_family,autonomy,wafcs,TRUE,TRUE,7,-1,For the following scale please rate how much you agree with the following statements by clicking...-My work prevents me spending sufficient quality time with my family
+work_conflict_time,autonomy,wafcs,TRUE,TRUE,7,-1,"For the following scale please rate how much you agree with the following statements by clicking...-There is no time left at the end of the day to do the things I?d like at home (e.g., chores and leisure activities)"
+work_commitments_family_time,autonomy,wafcs,TRUE,TRUE,7,-1,For the following scale please rate how much you agree with the following statements by clicking...-My family misses out because of my work commitments
+work_conflict_negative_family,autonomy,wafcs,TRUE,TRUE,7,-1,For the following scale please rate how much you agree with the following statements by clicking...-My work has a negative impact on my family life
+work_conflict_irritability,autonomy,wafcs,TRUE,TRUE,7,-1,For the following scale please rate how much you agree with the following statements by clicking...-Working often makes me irritable or short tempered at home
+father_confidence,competency,psi,TRUE,FALSE,0,1,Please select the most accurate response for each question below:-I feel sure of myself as a father
+father_good_job,competency,psi,TRUE,FALSE,0,1,Please select the most accurate response for each question below:-I know I am doing a good job as a father
+father_helping_parents,competency,psi,TRUE,FALSE,0,1,Please select the most accurate response for each question below:-I think I know things about being a father that would be helpful to other parents
+father_problem_solve,competency,psi,TRUE,FALSE,0,1,Please select the most accurate response for each question below:-I feel I can solve most problems between my child(ren) and me.
+father_child_conflict_change,competency,psi,TRUE,FALSE,0,1,"Please select the most accurate response for each question below:-When things are going badly between my child(ren) and me, I keep trying until things begin to change."
+marital_satisfaction,relatedness,kmss,TRUE,FALSE,0,1,The following questions have to do with your relationship with your romantic partner. Though thes...-How satisfied are you with your marriage?
+relationship_satisfaction,relatedness,kmss,TRUE,FALSE,0,1,The following questions have to do with your relationship with your romantic partner. Though thes...-How satisfied are you with your relationship with your husband/wife?
+spousal_satisfaction,relatedness,kmss,TRUE,FALSE,0,1,The following questions have to do with your relationship with your romantic partner. Though thes...-How satisfied are you with your husband/wife as a spouse?
+child_relationship_satisfaction,relatedness,rc,TRUE,FALSE,0,1,Answer the following questions in regards to your relationship with your children:-I have a rewarding relationship with my children.
+child_relationship_positivity,relatedness,rc,TRUE,FALSE,0,1,"Answer the following questions in regards to your relationship with your children:-Overall, I have a positive relationship with my children."
+playing_child,relatedness,rofq,TRUE,FALSE,0,1,For the following items place the letter that indicates your feelings in the blank.-It is essential for the child's well being that fathers spend time interacting and playing with their children
+affection_difficulty,relatedness,rofq,TRUE,TRUE,7,-1,For the following items place the letter that indicates your feelings in the blank.-It is difficult for men to express tender and affectionate feelings toward babies
+father_role_development,relatedness,rofq,TRUE,FALSE,0,1,For the following items place the letter that indicates your feelings in the blank.-Fathers play a central role 'in the child's personality development.
+father_responsibility,relatedness,rofq,TRUE,FALSE,0,1,For the following items place the letter that indicates your feelings in the blank.-The responsibilities of fatherhood never overshadow the joys.
+father_enjoyment_older_children,relatedness,rofq,TRUE,TRUE,7,-1,For the following items place the letter that indicates your feelings in the blank.-Fathers are able to enjoy children more when the children are older and don't require so much care.
+moods_adult_sensing,relatedness,rofq,TRUE,FALSE,0,1,"For the following items place the letter that indicates your feelings in the blank.-Very young babies are generally able to sense an adult's moods and feelings. For example, a baby can tell when you are angry."
+moods_adult_affecting,relatedness,rofq,TRUE,FALSE,0,1,"For the following items place the letter that indicates your feelings in the blank.-Very young babies are affected by adults' moods and feelings. For example, if you are angry with a baby he/she may feel hurt."
+family_time,relatedness,rofq,TRUE,FALSE,0,1,For the following items place the letter that indicates your feelings in the blank.-The most important thing a man can invest time and energy into his family.
+father_childcare,relatedness,rofq,TRUE,FALSE,0,1,For the following items place the letter that indicates your feelings in the blank.-A father should be as heavily involved in the care of a baby as the mother is.
+father_sensitivity,relatedness,rofq,TRUE,TRUE,7,-1,For the following items place the letter that indicates your feelings in the blank.-Mothers are naturally more sensitive caregivers than fathers are.
+father_example,relatedness,rofq,TRUE,FALSE,0,1,For the following items place the letter that indicates your feelings in the blank.-Even when a baby is very young it is important for a father to set a good example for his baby.
+father_psychological_needs,relatedness,rofq,TRUE,FALSE,0,1,For the following items place the letter that indicates your feelings in the blank.-It is as important for a father to meet a baby's psychological needs as it is for the mother to do so
+father_response_time,relatedness,rofq,TRUE,FALSE,0,1,For the following items place the letter that indicates your feelings in the blank.-It is important to respond quickly to a young a baby each time it cries.
+father_nurture_six_months,relatedness,rofq,TRUE,FALSE,0,1,For the following items place the letter that indicates your feelings in the blank.-The way a father treats his baby in the first six months has important life-long effects on the child.
+father_reward,relatedness,rofq,TRUE,FALSE,0,1,"For the following items place the letter that indicates your feelings in the blank.-All things considered, fatherhood is a highly rewarding experience."
+teach_responsibility_zero,motivation_external,motivation_external,FALSE,FALSE,0,-1,Do you participate in teaching your child responsibility?
+teach_responsibility_enjoyment,motivation_internal,motivation_internal,TRUE,FALSE,0,1,�Why do you participate in teaching your child responsibility?-Because I enjoy it
+teach_responsibility_important,motivation_internal,motivation_internal,TRUE,FALSE,0,1,�Why do you participate in teaching your child responsibility?-Because it's important to me
+teach_responsibility_others,motivation_external,motivation_external,TRUE,FALSE,0,1,�Why do you participate in teaching your child responsibility?-Because I want others to think I'm a good father
+teach_responsibility_obligation,motivation_external,motivation_external,TRUE,FALSE,0,1,�Why do you participate in teaching your child responsibility?-Because that's what I'm supposed to do as a father
+school_encourage_zero,motivation_external,motivation_external,FALSE,FALSE,0,-1,Do you participate in encouraging your child with school?
+school_encouragement_enjoyment,motivation_internal,motivation_internal,TRUE,FALSE,0,1,Why do you participate in encouraging your child with school?-Because I enjoy it
+school_encouragement_important,motivation_internal,motivation_internal,TRUE,FALSE,0,1,Why do you participate in encouraging your child with school?-Because it's important to me
+school_encouragement_others,motivation_external,motivation_external,TRUE,FALSE,0,1,Why do you participate in encouraging your child with school?-Because I want others to think I'm a good father
+school_encouragement_obligation,motivation_external,motivation_external,TRUE,FALSE,0,1,Why do you participate in encouraging your child with school?-Because that's what I'm supposed to do as a father
+support_mother_zero,motivation_external,motivation_external,FALSE,FALSE,0,-1,Do you support your child's mother?
+support_mother_enjoyment,motivation_internal,motivation_internal,TRUE,FALSE,0,1,Why do you support your child's mother?-Because I enjoy it
+support_mother_important,motivation_internal,motivation_internal,TRUE,FALSE,0,1,Why do you support your child's mother?-Because it's important to me
+support_mother_others,motivation_external,motivation_external,TRUE,FALSE,0,1,Why do you support your child's mother?-Because I want others to think I'm a good father
+support_mother_obligation,motivation_external,motivation_external,TRUE,FALSE,0,1,Why do you support your child's mother?-Because that's what I'm supposed to do as a father
+provide_zero,motivation_external,motivation_external,FALSE,FALSE,0,-1,Do you provide for your children?
+provide_enjoyment,motivation_internal,motivation_internal,TRUE,FALSE,0,1,Why do you provide for your children?-Because I enjoy it
+provide_important,motivation_internal,motivation_internal,TRUE,FALSE,0,1,Why do you provide for your children?-Because it's important to me
+provide_others,motivation_external,motivation_external,TRUE,FALSE,0,1,Why do you provide for your children?-Because I want others to think I'm a good father
+provide_obligation,motivation_external,motivation_external,TRUE,FALSE,0,1,Why do you provide for your children?-Because that's what I'm supposed to do as a father
+talking_child_zero,motivation_external,motivation_external,FALSE,FALSE,0,-1,Do you spend time with your children talking and getting to know them?
+talking_child_enjoyment,motivation_internal,motivation_internal,TRUE,FALSE,0,1,Why do you spend time with your children talking and getting to know them?-Because I enjoy it
+talking_child_important,motivation_internal,motivation_internal,TRUE,FALSE,0,1,Why do you spend time with your children talking and getting to know them?-Because it's important to me
+talking_child_others,motivation_external,motivation_external,TRUE,FALSE,0,1,Why do you spend time with your children talking and getting to know them?-Because I want others to think I'm a good father
+talking_child_obligation,motivation_external,motivation_external,TRUE,FALSE,0,1,Why do you spend time with your children talking and getting to know them?-Because that's what I'm supposed to do as a father
+praise_child_zero,motivation_external,motivation_external,FALSE,FALSE,0,-1,Do you give your kids praise and attention?
+praise_child_enjoyment,motivation_internal,motivation_internal,TRUE,FALSE,0,1,Why do you give your kids praise and affection?-Because I enjoy it
+praise_child_important,motivation_internal,motivation_internal,TRUE,FALSE,0,1,Why do you give your kids praise and affection?-Because it's important to me
+praise_child_others,motivation_external,motivation_external,TRUE,FALSE,0,1,Why do you give your kids praise and affection?-Because I want others to think I'm a good father
+praise_child_obligation,motivation_external,motivation_external,TRUE,FALSE,0,1,Why do you give your kids praise and affection?-Because that's what I'm supposed to do as a father
+talent_future_zero,motivation_external,motivation_external,FALSE,FALSE,0,-1,Do you spend time helping your child(ren) develop their talents and prepare for future concerns?
+talent_future_enjoyment,motivation_internal,motivation_internal,TRUE,FALSE,0,1,Why do you spend time helping your child(ren) develop their talents and prepare for future concerns?-Because I enjoy it
+talent_future_important,motivation_internal,motivation_internal,TRUE,FALSE,0,1,Why do you spend time helping your child(ren) develop their talents and prepare for future concerns?-Because it's important to me
+talent_future_others,motivation_external,motivation_external,TRUE,FALSE,0,1,Why do you spend time helping your child(ren) develop their talents and prepare for future concerns?-Because I want others to think I'm a good father
+talent_future_obligation,motivation_external,motivation_external,TRUE,FALSE,0,1,Why do you spend time helping your child(ren) develop their talents and prepare for future concerns?-Because that's what I'm supposed to do as a father
+reading_support_zero,motivation_external,motivation_external,FALSE,FALSE,0,-1,Do you engage in homework and reading support with your child?
+reading_support_enjoyment,motivation_internal,motivation_internal,TRUE,FALSE,0,1,Why do you engage in homework and reading support with your child?-Because I enjoy it
+reading_support_important,motivation_internal,motivation_internal,TRUE,FALSE,0,1,Why do you engage in homework and reading support with your child?-Because it's important to me
+reading_support_others,motivation_external,motivation_external,TRUE,FALSE,0,1,Why do you engage in homework and reading support with your child?-Because I want others to think I'm a good father
+reading_support_obligation,motivation_external,motivation_external,TRUE,FALSE,0,1,Why do you engage in homework and reading support with your child?-Because that's what I'm supposed to do as a father
+attention_zero,motivation_external,motivation_external,FALSE,FALSE,0,-1,Do you give your child attention?
+attention_enjoyment,motivation_internal,motivation_internal,TRUE,FALSE,0,1,Why do you give your child attention?-Because I enjoy it
+attention_important,motivation_internal,motivation_internal,TRUE,FALSE,0,1,Why do you give your child attention?-Because it's important to me
+attention_others,motivation_external,motivation_external,TRUE,FALSE,0,1,Why do you give your child attention?-Because I want others to think I'm a good father
+attention_obligation,motivation_external,motivation_external,TRUE,FALSE,0,1,Why do you give your child attention?-Because that's what I'm supposed to do as a father
+attending_events,involvement,ifi,TRUE,FALSE,0,1,"Now think of your experience as a father currently. Please rate how involved you think you are on...-I attend events my children participate in (sports, school church events)"
+reading_encouragement,involvement,ifi,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I encourage my children to read
+provide_needs,involvement,ifi,TRUE,FALSE,0,1,"Now think of your experience as a father currently. Please rate how involved you think you are on...-I provide for my children's basic needs (shelter, health care, etc.)"
+praising_choices,involvement,ifi,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I praise my children for being good or doing the right thing
+encouraging_mother,involvement,ifi,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I give my children's mother encouragement and emotional support
+routine_daily_involvement,involvement,ifi,TRUE,FALSE,0,1,"Now think of your experience as a father currently. Please rate how involved you think you are on...-I am involved in the daily or regular routine of taking care of my children's basic needs or activities (feeding, driving them places, etc.)"
+praise_mom_to_children,involvement,ifi,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I let my children know that their mother is an important and special person
+praise_children_good_job,involvement,ifi,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I praise my children for something they have done well
+encourage_school,involvement,ifi,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I encourage my children to succeed in school
+befriend_children,involvement,ifi,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I am a pal or friend to my children
+financial_support_responsibility,involvement,ifi,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I accept responsibility for the financial support of the children I have fathered
+encourage_homework,involvement,ifi,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I encourage my children to do their homework
+love_communication,involvement,ifi,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I tell my children that I love them
+children_whereabouts,involvement,ifi,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I know where my children go and what they do with their friends
+talking_children,involvement,ifi,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I spend time just talking with my children when they want to talk about something
+mother_cooperation_parenting,involvement,ifi,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I cooperate with my children's mother in the rearing of my children
+reading_child,involvement,ifi,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I read to my younger children
+teach_rules_following,involvement,ifi,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I teach my children to follow rules at school
+encourage_college,involvement,ifi,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I encourage my children to continue schooling beyond high school
+discipline_child,involvement,ifi,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I discipline my children
+homework_help,involvement,ifi,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I help my older children with their homework
+plan_child_future,involvement,ifi,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I plan for my children's future
+encourage_talent_development,involvement,ifi,TRUE,FALSE,0,1,"Now think of your experience as a father currently. Please rate how involved you think you are on...-I encourage my children to develop their talents (music, athletics, art, etc.)"
+time_child,involvement,ifi,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I spend time with my children doing things they like to do
+chores_encouragement,involvement,ifi,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I encourage my children to do their chores
+rules_behavior_child,involvement,ifi,TRUE,FALSE,0,1,Now think of your experience as a father currently. Please rate how involved you think you are on...-I set rules and limits for my children's behavior
+satisfaction_child,satisfaction,kpss,TRUE,FALSE,0,1,Use the scale provided to answer the questions below:-How satisfied are you with your children's behavior?
+satisfaction_parenting,satisfaction,kpss,TRUE,FALSE,0,1,Use the scale provided to answer the questions below:-How satisfied are you with yourself as a parent?
+satisfaction_relationship_child,satisfaction,kpss,TRUE,FALSE,0,1,Use the scale provided to answer the questions below:-How satisfied are you with your relationship(s) with your children?
+gift_card,gift_card,gift_card,FALSE,FALSE,NA,NA,"If you want to be eligible for one of two $50 gift cards to a local retailer, you must provide yo..."
