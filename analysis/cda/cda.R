@@ -53,9 +53,9 @@ model_dual_motivation <- '
    satisfaction ~ motivation_internal + motivation_external
 
    # residual covariances
-   autonomy ~~ competency
-   autonomy ~~ relatedness
-   competency ~~ relatedness
+   # autonomy ~~ competency
+   # autonomy ~~ relatedness
+   # competency ~~ relatedness
    motivation_internal ~~ motivation_external
    involvement ~~ satisfaction
 '

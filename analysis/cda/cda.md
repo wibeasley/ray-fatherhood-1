@@ -35,30 +35,24 @@
 # Model (Motivation separated into two variables)
 
 ```
-Warning in vnames(FLAT, "ov.x", warn = TRUE): lavaan WARNING: model syntax contains variance/covariance/intercept formulas
-  involving (an) exogenous variable(s): [autonomy competency relatedness];
-  Please use fixed.x=FALSE or leave them alone
-```
-
-```
                npar                fmin               chisq                  df              pvalue      baseline.chisq 
-             22.000               0.173              89.728               6.000               0.000             671.630 
+             16.000               0.173              89.728               6.000               0.000             536.279 
         baseline.df     baseline.pvalue                 cfi                 tli                nnfi                 rfi 
-             21.000               0.000               0.871               0.550               0.550               0.532 
+             18.000               0.000               0.838               0.515               0.515               0.498 
                 nfi                pnfi                 ifi                 rni                logl   unrestricted.logl 
-              0.866               0.248               0.874               0.871           -1170.491           -1125.627 
+              0.833               0.278               0.842               0.838           -1170.491           -1125.627 
                 aic                 bic              ntotal                bic2               rmsea      rmsea.ci.lower 
-           2384.983            2463.318             260.000            2393.569               0.232               0.191 
+           2372.983            2429.953             260.000            2379.227               0.232               0.191 
      rmsea.ci.upper        rmsea.pvalue                 rmr          rmr_nomean                srmr        srmr_bentler 
               0.275               0.000               0.030               0.030               0.095               0.095 
 srmr_bentler_nomean         srmr_bollen  srmr_bollen_nomean          srmr_mplus   srmr_mplus_nomean               cn_05 
               0.095               0.095               0.095               0.095               0.095              37.486 
               cn_01                 gfi                agfi                pgfi                 mfi                ecvi 
-             49.715               0.922               0.634               0.197               0.851               0.514 
+             49.715               0.922               0.634               0.197               0.851               0.468 
 ```
 
 ```
-lavaan (0.5-20) converged normally after  43 iterations
+lavaan (0.5-20) converged normally after  28 iterations
 
   Number of observations                           260
 
@@ -91,11 +85,6 @@ Regressions:
 
 Covariances:
                          Estimate  Std.Err  Z-value  P(>|z|)
-  autonomy ~~                                               
-    competency              0.074    0.014    5.383    0.000
-    relatedness             0.066    0.011    5.961    0.000
-  competency ~~                                             
-    relatedness             0.146    0.020    7.413    0.000
   motivation_internal ~~                                    
     motivatn_xtrnl          0.060    0.021    2.889    0.004
   involvement ~~                                            
@@ -107,34 +96,31 @@ Variances:
     motivatn_xtrnl    0.594    0.052   11.402    0.000
     involvement       0.113    0.010   11.402    0.000
     satisfaction      0.288    0.025   11.402    0.000
-    autonomy          0.123    0.011   11.402    0.000
-    competency        0.357    0.031   11.402    0.000
-    relatedness       0.223    0.020   11.402    0.000
 ```
 
 ```
                    lhs op                 rhs est.std    se      z pvalue
-1  motivation_internal  ~            autonomy  -0.058 0.052 -1.126  0.260
-2  motivation_internal  ~          competency   0.279 0.054  5.144  0.000
-3  motivation_internal  ~         relatedness   0.497 0.052  9.556  0.000
+1  motivation_internal  ~            autonomy  -0.058 0.052 -1.128  0.259
+2  motivation_internal  ~          competency   0.279 0.053  5.233  0.000
+3  motivation_internal  ~         relatedness   0.497 0.050  9.935  0.000
 4  motivation_external  ~            autonomy  -0.031 0.068 -0.454  0.650
-5  motivation_external  ~          competency   0.164 0.072  2.287  0.022
+5  motivation_external  ~          competency   0.164 0.071  2.298  0.022
 6  motivation_external  ~         relatedness   0.062 0.074  0.844  0.399
-7          involvement  ~ motivation_internal   0.699 0.032 21.576  0.000
-8          involvement  ~ motivation_external   0.111 0.043  2.540  0.011
-9         satisfaction  ~ motivation_internal   0.456 0.051  8.950  0.000
+7          involvement  ~ motivation_internal   0.699 0.032 21.997  0.000
+8          involvement  ~ motivation_external   0.111 0.043  2.541  0.011
+9         satisfaction  ~ motivation_internal   0.456 0.050  9.033  0.000
 10        satisfaction  ~ motivation_external   0.033 0.057  0.576  0.564
-11            autonomy ~~          competency   0.354 0.054  6.530  0.000
-12            autonomy ~~         relatedness   0.398 0.052  7.621  0.000
-13          competency ~~         relatedness   0.518 0.045 11.403  0.000
-14 motivation_internal ~~ motivation_external   0.182 0.060  3.037  0.002
-15         involvement ~~        satisfaction   0.228 0.059  3.884  0.000
-16 motivation_internal ~~ motivation_internal   0.563 0.046 12.190  0.000
-17 motivation_external ~~ motivation_external   0.963 0.023 41.796  0.000
-18         involvement ~~         involvement   0.461 0.042 10.985  0.000
-19        satisfaction ~~        satisfaction   0.784 0.045 17.345  0.000
-20            autonomy ~~            autonomy   1.000 0.000     NA     NA
-21          competency ~~          competency   1.000 0.000     NA     NA
+11 motivation_internal ~~ motivation_external   0.182 0.060  3.037  0.002
+12         involvement ~~        satisfaction   0.228 0.059  3.884  0.000
+13 motivation_internal ~~ motivation_internal   0.563 0.041 13.791  0.000
+14 motivation_external ~~ motivation_external   0.963 0.023 42.190  0.000
+15         involvement ~~         involvement   0.461 0.041 11.269  0.000
+16        satisfaction ~~        satisfaction   0.784 0.045 17.526  0.000
+17            autonomy ~~            autonomy   1.000 0.000     NA     NA
+18            autonomy ~~          competency   0.354 0.000     NA     NA
+19            autonomy ~~         relatedness   0.398 0.000     NA     NA
+20          competency ~~          competency   1.000 0.000     NA     NA
+21          competency ~~         relatedness   0.518 0.000     NA     NA
 22         relatedness ~~         relatedness   1.000 0.000     NA     NA
 ```
 
@@ -231,7 +217,7 @@ For the sake of documentation and reproducibility, the current report was render
 
 
 ```
-Report rendered by Will at 2016-04-15, 10:04 -0500
+Report rendered by Will at 2016-04-16, 01:23 -0500
 ```
 
 ```
