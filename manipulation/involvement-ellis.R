@@ -24,7 +24,8 @@ requireNamespace("psych") #For item reliably
 # Constant values that won't change.
 path_in                        <- "data-unshared/raw/Father_Involvement.csv"
 path_in_translator             <- "data-phi-free/raw/variable-translator.csv"
-path_out                       <- "data-unshared/derived/involvement-subject.csv"
+path_out_csv                   <- "data-unshared/derived/involvement-subject.csv"
+path_out_rds                   <- "data-unshared/derived/involvement-subject.rds"
 figure_path                    <- 'manipulation/stitched-output/father-involvement/'
 
 # URIs of CSV and County lookup table
@@ -88,20 +89,31 @@ ds_wide_1 <- ds_wide_1 %>%
   #   "response_tag"    = "response_id"
   # ) %>%
   dplyr::mutate(
-    response_id          = seq_len(n()),
-    one_child_at_least   = as.logical(car::recode(one_child_at_least    , "1='TRUE'; else='FALSE'"       )),
-    live_with_mother     = as.logical(car::recode(live_with_mother      , "1='TRUE'; else='FALSE'"       )),
-    is_married           = as.logical(car::recode(is_married            , "1='TRUE'; else='FALSE'"       )),
-    sexual_orientation   = car::recode(sexual_orientation    , "1='Heterosexual'; 2='Homosexual'; 3='Bisexual'"       ),
-    married_duration     = car::recode(married_duration,  "1='0-1 year'; 2='1-5 years'; 3='6-10 years'; 4='11-15 years'; 5='16-20 years'; 6='20+years'"),
-    education            = car::recode(education, "1='High school diploma or GED'; 2='Vocational-Technical Training'; 3='Associates Degree'; 4='College Graduate'; 5='Graduate School'" ),
-    age                  = car::recode(age, "1='18-25'; 2='26-40'; 3='41-55'; 4='56 or older'"),
-    income_category      = car::recode(income_category, "1='Less than $24,999'; 2='$25,000 to $49,999'; 3='$50,000 to $99,999'; 4='$100,000'"),
-    child_in_home_count  = car::recode(child_in_home_count,  "1='1'; 2='2'; 3='3'; 4='4 or more'"),
-    race                 = car::recode(race, "1='Black'; 2='Caucasian'; 3='Asian-American'; 4='American Indian'; 5='Hispanic'; 6='Other'"),
-    religion             = car::recode(religion, "1='Christian'; 2='Buddhist'; 3='Muslim'; 4='Hindu'; 5='American Indian spirituality/religion'; 6='Agnostic'; 7='Atheist'; 8='None'"),
-    work_hours_outside   = car::recode(work_hours_outside, "1='0'; 2='1-20'; 3='21-40'; 4='40+'"),
-    work_hours_spouse_outside   = car::recode(work_hours_spouse_outside ,  "1='0'; 2='1-20'; 3='21-40'; 4='40+'")
+    response_id                 = seq_len(n()),
+    one_child_at_least          = as.logical(car::recode(one_child_at_least    , "1='TRUE'; else='FALSE'"       )),
+    live_with_mother            = as.logical(car::recode(live_with_mother      , "1='TRUE'; else='FALSE'"       )),
+    is_married                  = as.logical(car::recode(is_married            , "1='TRUE'; else='FALSE'"       )),
+    sexual_orientation          = car::recode(sexual_orientation    , "1='Heterosexual'; 2='Homosexual'; 3='Bisexual'", as.factor.result=T),
+    married_duration            = car::recode(married_duration,  "1='0-1 year'; 2='1-5 years'; 3='6-10 years'; 4='11-15 years'; 5='16-20 years'; 6='20+years'", as.factor.result=T),
+    education                   = car::recode(education, "1='High school diploma or GED'; 2='Vocational-Technical Training'; 3='Associates Degree'; 4='College Graduate'; 5='Graduate School'", as.factor.result=T),
+    age                         = car::recode(age, "1='18-25'; 2='26-40'; 3='41-55'; 4='56 or older'", as.factor.result=T),
+    income_category             = car::recode(income_category, "1='Less than $24,999'; 2='$25,000 to $49,999'; 3='$50,000 to $99,999'; 4='$100,000'", as.factor.result=T),
+    child_in_home_count         = car::recode(child_in_home_count,  "1='1'; 2='2'; 3='3'; 4='4 or more'", as.factor.result=T),
+    race                        = car::recode(race, "1='Black'; 2='Caucasian'; 3='Asian-American'; 4='American Indian'; 5='Hispanic'; 6='Other'", as.factor.result=T),
+    religion                    = car::recode(religion, "1='Christian'; 2='Buddhist'; 3='Muslim'; 4='Hindu'; 5='American Indian spirituality/religion'; 6='Agnostic'; 7='Atheist'; 8='None'", as.factor.result=T),
+    work_hours_outside          = car::recode(work_hours_outside, "1='0'; 2='1-20'; 3='21-40'; 4='40+'", as.factor.result=T),
+    work_hours_spouse_outside   = car::recode(work_hours_spouse_outside ,  "1='0'; 2='1-20'; 3='21-40'; 4='40+'", as.factor.result=T),
+
+    sexual_orientation          = factor(sexual_orientation         , c("Heterosexual", "Homosexual", "Bisexual")),
+    married_duration            = factor(married_duration           , c("0-1 year", "1-5 years", "6-10 years", "11-15 years", "16-20 years", "20+years")),
+    education                   = factor(education                  , c("High school diploma or GED", "Vocational-Technical Training", "Associates Degree", "College Graduate", "Graduate School")),
+    age                         = factor(age                        , c("18-25", "26-40", "41-55", "56 or older")),
+    income_category             = factor(income_category            , c("Less than $24,999", "$25,000 to $49,999", "$50,000 to $99,999", "$100,000")),
+    child_in_home_count         = factor(child_in_home_count        , c("1", "2", "3", "4 or more")),
+    race                        = factor(race                       , c("Black", "Caucasian", "Asian-American", "American Indian", "Hispanic", "Other")),
+    religion                    = factor(religion                   , c("Christian", "Buddhist", "Muslim", "Hindu", "American Indian spirituality/religion", "Agnostic", "Atheist", "None")),
+    work_hours_outside          = factor(work_hours_outside         , c("0", "1-20", "21-40", "40+")),
+    work_hours_spouse_outside   = factor(work_hours_spouse_outside  , c("0", "1-20", "21-40", "40+"))
   ) %>%
   dplyr::filter(
     !is.na(one_child_at_least) & one_child_at_least &  #Drop if not 'yes'
@@ -171,7 +183,8 @@ testit::assert("All `response_id` values should be nonmissing.", sum(is.na(ds_wi
 
 
 # ---- save-to-disk ------------------------------------------------------------
-readr::write_csv(ds_wide_2, path_out)
+readr::write_csv(ds_wide_2, path_out_csv)
+readr::write_rds(ds_wide_2, path_out_rds)
 
 
 # ---- save-metadata-skeleton --------------------------------------------------

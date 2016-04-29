@@ -20,11 +20,11 @@ requireNamespace("TabularManifest") # devtools::install_github("Melinae/TabularM
 # ---- declare-globals ---------------------------------------------------------
 options(show.signif.stars=F) #Turn off the annotations on p-values
 
-path_input <- "./data-unshared/derived/involvement-subject.csv"
+path_input <- "./data-unshared/derived/involvement-subject.rds"
 
 
 # ---- load-data ---------------------------------------------------------------
-ds <- readr::read_csv(path_input)
+ds <- readr::read_rds(path_input)
 
 rm(path_input)
 

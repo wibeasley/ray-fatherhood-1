@@ -33,21 +33,21 @@
 
 
 # Marginals
-![](figure-png/marginals-1.png)![](figure-png/marginals-2.png)![](figure-png/marginals-3.png)![](figure-png/marginals-4.png)![](figure-png/marginals-5.png)![](figure-png/marginals-6.png)![](figure-png/marginals-7.png)![](figure-png/marginals-8.png)![](figure-png/marginals-9.png)![](figure-png/marginals-10.png)![](figure-png/marginals-11.png)![](figure-png/marginals-12.png)![](figure-png/marginals-13.png)![](figure-png/marginals-14.png)![](figure-png/marginals-15.png)![](figure-png/marginals-16.png)![](figure-png/marginals-17.png)![](figure-png/marginals-18.png)![](figure-png/marginals-19.png)![](figure-png/marginals-20.png)![](figure-png/marginals-21.png)![](figure-png/marginals-22.png)
+![](figure-png/marginals-1.png)<!-- -->![](figure-png/marginals-2.png)<!-- -->![](figure-png/marginals-3.png)<!-- -->![](figure-png/marginals-4.png)<!-- -->![](figure-png/marginals-5.png)<!-- -->![](figure-png/marginals-6.png)<!-- -->![](figure-png/marginals-7.png)<!-- -->![](figure-png/marginals-8.png)<!-- -->![](figure-png/marginals-9.png)<!-- -->![](figure-png/marginals-10.png)<!-- -->![](figure-png/marginals-11.png)<!-- -->![](figure-png/marginals-12.png)<!-- -->![](figure-png/marginals-13.png)<!-- -->![](figure-png/marginals-14.png)<!-- -->![](figure-png/marginals-15.png)<!-- -->![](figure-png/marginals-16.png)<!-- -->![](figure-png/marginals-17.png)<!-- -->![](figure-png/marginals-18.png)<!-- -->![](figure-png/marginals-19.png)<!-- -->![](figure-png/marginals-20.png)<!-- -->![](figure-png/marginals-21.png)<!-- -->![](figure-png/marginals-22.png)<!-- -->
 
 # Scatterplots
-![](figure-png/scatterplots-1.png)![](figure-png/scatterplots-2.png)![](figure-png/scatterplots-3.png)
+![](figure-png/scatterplots-1.png)<!-- -->![](figure-png/scatterplots-2.png)<!-- -->![](figure-png/scatterplots-3.png)<!-- -->
 
 # Session Information
 For the sake of documentation and reproducibility, the current report was rendered on a system using the following software.
 
 
 ```
-Report rendered by Will at 2016-04-13, 21:55 -0500
+Report rendered by Will at 2016-04-29, 13:32 -0500
 ```
 
 ```
-R version 3.2.4 Patched (2016-03-28 r70435)
+R version 3.2.5 Patched (2016-04-17 r70499)
 Platform: x86_64-w64-mingw32/x64 (64-bit)
 Running under: Windows >= 8 x64 (build 9200)
 
@@ -63,10 +63,10 @@ other attached packages:
 
 loaded via a namespace (and not attached):
  [1] Rcpp_0.12.4                 munsell_0.4.3               colorspace_1.2-6            R6_2.1.2                   
- [5] stringr_1.0.0               plyr_1.8.3                  dplyr_0.4.3                 tools_3.2.4                
- [9] parallel_3.2.4              grid_3.2.4                  gtable_0.2.0                DBI_0.3.1.9008             
+ [5] stringr_1.0.0               plyr_1.8.3                  dplyr_0.4.3                 tools_3.2.5                
+ [9] parallel_3.2.5              grid_3.2.5                  gtable_0.2.0                DBI_0.3.1.9008             
 [13] htmltools_0.3.5             yaml_2.1.13                 lazyeval_0.1.10             digest_0.6.9               
 [17] assertthat_0.1              readr_0.2.2                 formatR_1.3                 evaluate_0.8.3             
-[21] rmarkdown_0.9.5             labeling_0.3                stringi_1.0-1               scales_0.4.0               
+[21] rmarkdown_0.9.5.9           labeling_0.3                stringi_1.0-1               scales_0.4.0               
 [25] TabularManifest_0.1-16.9000
 ```
