@@ -13,6 +13,7 @@ requireNamespace("readr")
 requireNamespace("knitr")
 # requireNamespace("scales") #For formating values in graphs
 # requireNamespace("RColorBrewer")
+requireNamespace("moments")
 requireNamespace("dplyr")
 requireNamespace("TabularManifest") # devtools::install_github("Melinae/TabularManifest")
 
@@ -34,9 +35,11 @@ ds <- ds %>%
   dplyr::filter(section_complete_count == 7L) %>%
   as.data.frame()
 
-# ---- singular-columns --------------------------------------------------------
-
-# ---- na-columns --------------------------------------------------------------
+# ---- moments --------------------------------------------------------------
+summary(ds) #Mean and quartiles
+sapply(ds, sd) #Standard Deviation
+sapply(ds, e1071::skewness, na.rm=T) #Skew (0 signifies symmetry)
+sapply(ds, e1071::kurtosis, na.rm=T) #Kurtosis (0 signifies Gaussian-ish peakedness)
 
 
 # ---- marginals --------------------------------------------------------------
