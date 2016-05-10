@@ -32,8 +32,8 @@ rm(path_input)
 
 # ---- tweak-data --------------------------------------------------------------
 ds <- ds %>%
-  # dplyr::filter(section_complete_count == 7L) %>%
-  dplyr::filter(section_complete_count < 7L) %>%
+  dplyr::filter(section_complete_count == 7L) %>%
+  # dplyr::filter(section_complete_count < 7L) %>%
   as.data.frame()
 
 # ---- moments --------------------------------------------------------------

@@ -39,46 +39,46 @@ summary(ds) #Mean and quartiles
 ```
 
 ```
-  response_id    one_child_at_least live_with_child    sexual_orientation live_with_mother is_married    
- Min.   : 22.0   Mode:logical       Min.   :1       Heterosexual:54       Mode :logical    Mode:logical  
- 1st Qu.:248.5   TRUE:55            1st Qu.:1       Homosexual  : 1       FALSE:3          TRUE:55       
- Median :356.0   NA's:0             Median :1       Bisexual    : 0       TRUE :52         NA's:0        
- Mean   :320.1                      Mean   :1                             NA's :0                        
- 3rd Qu.:412.5                      3rd Qu.:1                                                            
- Max.   :429.0                      Max.   :1                                                            
-                                                                                                         
-    married_duration                         education           age               income_category child_in_home_count
- 0-1 year   : 0      High school diploma or GED   : 7   18-25      : 0   Less than $24,999 : 2     1        : 5       
- 1-5 years  : 3      Vocational-Technical Training: 3   26-40      :33   $25,000 to $49,999: 3     2        :25       
- 6-10 years :17      Associates Degree            : 4   41-55      :20   $50,000 to $99,999:19     3        :12       
- 11-15 years:23      College Graduate             :25   56 or older: 0   $100,000          :25     4 or more:11       
- 16-20 years: 9      Graduate School              :15   NA's       : 2   NA's              : 6     NA's     : 2       
- 20+years   : 2      NA's                         : 1                                                                 
- NA's       : 1                                                                                                       
-              race                                     religion  work_hours_outside work_hours_spouse_outside
- Black          : 0   Christian                            :42   0    : 0           0    :16                 
- Caucasian      :48   Atheist                              : 5   1-20 : 5           1-20 :11                 
- Asian-American : 1   None                                 : 4   21-40:16           21-40:19                 
- American Indian: 2   Buddhist                             : 1   40+  :34           40+  : 9                 
- Hispanic       : 1   American Indian spirituality/religion: 1                                               
- Other          : 1   (Other)                              : 1                                               
- NA's           : 2   NA's                                 : 1                                               
- section_complete_count    autonomy       competency    involvement    motivation_external motivation_internal
- Min.   :0.000          Min.   :2.479   Min.   :1.00   Min.   :2.042   Min.   :2.222       Min.   :4.875      
- 1st Qu.:0.000          1st Qu.:3.391   1st Qu.:4.65   1st Qu.:3.865   1st Qu.:3.809       1st Qu.:5.031      
- Median :0.000          Median :3.656   Median :5.00   Median :5.200   Median :4.125       Median :5.257      
- Mean   :1.382          Mean   :3.600   Mean   :4.60   Mean   :4.522   Mean   :4.174       Mean   :5.336      
- 3rd Qu.:2.000          3rd Qu.:4.000   3rd Qu.:5.20   3rd Qu.:5.404   3rd Qu.:4.625       3rd Qu.:5.566      
- Max.   :6.000          Max.   :4.250   Max.   :6.00   Max.   :5.875   Max.   :6.000       Max.   :6.000      
-                        NA's   :35      NA's   :37     NA's   :48      NA's   :48          NA's   :49         
-  relatedness     satisfaction  
- Min.   :2.550   Min.   :1.667  
- 1st Qu.:4.000   1st Qu.:2.000  
- Median :4.600   Median :3.333  
- Mean   :4.327   Mean   :3.333  
- 3rd Qu.:4.750   3rd Qu.:4.000  
- Max.   :5.300   Max.   :5.667  
- NA's   :42      NA's   :50     
+  response_id     one_child_at_least live_with_child    sexual_orientation live_with_mother is_married    
+ Min.   :  9.00   Mode:logical       Min.   :1       Heterosexual:257      Mode :logical    Mode:logical  
+ 1st Qu.: 83.75   TRUE:260           1st Qu.:1       Homosexual  :  2      FALSE:6          TRUE:260      
+ Median :184.50   NA's:0             Median :1       Bisexual    :  1      TRUE :254        NA's:0        
+ Mean   :188.28                      Mean   :1                             NA's :0                        
+ 3rd Qu.:292.50                      3rd Qu.:1                                                            
+ Max.   :404.00                      Max.   :1                                                            
+                                                                                                          
+    married_duration                         education            age                income_category
+ 0-1 year   :  2     High school diploma or GED   : 19   18-25      :  0   Less than $24,999 :  1   
+ 1-5 years  :  8     Vocational-Technical Training:  7   26-40      :167   $25,000 to $49,999: 22   
+ 6-10 years : 63     Associates Degree            : 17   41-55      : 88   $50,000 to $99,999: 90   
+ 11-15 years:110     College Graduate             :104   56 or older:  4   $100,000          :145   
+ 16-20 years: 55     Graduate School              :113   NA's       :  1   NA's              :  2   
+ 20+years   : 21                                                                                    
+ NA's       :  1                                                                                    
+ child_in_home_count              race                                      religion   work_hours_outside
+ 1        : 26       Black          :  4   Christian                            :225   0    :  4         
+ 2        :124       Caucasian      :229   Agnostic                             : 13   1-20 : 12         
+ 3        : 72       Asian-American :  5   None                                 : 10   21-40: 74         
+ 4 or more: 38       American Indian: 10   Atheist                              :  7   40+  :169         
+                     Hispanic       :  4   American Indian spirituality/religion:  3   NA's :  1         
+                     Other          :  7   (Other)                              :  0                     
+                     NA's           :  1   NA's                                 :  2                     
+ work_hours_spouse_outside section_complete_count    autonomy       competency     involvement    motivation_external
+ 0    :77                  Min.   :7              Min.   :2.562   Min.   :2.200   Min.   :3.577   Min.   :1.111      
+ 1-20 :55                  1st Qu.:7              1st Qu.:3.458   1st Qu.:4.600   1st Qu.:5.115   1st Qu.:3.667      
+ 21-40:74                  Median :7              Median :3.708   Median :5.000   Median :5.538   Median :4.389      
+ 40+  :53                  Mean   :7              Mean   :3.674   Mean   :4.887   Mean   :5.413   Mean   :4.292      
+ NA's : 1                  3rd Qu.:7              3rd Qu.:3.917   3rd Qu.:5.200   3rd Qu.:5.808   3rd Qu.:4.844      
+                           Max.   :7              Max.   :4.562   Max.   :6.000   Max.   :6.000   Max.   :6.000      
+                                                                                                                     
+ motivation_internal  relatedness     satisfaction  
+ Min.   :3.667       Min.   :3.550   Min.   :1.667  
+ 1st Qu.:4.833       1st Qu.:4.500   1st Qu.:4.667  
+ Median :5.333       Median :4.850   Median :5.000  
+ Mean   :5.236       Mean   :4.813   Mean   :4.855  
+ 3rd Qu.:5.667       3rd Qu.:5.150   3rd Qu.:5.333  
+ Max.   :6.000       Max.   :5.900   Max.   :6.000  
+                                                    
 ```
 
 ```r
@@ -119,17 +119,17 @@ Warning in var(if (is.vector(x) || is.factor(x)) x else as.double(x), na.rm = na
 
 ```
               response_id        one_child_at_least           live_with_child        sexual_orientation 
-              113.1435369                 0.0000000                 0.0000000                 0.1348400 
+              113.8689903                 0.0000000                 0.0000000                 0.1514213 
          live_with_mother                is_married          married_duration                 education 
-                0.2291839                 0.0000000                        NA                        NA 
+                0.1504374                 0.0000000                        NA                 1.1229377 
                       age           income_category       child_in_home_count                      race 
-                       NA                        NA                        NA                        NA 
+                       NA                        NA                 0.8626838                        NA 
                  religion        work_hours_outside work_hours_spouse_outside    section_complete_count 
-                       NA                 0.6626139                 1.0799676                 2.0771322 
+                       NA                        NA                        NA                 0.0000000 
                  autonomy                competency               involvement       motivation_external 
-                       NA                        NA                        NA                        NA 
+                0.3520898                 0.5985682                 0.4966607                 0.7868635 
       motivation_internal               relatedness              satisfaction 
-                       NA                        NA                        NA 
+                0.5738603                 0.4735373                 0.6073652 
 ```
 
 ```r
@@ -218,17 +218,17 @@ Warning in Ops.factor(x, mean(x)): '-' not meaningful for factors
 
 ```
               response_id        one_child_at_least           live_with_child        sexual_orientation 
-              -1.00091956                       NaN                       NaN                        NA 
+                0.1158917                       NaN                       NaN                        NA 
          live_with_mother                is_married          married_duration                 education 
-              -3.81663287                       NaN                        NA                        NA 
+               -6.3160974                       NaN                        NA                        NA 
                       age           income_category       child_in_home_count                      race 
                        NA                        NA                        NA                        NA 
                  religion        work_hours_outside work_hours_spouse_outside    section_complete_count 
-                       NA                        NA                        NA                1.10179161 
+                       NA                        NA                        NA                       NaN 
                  autonomy                competency               involvement       motivation_external 
-              -0.70398385               -1.68267324               -0.67606344               -0.08993981 
+               -0.3984564                -0.6541192                -1.1054107                -0.2988568 
       motivation_internal               relatedness              satisfaction 
-               0.37867615               -1.03627610                0.28440892 
+               -0.6590821                -0.2871952                -0.8064942 
 ```
 
 ```r
@@ -315,17 +315,17 @@ Warning in Ops.factor(x, mean(x)): '-' not meaningful for factors
 
 ```
               response_id        one_child_at_least           live_with_child        sexual_orientation 
-               -0.3039642                       NaN                       NaN                        NA 
+               -1.2769582                       NaN                       NaN                        NA 
          live_with_mother                is_married          married_duration                 education 
-               12.8004069                       NaN                        NA                        NA 
+               38.0394367                       NaN                        NA                        NA 
                       age           income_category       child_in_home_count                      race 
                        NA                        NA                        NA                        NA 
                  religion        work_hours_outside work_hours_spouse_outside    section_complete_count 
-                       NA                        NA                        NA                -0.4696217 
+                       NA                        NA                        NA                       NaN 
                  autonomy                competency               involvement       motivation_external 
-               -0.3784779                 2.0286265                -1.1343305                -1.0072162 
+                0.2626358                 1.6637468                 1.0498651                 0.7562286 
       motivation_internal               relatedness              satisfaction 
-               -1.6462382                 0.5136431                -1.8056134 
+               -0.3314176                -0.3605562                 2.9667347 
 ```
 
 # Marginals
@@ -339,7 +339,7 @@ For the sake of documentation and reproducibility, the current report was render
 
 
 ```
-Report rendered by Will at 2016-05-09, 21:08 -0500
+Report rendered by Will at 2016-05-09, 21:19 -0500
 ```
 
 ```
