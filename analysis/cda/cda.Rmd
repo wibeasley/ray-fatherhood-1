@@ -65,6 +65,10 @@ read_chunk("./analysis/cda/cda.R") #This allows knitr to call chunks tagged in t
 ### Unanswered questions
 
 
+# Model w/ Partial Mediation(Motivation separated into two variables)
+```{r model-dual-motivation-partial-mediation, echo=echoChunks, results='show', message = FALSE}
+```
+
 # Model (Motivation separated into two variables)
 ```{r model-dual-motivation, echo=echoChunks, results='show', message = FALSE}
 ```

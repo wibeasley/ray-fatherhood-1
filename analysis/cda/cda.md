@@ -32,6 +32,115 @@
 ### Unanswered questions
 
 
+# Model w/ Partial Mediation(Motivation separated into two variables)
+
+```
+               npar                fmin               chisq                  df              pvalue      baseline.chisq 
+             21.000               0.017               8.768               1.000               0.003             536.279 
+        baseline.df     baseline.pvalue                 cfi                 tli                nnfi                 rfi 
+             18.000               0.000               0.985               0.730               0.730               0.706 
+                nfi                pnfi                 ifi                 rni                logl   unrestricted.logl 
+              0.984               0.055               0.985               0.985           -1130.011           -1125.627 
+                aic                 bic              ntotal                bic2               rmsea      rmsea.ci.lower 
+           2302.022            2376.796             260.000            2310.218               0.173               0.082 
+     rmsea.ci.upper        rmsea.pvalue                 rmr          rmr_nomean                srmr        srmr_bentler 
+              0.286               0.016               0.013               0.013               0.029               0.029 
+srmr_bentler_nomean         srmr_bollen  srmr_bollen_nomean          srmr_mplus   srmr_mplus_nomean               cn_05 
+              0.029               0.029               0.029               0.029               0.029             114.914 
+              cn_01                 gfi                agfi                pgfi                 mfi                ecvi 
+            197.750               0.991               0.737               0.035               0.985               0.195 
+```
+
+```
+lavaan (0.5-20) converged normally after  36 iterations
+
+  Number of observations                           260
+
+  Estimator                                         ML
+  Minimum Function Test Statistic                8.768
+  Degrees of freedom                                 1
+  P-value (Chi-square)                           0.003
+
+Parameter Estimates:
+
+  Information                                 Expected
+  Standard Errors                             Standard
+
+Regressions:
+                        Estimate  Std.Err  Z-value  P(>|z|)
+  motivation_internal ~                                    
+    autonomy              -0.095    0.084   -1.126    0.260
+    competency             0.268    0.053    5.045    0.000
+    relatedness            0.602    0.068    8.803    0.000
+  motivation_external ~                                    
+    autonomy              -0.069    0.151   -0.454    0.650
+    competency             0.216    0.095    2.265    0.024
+    relatedness            0.103    0.123    0.843    0.399
+  involvement ~                                            
+    motivatn_ntrnl         0.466    0.047    9.976    0.000
+    motivatn_xtrnl         0.070    0.026    2.677    0.007
+    autonomy               0.027    0.064    0.422    0.673
+    competency             0.058    0.042    1.360    0.174
+    relatedness            0.203    0.059    3.448    0.001
+  satisfaction ~                                           
+    motivatn_ntrnl         0.112    0.067    1.682    0.093
+    motivatn_xtrnl         0.009    0.037    0.255    0.799
+    autonomy               0.085    0.091    0.939    0.347
+    competency             0.423    0.060    7.018    0.000
+    relatedness            0.266    0.084    3.173    0.002
+
+Covariances:
+                   Estimate  Std.Err  Z-value  P(>|z|)
+  involvement ~~                                      
+    satisfaction      0.020    0.009    2.111    0.035
+
+Variances:
+                   Estimate  Std.Err  Z-value  P(>|z|)
+    motivatn_ntrnl    0.185    0.016   11.402    0.000
+    motivatn_xtrnl    0.594    0.052   11.402    0.000
+    involvement       0.105    0.009   11.402    0.000
+    satisfaction      0.213    0.019   11.402    0.000
+```
+
+```
+                   lhs op                 rhs est.std    se      z pvalue
+1  motivation_internal  ~            autonomy  -0.058 0.052 -1.128  0.259
+2  motivation_internal  ~          competency   0.279 0.053  5.233  0.000
+3  motivation_internal  ~         relatedness   0.497 0.050  9.935  0.000
+4  motivation_external  ~            autonomy  -0.031 0.068 -0.454  0.650
+5  motivation_external  ~          competency   0.164 0.071  2.298  0.022
+6  motivation_external  ~         relatedness   0.062 0.074  0.844  0.399
+7          involvement  ~ motivation_internal   0.543 0.050 10.804  0.000
+8          involvement  ~ motivation_external   0.111 0.042  2.676  0.007
+9          involvement  ~            autonomy   0.019 0.045  0.422  0.673
+10         involvement  ~          competency   0.070 0.051  1.362  0.173
+11         involvement  ~         relatedness   0.195 0.056  3.484  0.000
+12        satisfaction  ~ motivation_internal   0.106 0.063  1.685  0.092
+13        satisfaction  ~ motivation_external   0.012 0.048  0.255  0.799
+14        satisfaction  ~            autonomy   0.049 0.052  0.941  0.347
+15        satisfaction  ~          competency   0.417 0.055  7.572  0.000
+16        satisfaction  ~         relatedness   0.207 0.064  3.219  0.001
+17 motivation_internal ~~ motivation_internal   0.563 0.041 13.791  0.000
+18 motivation_external ~~ motivation_external   0.963 0.023 42.190  0.000
+19         involvement ~~         involvement   0.434 0.038 11.529  0.000
+20        satisfaction ~~        satisfaction   0.579 0.042 13.932  0.000
+21         involvement ~~        satisfaction   0.132 0.061  2.167  0.030
+22            autonomy ~~            autonomy   1.000 0.000     NA     NA
+23            autonomy ~~          competency   0.354 0.000     NA     NA
+24            autonomy ~~         relatedness   0.398 0.000     NA     NA
+25          competency ~~          competency   1.000 0.000     NA     NA
+26          competency ~~         relatedness   0.518 0.000     NA     NA
+27         relatedness ~~         relatedness   1.000 0.000     NA     NA
+```
+
+```
+Correlation between motivation_internal ~~ motivatn_xtrnl:  0.1809973
+```
+
+```
+Correlation between involvement ~~ satisfaction:  0.2272733
+```
+
 # Model (Motivation separated into two variables)
 
 ```
@@ -217,11 +326,11 @@ For the sake of documentation and reproducibility, the current report was render
 
 
 ```
-Report rendered by Will at 2016-04-16, 01:23 -0500
+Report rendered by Will at 2016-05-09, 21:40 -0500
 ```
 
 ```
-R version 3.2.4 Patched (2016-03-28 r70435)
+R version 3.3.0 Patched (2016-05-05 r70588)
 Platform: x86_64-w64-mingw32/x64 (64-bit)
 Running under: Windows >= 8 x64 (build 9200)
 
@@ -237,10 +346,10 @@ other attached packages:
 
 loaded via a namespace (and not attached):
  [1] Rcpp_0.12.4                 quadprog_1.5-5              assertthat_0.1              dplyr_0.4.3                
- [5] digest_0.6.9                MASS_7.3-45                 R6_2.1.2                    DBI_0.3.1.9008             
- [9] stats4_3.2.4                formatR_1.3                 evaluate_0.8.3              TabularManifest_0.1-16.9000
-[13] stringi_1.0-1               lazyeval_0.1.10             pbivnorm_0.6.0              rmarkdown_0.9.5            
-[17] tools_3.2.4                 stringr_1.0.0               readr_0.2.2                 parallel_3.2.4             
+ [5] digest_0.6.9                MASS_7.3-45                 R6_2.1.2                    DBI_0.4-1                  
+ [9] stats4_3.3.0                formatR_1.3                 evaluate_0.9                TabularManifest_0.1-16.9000
+[13] stringi_1.0-1               lazyeval_0.1.10             pbivnorm_0.6.0              rmarkdown_0.9.6            
+[17] tools_3.3.0                 stringr_1.0.0               readr_0.2.2                 parallel_3.3.0             
 [21] yaml_2.1.13                 mnormt_1.5-4                htmltools_0.3.5            
 ```
 

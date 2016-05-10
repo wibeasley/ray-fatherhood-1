@@ -32,6 +32,44 @@ ds <- ds %>%
   as.data.frame()
 
 
+# ---- model-dual-motivation-partial-mediation --------------------------------------------------------------
+# > colnames(ds)
+# [1] "response_id"               "one_child_at_least"        "live_with_child"
+# [4] "sexual_orientation"        "live_with_mother"          "is_married"
+# [7] "married_duration"          "education"                 "age"
+# [10] "income_category"           "child_in_home_count"       "race"
+# [13] "religion"                  "work_hours_outside"        "work_hours_spouse_outside"
+# [16] "section_complete_count"    "autonomy"                  "competency"
+# [19] "involvement"               "motivation_external"       "motivation_internal"
+# [22] "relatedness"               "satisfaction"
+
+model_dual_motivation <- '
+# regressions between tiers 1 & 2
+motivation_internal ~ autonomy + competency + relatedness
+motivation_external ~ autonomy + competency + relatedness
+
+# regressions between tiers 2 & 3
+involvement  ~ motivation_internal + motivation_external + autonomy + competency + relatedness
+satisfaction ~ motivation_internal + motivation_external + autonomy + competency + relatedness
+
+# residual covariances
+# autonomy ~~ competency
+# autonomy ~~ relatedness
+# competency ~~ relatedness
+# motivation_internal ~~ motivation_external
+# involvement ~~ satisfaction
+'
+fit_dual_motivation <- sem(model_dual_motivation, data=ds)
+fitmeasures(fit_dual_motivation)
+summary(fit_dual_motivation)
+standardizedSolution(fit_dual_motivation)
+# sapply(ds, sd, na.rm=T)
+
+cat("Correlation between motivation_internal ~~ motivatn_xtrnl: ", 0.060/sqrt(0.185*0.594)) #0.1809973
+cat("Correlation between involvement ~~ satisfaction: ", 0.041/sqrt(.113*.288)) #0.2272733 =
+
+
+
 # ---- model-dual-motivation --------------------------------------------------------------
 # > colnames(ds)
 # [1] "response_id"               "one_child_at_least"        "live_with_child"
@@ -44,20 +82,20 @@ ds <- ds %>%
 # [22] "relatedness"               "satisfaction"
 
 model_dual_motivation <- '
-   # regressions between tiers 1 & 2
-   motivation_internal ~ autonomy + competency + relatedness
-   motivation_external ~ autonomy + competency + relatedness
+# regressions between tiers 1 & 2
+motivation_internal ~ autonomy + competency + relatedness
+motivation_external ~ autonomy + competency + relatedness
 
-   # regressions between tiers 2 & 3
-   involvement  ~ motivation_internal + motivation_external
-   satisfaction ~ motivation_internal + motivation_external
+# regressions between tiers 2 & 3
+involvement  ~ motivation_internal + motivation_external
+satisfaction ~ motivation_internal + motivation_external
 
-   # residual covariances
-   # autonomy ~~ competency
-   # autonomy ~~ relatedness
-   # competency ~~ relatedness
-   motivation_internal ~~ motivation_external
-   involvement ~~ satisfaction
+# residual covariances
+# autonomy ~~ competency
+# autonomy ~~ relatedness
+# competency ~~ relatedness
+motivation_internal ~~ motivation_external
+involvement ~~ satisfaction
 '
 fit_dual_motivation <- sem(model_dual_motivation, data=ds)
 fitmeasures(fit_dual_motivation)
