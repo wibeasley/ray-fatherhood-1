@@ -28,7 +28,7 @@ opts_chunk$set(
 # out.width = "650px", #This affects only the markdown, not the underlying png file.  The height will be scaled appropriately.
 
 echoChunks <- FALSE
-options(width=120) #So the output is 50% wider than the default.
+# options(width=120) #So the output is 50% wider than the default.
 read_chunk("./analysis/eda/eda.R") #This allows knitr to call chunks tagged in the underlying *.R file.
 ```
 
@@ -75,6 +75,11 @@ read_chunk("./analysis/eda/eda.R") #This allows knitr to call chunks tagged in t
 
 # Scatterplots
 ```{r scatterplots, echo=echoChunks, results='show', message = FALSE, fig.width=9, fig.height=9}
+```
+
+# Correlation Matrix
+The Pearson bivariate correlations, with their [*p*-values and CIs below](http://personality-project.org/r/html/corr.test.html).
+```{r correlation-matrix, echo=echoChunks, results='show', message = FALSE, fig.width=9, fig.height=9}
 ```
 
 # Session Information

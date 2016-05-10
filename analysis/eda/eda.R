@@ -16,7 +16,7 @@ requireNamespace("knitr")
 requireNamespace("moments")
 requireNamespace("dplyr")
 requireNamespace("TabularManifest") # devtools::install_github("Melinae/TabularManifest")
-
+requireNamespace("psych")
 
 # ---- declare-globals ---------------------------------------------------------
 options(show.signif.stars=F) #Turn off the annotations on p-values
@@ -101,5 +101,9 @@ pairs(x=ds[, c("autonomy", "competency", "relatedness", "motivation_internal", "
 pairs(x=ds[, c("autonomy", "competency", "relatedness", "motivation_internal", "motivation_external")], lower.panel=panel.smooth, upper.panel=panel.cor, diag.panel=panel.hist)
 pairs(x=ds[, c("motivation_internal", "motivation_external", "involvement", "satisfaction" )], lower.panel=panel.smooth, upper.panel=panel.cor, diag.panel=panel.hist)
 
+# ---- correlation-matrix --------------------------------------------------------------
+cor(ds[, c("autonomy", "competency", "relatedness", "motivation_internal", "motivation_external", "involvement", "satisfaction" )])
+print(psych::corr.test(ds[, c("autonomy", "competency", "relatedness", "motivation_internal", "motivation_external", "involvement", "satisfaction" )]), short=F)
+# psych::corr.p(cor(ds[, c("autonomy", "competency", "relatedness", "motivation_internal", "motivation_external", "involvement", "satisfaction" )]), n=nrow(ds))
 
 # grep(" colnames(ds)
